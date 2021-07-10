@@ -1,0 +1,28 @@
+.connectWallet {
+    button {
+        align-items: center;
+        background: #212121;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        border-radius: 37.4634px;
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #BABABA;
+        padding: 5px 6px 5px 14px;
+        p {
+            margin-right: 9px;
+        }
+        img{
+            width: 29px;
+            height: 29px;
+        }
+    }
+}
+
+
