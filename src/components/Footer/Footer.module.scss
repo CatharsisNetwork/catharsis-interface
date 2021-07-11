@@ -1,0 +1,155 @@
+.footer {
+    margin-top: 86px;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0%;
+    .footerWrapper {
+        background-color: #181818;
+        
+        .footerContainer {
+            max-width: 1040px;
+            width: 100%;
+            margin: auto;
+            @media (max-width: 1160px) and (min-width: 1050px){
+                max-width: 1000px;
+            }
+            @media (max-width: 1050px) and (min-width: 900px){
+                max-width: 850px;
+            }
+            @media (max-width: 900px) and (min-width: 800px){
+                max-width: 750px;
+            }
+            @media (max-width: 800px) and (min-width: 700px){
+                max-width: 650px;
+            }
+            .footerBody {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @media (max-width: 700px) and (min-width: 319px){
+                    flex-direction: column;
+                }
+                .footerLinks {
+                    margin-top: 20px;
+                    @media (max-width: 700px) and (min-width: 319px){
+                        order: 3; 
+                    }
+                    ul {
+                        padding: 0px;
+                        margin: 0px;
+                        @media (max-width: 700px) and (min-width: 319px){
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            height: 150px;
+                            width: 300px;
+                            text-align: left;
+                        }
+                        li {
+                            font-family: Gilroy;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 18px;
+                            line-height: 21px;
+                            list-style-type: none;
+                            color: #565656;
+                            text-align: left;
+                            margin-top: 21px;
+                            @media (max-width: 550px) and (min-width: 319px){
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .footerLogo {
+                    @media (max-width: 700px) and (min-width: 319px){
+                        margin-top: 22px;
+                        order: 1; 
+                    }
+                    @media (max-width: 550px) and (min-width: 319px){
+                        .logoImg{
+                            img{
+                                width: 148.37px;
+                                height: 51.36px;
+                            }
+                        }
+                    }
+                    .logoText {
+                        margin-top: 16px;
+                        p {
+                            font-family: Gilroy;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 21.6675px;
+                            line-height: 25px;
+                            text-align: center;
+                            color: #ffffff;
+                            @media (max-width: 550px) and (min-width: 319px){
+                                font-size: 15px;
+                            }
+                            span {
+                                color: #c19ce3;
+                            }
+                        }
+                    }
+                }
+                .connectWallet {
+                    @media (max-width: 700px) and (min-width: 319px){
+                        order: 2; 
+                        margin-top: 10px;
+                    }
+                    button {
+                        align-items: center;
+                        background: #212121;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        display: flex;
+                        border-radius: 37.4634px;
+                        font-family: Gilroy;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16.3902px;
+                        line-height: 20px;
+                        text-align: center;
+                        color: #bababa;
+                        padding: 5px 6px 5px 24px;
+                        p {
+                            margin-right: 9px;
+                        }
+                    }
+                }
+            }
+        }
+        .footerTerms {
+            text-align: right;
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            text-decoration-line: underline;
+            color: #565656;
+            padding-bottom: 42px;
+            cursor: pointer;
+            @media (max-width: 700px) and (min-width: 319px){
+                text-align: center;
+                padding-bottom: 33px;
+            }
+        }
+    }
+    .rightsReserved {
+        height: 40px;
+        p {
+            padding-top: 7px;
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 21px;
+            color: #373737;
+        }
+    }
+}
