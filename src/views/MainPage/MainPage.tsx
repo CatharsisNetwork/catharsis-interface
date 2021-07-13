@@ -45,8 +45,8 @@ function MainPage() {
                 <div className={classes.galleryItemsContainer}>
                     <div className={classes.galleryItems}>
                         {
-                            gallery.map((elem) => {
-                                return <GalleryItem title={elem.title} amount={elem.amount} type={elem.type}
+                            gallery.map((elem, i) => {
+                                return <GalleryItem key={`gallery-item-${i}`} title={elem.title} amount={elem.amount} type={elem.type}
                                     status={elem.status} img={elem.img} supply={elem.supply} fee={elem.fee} amountETH={elem.amountETH} />
                             })
                         }
@@ -63,8 +63,8 @@ function MainPage() {
                     </div>
                     <div className={classes.howItWorksItems}>
                         {
-                            howWorks.map((elem)=>{
-                               return <HowItWorksItem img={elem.img} title={elem.title} text={elem.text} color={elem.color}/>
+                            howWorks.map((elem, i)=>{
+                               return <HowItWorksItem key={`how-it-works-item-${i}`} img={elem.img} title={elem.title} text={elem.text} color={elem.color}/>
                             })
                         }
                       
@@ -85,8 +85,8 @@ function MainPage() {
                     <div className={classes.itemsBg}>
 
                     </div>
-                    {auction.map((elem)=>{
-                        return  <AuctionItem title={elem.title} amount={elem.amount} 
+                    {auction.map((elem, i)=>{
+                        return  <AuctionItem key={`auction-item-${i}`} title={elem.title} amount={elem.amount} 
                         type={elem.type} status={elem.status} img={elem.img} endsText={elem.endsText}
                         timeLeft={elem.timeLeft} />
                     })}
@@ -112,8 +112,8 @@ function MainPage() {
                 </div>
                 <div className={classes.votingItems}>
                     {
-                        voting.map((elem)=>{
-                           return <VotingItem title={elem.title} amount={elem.amount} img={elem.img}/>
+                        voting.map((elem, i)=>{
+                           return <VotingItem key={`voting-item-${i}`} title={elem.title} amount={elem.amount} img={elem.img}/>
                         })
                     }
                 </div>
