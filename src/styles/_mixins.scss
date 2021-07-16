@@ -1,0 +1,57 @@
+@mixin flex_column_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex_row_center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin   flex_row_space_between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex_column_start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+@mixin flex_column_end {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+@mixin font_size_small_xs {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+@mixin font_size_small_s {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21.6675px;
+  line-height: 25px;
+}
+@mixin font_size_small_m {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16.3902px;
+  line-height: 20px;
+}
+
+
+
+
+
+
+
+
+

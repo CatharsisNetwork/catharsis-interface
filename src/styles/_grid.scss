@@ -1,0 +1,55 @@
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@mixin col($column) {
+  flex: 0 0 (100% / 12) * $column;
+  max-width: (100% / 12) * $column;
+}
+
+@mixin offset($column) {
+  margin-left: (100% / 12) * $column;
+}
+
+@mixin ml($column) {
+  margin-right: (100% / 12) * $column;
+}
+
+._container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+._row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+@media (min-width: $sm) {
+  ._container {
+    max-width: 570px;
+  }
+
+}
+
+@media (min-width: $md) {
+  ._container {
+    max-width: 750px;
+  }
+
+}
+
+@media (min-width: $lg) {
+  ._container {
+    max-width: 990px;
+  }
+}
+
+@media (min-width: $xl) {
+  ._container {
+    max-width: 1170px;
+  }
+}

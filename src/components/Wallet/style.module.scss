@@ -1,0 +1,52 @@
+@import "../../styles/_vars.scss";
+@import "../../styles/_mixins.scss";
+
+.wallet_link {
+  @include flex_column_center;
+  position: relative;
+  height: 51px;
+  width: 196px;
+  background: $black120;
+  box-shadow: 0 0 30.439px $black0;
+  border-radius: 37.4634px;
+
+  & a {
+    text-decoration: none;
+  }
+
+  & p {
+    @include font_size_small_m;
+    text-align: center;
+    color: $grey20;
+    margin-right: 40px;
+    white-space: nowrap;
+
+  }
+
+  & img {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .wallet_link {
+    width: 154px;
+    height: 38px;
+
+    & p {
+      margin-right: 30px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    & img {
+      width: 29px;
+      position: absolute;
+      top: 5px;
+      right: 6px;
+    }
+  }
+}
