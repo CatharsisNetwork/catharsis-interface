@@ -1,0 +1,58 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+
+.wallet.header {
+  @include wallet;
+}
+.wallet.modal {
+  @include wallet;
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 990px) {
+  .wallet.header {
+    margin-top: 12px;
+    width: 154px;
+    height: 38px;
+
+    & a:first-child {
+      display: none;
+    }
+
+    & a:last-child {
+      padding: 0 49px 0 14px;
+
+      & > img {
+        width: 18.39px;
+        height: 17.68px;
+        top: -1px;
+        right: 16px;
+      }
+
+      & div {
+        & > img {
+          height: 29px;
+          width: 29px;
+        }
+        top: -7px;
+        right: 11px;
+        height: 29px;
+        width: 29px;
+      }
+    }
+    & a {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

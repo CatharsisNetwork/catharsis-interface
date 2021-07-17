@@ -1,28 +1,24 @@
 import React from 'react'
-import FaqPage from "./pages/faq/FAQPage";
 import './styles/global.scss';
-import {Footer} from "./components/Footer";
-import logo from "./img/footerLogo.png";
-import bg from "./img/faq_image/bg.png";
+import {Footer} from "./components/global/Footer";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Header from "./components/global/Header/Header";
+import PageRender from "./PageRender";
 
 
 function App() {
     return (
-            <div className={"main"}>
-                <div className="background"/>
-                <div className={"main_content"}>
-                    <div className={"header_logo"}>
-                        <img src={logo} alt={logo}/>
-                    </div>
-                    <div className={"header_bg"}>
-                        <img src={bg} alt={logo}/>
-                    </div>
-                    <div className="_container">
-                        <FaqPage/>
-                    </div>
-                </div>
+        <div className={"main"}>
+            <Router>
+                <Header/>
+                <Switch>
+                    <Route exact path='/' component={PageRender}/>
+                    <Route exact path='/:page' component={PageRender}/>
+                    <Route exact path='/:page/:slug' component={PageRender}/>
+                </Switch>
                 <Footer/>
-            </div>);
+            </Router>
+        </div>);
 }
 
 export default App;

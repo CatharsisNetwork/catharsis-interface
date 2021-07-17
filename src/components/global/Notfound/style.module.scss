@@ -1,0 +1,23 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+.not_found {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  @include flex_column_center;
+
+  &__text {
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 51px;
+    color: #FFFFFF;
+
+
+    span {
+      color: $lilac;
+    }
+  }
+}

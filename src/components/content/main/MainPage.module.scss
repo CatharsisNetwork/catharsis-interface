@@ -1,0 +1,339 @@
+.MainPage {
+    width: 100%;
+    margin: auto;
+    .mainText {
+        margin-top: 32px;
+        .title {
+            @media (max-width: 560px) and (min-width: 319px) {
+                width: 300px;
+                margin: auto;
+            }
+            h1 {
+                font-family: Gilroy;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 42px;
+                line-height: 51px;
+                text-align: center;
+                color: #ffffff;
+                @media (max-width: 560px) and (min-width: 319px) {
+                    font-size: 30px;
+                    line-height: 37px;
+                }
+                @media (max-width: 375px) and (min-width: 319px) {
+                    font-size: 25px;
+                    line-height: 27px;
+                }
+                span {
+                    color: #a54aff;
+                }
+            }
+        }
+        .subtitle {
+            max-width: 480px;
+            width: 100%;
+            margin: auto;
+            margin-top: 21px;
+            @media (max-width: 560px) and (min-width: 319px) {
+                max-width: 350px;
+            }
+            @media (max-width: 375px) and (min-width: 319px) {
+                max-width: 320px;
+            }
+            p {
+                font-family: Gilroy;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 20px;
+                line-height: 23px;
+                text-align: center;
+                color: #ffffff;
+                @media (max-width: 560px) and (min-width: 319px) {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+                @media (max-width: 375px) and (min-width: 319px) {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+    .vaultsBtn {
+        margin-top: 42px;
+        button {
+            border: 2px solid #d8b2ff;
+            background-color: #141516;
+            border-radius: 43px;
+            box-shadow: 0px 0px 41px rgba(255, 90, 110, 0.12);
+            padding: 14px 51px;
+            cursor: pointer;
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+
+            color: #d8b2ff;
+            @media (max-width: 560px) and (min-width: 319px) {
+                font-size: 15px;
+                padding: 11.33px 42.36px;
+            }
+        }
+    }
+    .mainImg {
+        display: flex;
+        justify-content: center;
+        margin-top: 33px;
+        @media (max-width: 500px) and (min-width: 319px) {
+            width: 294.24px;
+            height: 287px;
+            margin: auto;
+            margin-top: 33px;
+        }
+    }
+    .gallery {
+        margin-top: -20px;
+        position: relative;
+        .galleryBg {
+            background-image: url("../../../old/img/GalleryBg.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 120%;
+            position: absolute;
+            top: 45%;
+            z-index: -1;
+            @media (max-width: 900px) and (min-width: 319px) {
+                display: none;
+            }
+        }
+        .galleryTitle {
+            margin-bottom: 47px;
+            h3 {
+                font-family: Gilroy;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 42px;
+                line-height: 51px;
+                text-align: center;
+                color: #ffffff;
+                @media (max-width: 560px) and (min-width: 319px) {
+                    font-size: 30px;
+                }
+            }
+        }
+        .galleryItemsContainer {
+            max-width: 1110px;
+            width: 100%;
+            margin: auto;
+            @media (max-width: 1160px) and (min-width: 1050px) {
+                max-width: 1000px;
+            }
+            .galleryItems {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                @media (max-width: 1050px) and (min-width: 319px) {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+        .galleryBtn {
+            margin-top: 61px;
+            @media (max-width: 560px) and (min-width: 319px) {
+                margin-top: 24px;
+                button {
+                    font-size: 14.9524px;
+                    line-height: 18px;
+                    padding: 11.33px 52.33px;
+                }
+            }
+            button {
+                border: 2px solid #d8b2ff;
+                background-color: #141516;
+                border-radius: 43px;
+                box-shadow: 0px 0px 41px rgba(255, 90, 110, 0.12);
+                padding: 14px 63px;
+                cursor: pointer;
+                font-family: Gilroy;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 21px;
+                text-align: center;
+                color: #d8b2ff;
+            }
+        }
+    }
+    .howWorks {
+        margin-top: 56px;
+        width: 100%;
+        background-color: #181718;
+
+        .howItWorksContainer {
+            max-width: 1110px;
+            width: 100%;
+            margin: auto;
+            @media (max-width: 1160px) and (min-width: 1050px) {
+                max-width: 1000px;
+            }
+            .howWorksTitle {
+                padding-top: 34px;
+                margin-bottom: 15px;
+                h2 {
+                    font-family: Gilroy;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 42px;
+                    line-height: 51px;
+                    text-align: center;
+                    color: #ffffff;
+                    @media (max-width: 560px) and (min-width: 319px) {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .howItWorksItems {
+                padding-bottom: 37px;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                @media (max-width: 1050px) and (min-width: 319px) {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .auction {
+        margin-top: 87px;
+        background-image: url("../../../old/img/auctionBottomBg.png");
+        background-repeat: no-repeat;
+        background-size: 397px;
+        background-position: right bottom;
+        @media (max-width: 900px) and (min-width: 319px) {
+            background-image: none;
+        }
+        .auctionContainer {
+            max-width: 1110px;
+            width: 100%;
+            margin: auto;
+            @media (max-width: 1160px) and (min-width: 1050px) {
+                max-width: 1000px;
+            }
+            .auctionTitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 47px;
+                h2 {
+                    margin-left: 13px;
+                    font-family: Gilroy;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 42px;
+                    line-height: 51px;
+                    color: #ffffff;
+                    @media (max-width: 560px) and (min-width: 319px) {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .auctionItems {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                position: relative;
+                @media (max-width: 1050px) and (min-width: 319px) {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .itemsBg {
+                    position: absolute;
+                    top: 14%;
+                    left: -8%;
+                    background-image: url("../../../old/img/auctionTopBg.png");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 187px;
+                    height: 175px;
+                    z-index: -1;
+                }
+            }
+            .auctionBtn {
+                margin-top: 61px;
+                button {
+                    border: 2px solid #d8b2ff;
+                    background-color: #141516;
+                    border-radius: 43px;
+                    box-shadow: 0px 0px 41px rgba(255, 90, 110, 0.12);
+                    padding: 14px 63px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .voting {
+        margin-top: 62px;
+        .votingContainer {
+            max-width: 1110px;
+            width: 100%;
+            margin: auto;
+            @media (max-width: 1160px) and (min-width: 1050px) {
+                max-width: 1000px;
+            }
+            .votingTitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 7px;
+                h2 {
+                    font-family: Gilroy;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 42px;
+                    line-height: 51px;
+                    text-align: center;
+                    color: #ffffff;
+                    margin-left: 10px;
+                    @media (max-width: 560px) and (min-width: 319px) {
+                        font-size: 30px;
+                    }
+                }
+            }
+            .votingSubtitle {
+                p {
+                    font-family: Gilroy;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 23px;
+                    text-align: center;
+
+                    color: #ffffff;
+                }
+            }
+            .votingItems {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @media (max-width: 1050px) and (min-width: 319px) {
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .footer {
+        position: relative;
+        z-index: 1;
+        margin-top: 86px;
+    }
+}
