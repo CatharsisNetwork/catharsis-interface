@@ -5,7 +5,6 @@ import { GalleryItem } from '../../../old/GalleryItem';
 import { HowItWorksItem } from '../../../old/HowItWorksItem';
 import { AuctionItem } from '../../../old/AuctionItem';
 import { VotingItem } from '../../../old/VotingItem';
-import { Footer } from '../../global/Footer';
 import { gallery } from '../../../assets/config';
 import {howWorks} from '../../../assets/config';
 import {auction} from '../../../assets/config';

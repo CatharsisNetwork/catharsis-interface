@@ -5,20 +5,48 @@
 .wallet.header {
   @include wallet;
 }
+
 .wallet.modal {
   @include wallet;
 }
+
+.wallet.footer {
+  @include wallet;
+  width: 196px;
+  height: 51px;
+
+  & a:first-child {
+    display: none;
+  }
+
+  & a:last-child {
+
+    & > img {
+      top: -1px;
+      right: 3px;
+    }
+
+    & div {
+      top: -9px;
+      right: -5px;
+    }
+  }
+}
+
 @keyframes rot {
   0% {
     transform: rotate(0deg);
+
   }
   100% {
     transform: rotate(360deg);
+
   }
 }
 
 @media (max-width: 990px) {
-  .wallet.header {
+  .wallet.header,
+  .wallet.footer {
     margin-top: 12px;
     width: 154px;
     height: 38px;
@@ -42,12 +70,14 @@
           height: 29px;
           width: 29px;
         }
+
         top: -7px;
         right: 11px;
         height: 29px;
         width: 29px;
       }
     }
+
     & a {
       font-style: normal;
       font-weight: 600;
@@ -55,4 +85,9 @@
       line-height: 17px;
     }
   }
+  .wallet.footer {
+    margin-top: 0;
+  }
 }
+
+

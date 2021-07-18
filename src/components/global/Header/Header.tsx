@@ -8,6 +8,15 @@ import Logo from "../../ui/Logo/Logo";
 import Navbar from "../../ui/Navbar/Navbar";
 import Avatar from "../../ui/Avatar/Avatar";
 
+const links = [
+    {label: 'Main', path: '/'},
+    {label: 'Fractionalize', path: '/fractionalize'},
+    {label: 'The Limbo', path: '/the_limbo'},
+    {label: 'FAQ', path: '/faq'},
+    {label: 'Farm LP', path: '/farm_lp'},
+]
+
+
 function Header() {
     const custom_style = "header_modal"
 
@@ -19,13 +28,12 @@ function Header() {
         custom_style,
     });
     return (
-
-        <div className={style.header}>
+        <header className={style.header}>
             <div className={style.header_logo}>
                 <Logo/>
             </div>
             <div className={style.header_navbar}>
-                <Navbar customStyle={"header"}/>
+                <Navbar customStyle={"header"} links={links}/>
             </div>
             <div className={style.header_wallet}>
                 <Wallet customStyle={"header"}>
@@ -36,8 +44,7 @@ function Header() {
                 <Menu/>
             </div>
             <ModalComponent/>
-        </div>
-
+        </header>
     );
 }
 

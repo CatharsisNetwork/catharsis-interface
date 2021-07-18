@@ -55,9 +55,13 @@ ul[class],
 ol[class] {
   list-style: none;
 }
-
+li{
+  list-style: none;
+}
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: #141414;
 }
 
 

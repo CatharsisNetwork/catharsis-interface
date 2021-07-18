@@ -10,9 +10,16 @@ export interface IAlert {
     success?: string | string[]
     errors?: string | string[]
 }
+
 export interface IModalProps {
     isOpen: boolean
     custom_style?: string
     onClose: () => void
     children: React.ReactNode
 }
+
+export interface LinkType {
+    label: string
+    path: string
+}
+

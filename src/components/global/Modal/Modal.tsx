@@ -1,9 +1,7 @@
 import React from 'react';
 import ModalContainer from './ModalContainer';
 import styles from './Modal.module.scss';
-
 import close from "../../../assets/image/header/close.png";
-import {closeModalLinkOnClick} from "../../../hooks/useCloseModalContext";
 import {IModalProps} from "../../../utils/types";
 
 
@@ -12,10 +10,6 @@ import {IModalProps} from "../../../utils/types";
  The component is a wrapper for reuse elsewhere , accepts custom styles for customization.
  Used in Header at screen width 990px.
  */
-
-
-
-
 
 
 const Modal: React.FC<IModalProps> = (props) => {
@@ -30,15 +24,15 @@ const Modal: React.FC<IModalProps> = (props) => {
 
     return (
         <ModalContainer>
-            <closeModalLinkOnClick.Provider value={onClose}>
                 <div className={styles.root} onClick={onClose}>
                     <div className={`${styles[`${custom_style}`]} ${styles.container}`}
                          onClick={(event) => event.stopPropagation()}>
-                        <div className={styles.children}>{children}</div>
+                        <div className={styles.children}>
+                            {children}
+                        </div>
                         <img className={styles.close} src={close} alt="close" onClick={onClose}/>
                     </div>
                 </div>
-            </closeModalLinkOnClick.Provider>
         </ModalContainer>
     );
 };

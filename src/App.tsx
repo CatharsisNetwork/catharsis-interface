@@ -1,9 +1,9 @@
 import React from 'react'
 import './styles/global.scss';
-import {Footer} from "./components/global/Footer";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Header from "./components/global/Header/Header";
 import PageRender from "./PageRender";
+import Footer from './components/global/Footer/Footer';
 
 
 function App() {
