@@ -6,15 +6,7 @@ import {Link} from "react-router-dom";
 import avatar from "../../../assets/image/header/avatar.png";
 import Navbar from "../../ui/Navbar/Navbar";
 import {useCloseModalContext} from "../../../hooks/useCloseModalContext";
-
-const links = [
-    {label: 'Main', path: '/'},
-    {label: 'Fractionalize', path: '/fractionalize'},
-    {label: 'The Limbo', path: '/the_limbo'},
-    {label: 'FAQ', path: '/faq'},
-    {label: 'Farm LP', path: '/farm_lp'},
-]
-
+import {links} from '../../../assets/config/header/data';
 
 
 function HeaderModal() {

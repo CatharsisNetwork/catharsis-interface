@@ -1,2 +1,2 @@
-import FaqPage from "../components/content/faq/FaqPage";
+import FaqPage from "../components/content/faq/FAQPage"
 export default FaqPage;

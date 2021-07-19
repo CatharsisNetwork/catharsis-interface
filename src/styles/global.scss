@@ -48,4 +48,9 @@ body {
   z-index: -1;
   width: 100vw;
   height: 90vh;
+  @media (max-width: 550px)  {
+    transform: rotate(271deg);
+    left: -185px;
+    top: 177px;
+  }
 }

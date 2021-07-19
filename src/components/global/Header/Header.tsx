@@ -7,14 +7,7 @@ import HeaderModal from "./HeaderModal";
 import Logo from "../../ui/Logo/Logo";
 import Navbar from "../../ui/Navbar/Navbar";
 import Avatar from "../../ui/Avatar/Avatar";
-
-const links = [
-    {label: 'Main', path: '/'},
-    {label: 'Fractionalize', path: '/fractionalize'},
-    {label: 'The Limbo', path: '/the_limbo'},
-    {label: 'FAQ', path: '/faq'},
-    {label: 'Farm LP', path: '/farm_lp'},
-]
+import {links} from '../../../assets/config/header/data';
 
 
 function Header() {

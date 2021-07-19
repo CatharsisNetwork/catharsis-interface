@@ -1,19 +1,10 @@
 import React from 'react';
+import {links} from '../../../assets/config/footer/data';
 import Avatar from '../../ui/Avatar/Avatar';
 import Logo from '../../ui/Logo/Logo';
-import Menu from '../../ui/Menu/Menu';
 import Navbar from '../../ui/Navbar/Navbar';
 import Wallet from '../../ui/Wallet/Wallet';
 import style from './style.module.scss';
-
-const links = [
-    {label: 'Main', path: '/'},
-    {label: 'Gallery', path: '/gallery'},
-    {label: 'Account', path: '/account'},
-    {label: 'Fractionalize', path: '/fractionalize'},
-    {label: 'FAW', path: '/faw'},
-    {label: 'Auction', path: '/auction'},
-]
 
 
 function Footer() {

@@ -2,7 +2,7 @@
 @import "../../../styles/_mixins.scss";
 
 .navbar_header {
-  background: rgba(255, 255, 255, 0.51);
+  background: $grey80;
   backdrop-filter: blur(1px);
   border-radius: 32px;
   min-width: 468px;
@@ -87,10 +87,7 @@
     text-align: start;
 
     & a {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
+      @include font_size_small_xs;
       color: #565656;
     }
   }

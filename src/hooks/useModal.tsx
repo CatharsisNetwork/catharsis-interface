@@ -34,7 +34,7 @@ const useModal = ({children, custom_style = ''}: ModalPropsType) => {
                 </Modal>
             </CloseModalLinkOnClick.Provider>
         ),
-        [isOpen]
+        [isOpen,children,custom_style]
     );
 
     return {ModalComponent, onOpen};

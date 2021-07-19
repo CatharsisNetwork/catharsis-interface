@@ -3,14 +3,15 @@
 
 
 .footer {
-  width: 100%;
-  background: #181818;
-  max-height: 407px;
   @include flex_column_center;
+  width: 100%;
+  background: $black20;
+  max-height: 407px;
+
 
   &_logo {
-    order: 2;
     @include flex_column_center;
+    order: 2;
     position: relative;
 
     & img {
@@ -19,10 +20,7 @@
     }
 
     &__text {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 21.6675px;
-      line-height: 25px;
+      @include font_size_medium_xl;
       text-align: center;
       color: $white;
 
@@ -37,14 +35,11 @@
     order: 3;
 
     &__text {
+      @include font_size_small_xs;
       margin-top: 102px;
       text-align: center;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 21px;
       text-decoration-line: underline;
-      color:#565656;
+      color: $grey0;
       white-space: nowrap;
     }
   }
@@ -62,28 +57,27 @@
 }
 
 .copyright {
+  @include flex_column_center;
   background: $black140;
   width: 100%;
   margin: 0 auto;
-  @include flex_column_center;
   height: 40px;
+
   span {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-    color: #373737;
+    @include font_size_small_xs;
+    color: $grey40;
     margin: 12px 12px;
   }
 
 }
 
 @media (max-width: 768px) {
-  .footer{
+  .footer {
     max-height: 400px;
+
     &_logo {
       order: 1;
-      margin-top: 22px ;
+      margin-top: 22px;
       margin-bottom: 7px;
     }
 
@@ -92,11 +86,12 @@
       position: relative;
       order: 2;
       margin-bottom: 32px;
+
       &__text {
         margin-top: 0;
         position: absolute;
         top: 165px;
-        left: 11px;
+        left: -4px;
       }
     }
 
@@ -110,6 +105,7 @@
   }
   .copyright {
     height: 30px;
+
     span {
       font-size: 12px;
       line-height: 14px;
