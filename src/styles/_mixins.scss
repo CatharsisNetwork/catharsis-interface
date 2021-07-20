@@ -76,7 +76,12 @@
   font-size: 14px;
   line-height: 17px;
 }
-
+@mixin font_size_small_xl {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 17px;
+}
 @mixin font_size_medium_s {
   font-style: normal;
   font-weight: bold;
@@ -94,6 +99,17 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 44px;
+}
+@mixin font_size_medium_800 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+}@mixin font_size_medium_800_s {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
 }
 @mixin font_size_medium_xl{
   font-style: normal;

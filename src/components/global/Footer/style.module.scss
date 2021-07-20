@@ -70,7 +70,14 @@
   }
 
 }
-
+@media (max-width: 768px) and (max-height: 450px){
+  .footer_logo{
+    img {
+      width: 148.37px;
+      height: 51.36px;
+    }
+  }
+}
 @media (max-width: 768px) {
   .footer {
     max-height: 400px;
@@ -79,6 +86,16 @@
       order: 1;
       margin-top: 22px;
       margin-bottom: 7px;
+
+      &__text {
+        margin: 7px 0;
+        @include font_size_small_xl;
+      }
+
+      img {
+        width: 148.37px;
+        height: 51.36px;
+      }
     }
 
     &_wallet {
@@ -113,5 +130,4 @@
 
   }
 }
-
 

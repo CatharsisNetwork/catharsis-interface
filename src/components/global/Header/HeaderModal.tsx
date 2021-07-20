@@ -16,7 +16,7 @@ function HeaderModal() {
             <div className={style.modal_logo}>
                 <Logo/>
             </div>
-            <div className={style.modal_logo}>
+            <div className={style.modal_navbar}>
                 <Navbar customStyle={"modal"} onClose={onClose} links={links}/>
             </div>
             <div className={style.modal_wallet}>
