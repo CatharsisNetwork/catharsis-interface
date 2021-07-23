@@ -1,0 +1,20 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+.not_found {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 100px 0;
+  @include flex_column_center;
+
+  &__text {
+    @include font_size_large;
+    color: $white;
+
+
+    span {
+      color: $lilac;
+    }
+  }
+}

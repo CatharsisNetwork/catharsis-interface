@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classes from './Navigation.module.scss';
-import logo from './../../img/CatharsisLogo.png';
+import logo from '../../img/CatharsisLogo.png';
 import account from '../../img/accountImg.png';
 import connectWallet from '../../img/connectWallet.png';
 import { ConnectWallet } from '../../UI/ConnectWallet';

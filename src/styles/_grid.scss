@@ -1,0 +1,37 @@
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+._container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+@media (min-width: $sm) {
+  ._container {
+    max-width: 570px;
+  }
+
+}
+
+@media (min-width: $md) {
+  ._container {
+    max-width: 750px;
+  }
+
+}
+
+@media (min-width: $lg) {
+  ._container {
+    max-width: 990px;
+  }
+}
+
+@media (min-width: $xl) {
+  ._container {
+    max-width: 1170px;
+  }
+}
