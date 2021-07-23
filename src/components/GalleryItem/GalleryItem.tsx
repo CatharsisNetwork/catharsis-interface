@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './GalleryItem.module.scss';
-import {GalleryTypes} from '../../assets/config';
+import {GalleryTypes} from '../../config';
 
 function GalleryItem({title, amount, type, status, img, supply, fee, amountETH}:GalleryTypes) {
     return (
@@ -36,7 +36,7 @@ function GalleryItem({title, amount, type, status, img, supply, fee, amountETH}:
                 </div>
             </div>
             <div className={classes.itemImg}>
-                <img src={require(`../img/${img}.jpg`).default} alt={img} />
+                <img src={require(`../../img/${img}.jpg`).default} alt={img} />
             </div>
             <div className={classes.itemBody}>
                 <div className={classes.totalSupply}>

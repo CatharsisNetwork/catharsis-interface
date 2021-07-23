@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './VotingItem.module.scss';
-import item from '../img/AuctionItem.jpg';
-import {votingTypes} from '../../assets/config'
+import item from '../../img/AuctionItem.jpg';
+import {votingTypes} from '../../config'
 
 function VotingItem({title, amount, img}:votingTypes) {
     return (
@@ -18,7 +18,7 @@ function VotingItem({title, amount, img}:votingTypes) {
             
             </div>
             <div className={classes.itemImage}>
-                <img src={require(`../img/${img}.jpg`).default} alt={img} />
+                <img src={require(`../../img/${img}.jpg`).default} alt={img} />
             </div>
             <div className={classes.itemBtn}>
                 <button>Vote</button>

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import classes from './Navigation.module.scss';
-import logo from '../img/CatharsisLogo.png';
-import account from '../img/accountImg.png';
-import connectWallet from '../img/connectWallet.png';
-import { ConnectWallet } from '../UI/ConnectWallet';
-import navMobile from '../img/mobileNavBtn.png';
-import { ConnectWalletAcount } from '../UI/ConnectWalletAccount';
+import logo from '../../img/CatharsisLogo.png';
+import account from '../../img/accountImg.png';
+import connectWallet from '../../img/connectWallet.png';
+import { ConnectWallet } from '../../UI/ConnectWallet';
+import navMobile from '../../img/mobileNavBtn.png';
+import { ConnectWalletAcount } from '../../UI/ConnectWalletAccount';
 
 function Navigation() {
 

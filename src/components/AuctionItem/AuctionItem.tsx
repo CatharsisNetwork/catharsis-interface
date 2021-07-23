@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './AuctionItem.module.scss';
-import {AuctionTypes} from '../../assets/config';
+import {AuctionTypes} from '../../config';
 
 function AuctionItem({title, amount, type, status, img, endsText, timeLeft}:AuctionTypes) {
     return (
@@ -30,7 +30,7 @@ function AuctionItem({title, amount, type, status, img, endsText, timeLeft}:Auct
                 </div>
             </div>
             <div className={classes.itemImage}>
-                <img src={require(`../img/${img}.jpg`).default} alt={img} />
+                <img src={require(`../../img/${img}.jpg`).default} alt={img} />
             </div>
             <div className={classes.itemBody}>
                 <div className={classes.itemBodyTitle}>

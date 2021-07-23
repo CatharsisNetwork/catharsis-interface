@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../../old/img/footerLogo.png";
+import logo from "../../../img/footerLogo.png";
 
 function Logo() {
     return <img src={logo} alt={logo}/>

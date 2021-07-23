@@ -1,5 +1,5 @@
 import React from 'react';
-import MainPage from "../components/content/main/MainPage";
+import MainPage from "../views/MainPage";
 
 
 function Index() {

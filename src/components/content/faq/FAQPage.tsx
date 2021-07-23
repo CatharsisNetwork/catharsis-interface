@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './style.module.scss';
 import Accordion from "./Acordion";
-import {data} from '../../../assets/config/faq/data';
+import {data} from '../../../assets/database/faq/data';
 
 
 function FAQPage() {

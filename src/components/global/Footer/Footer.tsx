@@ -1,5 +1,5 @@
 import React from 'react';
-import {links} from '../../../assets/config/footer/data';
+import {links} from '../../../assets/database/footer/data';
 import Avatar from '../../ui/Avatar/Avatar';
 import Logo from '../../ui/Logo/Logo';
 import Navbar from '../../ui/Navbar/Navbar';

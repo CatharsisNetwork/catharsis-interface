@@ -7,7 +7,7 @@ import HeaderModal from "./HeaderModal";
 import Logo from "../../ui/Logo/Logo";
 import Navbar from "../../ui/Navbar/Navbar";
 import Avatar from "../../ui/Avatar/Avatar";
-import {links} from '../../../assets/config/header/data';
+import {links} from '../../../assets/database/header/data';
 
 
 function Header() {

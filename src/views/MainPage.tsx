@@ -1,14 +1,14 @@
 import React from 'react';
 import classes from './MainPage.module.scss';
-import crypto from '../../../old/img/MainPageTitle.png';
-import { GalleryItem } from '../../../old/GalleryItem';
-import { HowItWorksItem } from '../../../old/HowItWorksItem';
-import { AuctionItem } from '../../../old/AuctionItem';
-import { VotingItem } from '../../../old/VotingItem';
-import { gallery } from '../../../assets/config';
-import {howWorks} from '../../../assets/config';
-import {auction} from '../../../assets/config';
-import {voting} from '../../../assets/config';
+import crypto from '../img/MainPageTitle.png';
+import { GalleryItem } from '../components/GalleryItem';
+import { HowItWorksItem } from '../components/HowItWorksItem';
+import { AuctionItem } from '../components/AuctionItem';
+import { VotingItem } from '../components/VotingItem';
+import { gallery } from '../config';
+import {howWorks} from '../config';
+import {auction} from '../config';
+import {voting} from '../config';
 
 
 

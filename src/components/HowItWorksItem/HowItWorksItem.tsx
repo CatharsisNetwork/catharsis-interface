@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import classes from './HowItWorksItem.module.scss';
-import lock from '../img/lock.png';
-import {HowWorksTypes} from '../../assets/config';
+import lock from '../../img/lock.png';
+import {HowWorksTypes} from '../../config';
 
 
 function HowItWorksItem({img, title, text, color}:HowWorksTypes){
@@ -9,7 +9,7 @@ function HowItWorksItem({img, title, text, color}:HowWorksTypes){
         <>
         <div className={classes.HowItWorks}>
             <div className={classes.HowItWorksImage}>
-                <img src={require(`../img/${img}.png`).default} alt="img" />
+                <img src={require(`../../img/${img}.png`).default} alt="img" />
             </div>
             <div className={classes.HowItWorksTitle}>
                 <h3 style={{color: color}}>{title}</h3>
