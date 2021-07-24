@@ -22,6 +22,7 @@ function Accordion(props: any) {
                 <button className={style.accordion_title} onClick={toggleAccordion}>
                     <div>
                         <span>{props.title}</span>
+
                     </div>
                     <img className={active ? style.icon_down : style.icon_up}
                          src={active ? caret_down : caret_up} alt={"caret"}/>

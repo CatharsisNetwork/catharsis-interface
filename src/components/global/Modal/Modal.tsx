@@ -2,7 +2,7 @@ import React from 'react';
 import ModalContainer from './ModalContainer';
 import style from './Modal.module.scss';
 import close from "../../../assets/image/header/close.png";
-import {IModalProps} from "../../../utils/types";
+import {IModalProps} from "../../../utils/types/types";
 
 
 

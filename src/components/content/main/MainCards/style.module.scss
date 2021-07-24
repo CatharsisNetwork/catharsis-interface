@@ -1,0 +1,104 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+
+.card {
+
+  z-index: 1000;
+  padding: 36px 23px 34px 23px;
+  @include flex_column_center;
+  width: 350px;
+  background: rgba(33, 32, 33, 0.51);
+  border-radius: 38px;
+
+  &_image {
+    position: relative;
+
+    img:last-child {
+      position: absolute;
+    }
+  }
+
+  &_title {
+    margin: 17px 0 17px 0;
+    text-align: center;
+
+    span {
+
+      width: 248px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+
+      color: #D8B2FF;
+    }
+  }
+
+  &_description {
+    height: 120px;
+    text-align: center;
+
+    span {
+      width: 307px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+
+      color: #8C8C8C;
+    }
+
+    p {
+      color: $black80;
+    }
+
+  }
+}
+
+.custom_purple {
+  .card_image {
+    img:last-child {
+      top: 11px;
+      left: 11px;
+    }
+  }
+
+  .card_title {
+    span {
+      color: #D8B2FF;
+    }
+  }
+}
+
+.custom_orange {
+  .card_image {
+    img:last-child {
+      top: 14px;
+      left: 12px;
+    }
+  }
+
+  .card_title {
+    span {
+      color: #F55656;
+    }
+  }
+}
+
+.custom_green {
+  .card_image {
+    img:last-child {
+      top: 12px;
+      left: 16px;
+    }
+  }
+
+  .card_title {
+    span {
+      color: #92E784;
+    }
+  }
+}

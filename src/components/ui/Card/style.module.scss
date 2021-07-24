@@ -1,0 +1,141 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+.card {
+  max-width: 350px;
+  width: 100%;
+  height: 558px;
+
+
+  background: $black20;
+  box-shadow: 0 48px 136px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+
+  &_header {
+    @include flex_column_start;
+    padding: 16px 13px 42px 21px;
+
+    & > div {
+      @include flex_row_space_between;
+    }
+
+    &__title {
+      white-space: nowrap;
+      @include font_size_small_xll;
+      color: $white;
+      margin-right: 51px;
+    }
+
+    &__amount {
+      @include flex_column_start;
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 5px;;
+        left: 19px;
+        @include font_size_small_s_900;
+        text-align: center;
+        color: $black20;
+
+      }
+    }
+
+    &__star {
+      @include flex_row_start;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      span {
+        margin-left: 8px;
+        @include font_size_micro;
+        text-align: center;
+        color: $pink0;
+      }
+    }
+  }
+
+  &_content {
+    width: 350px;
+    height: 286px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_footer {
+    height: 160px;
+    @include flex_column_center;
+    background: $purple20;
+    box-shadow: 0 48px 136px $black160;
+    border-radius: 0 0 22px 22px;
+
+    &__title {
+      @include font_size_small_xs_bold;
+      color: $white;
+      margin-top: 11px;
+    }
+
+    &__countdown {
+      padding: 0 15px 0 21px;
+      width: 100%;
+      flex: 1 1 auto;
+      @include flex_row_space_between;
+
+      .interval p {
+        @include font_size_small_medium_bold;
+        color: $white;
+      }
+
+      .interval span {
+        @include font_size_micro;
+
+        color: $lilac40;
+      }
+    }
+
+    &__details {
+      margin-bottom: 15px;
+
+      button:focus {
+
+      }
+
+      button {
+        @include font_size_small_m;
+        width: 159px;
+        height: 41px;
+        background: $white;
+        border-radius: 43px;
+        text-align: center;
+        color: $purple20;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 360px) {
+  .card {
+    padding: 0 20px;
+
+    &_header__title {
+      margin-right: 21px;
+    }
+
+    &_content {
+      width: 100%;
+    }
+  }
+
+}
+
+
+
+
+

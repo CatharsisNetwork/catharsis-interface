@@ -18,16 +18,16 @@ type WalletPropsType = {
 function Wallet({children, customStyle = ''}: WalletPropsType) {
     return (
         <div className={`${style[customStyle]} ${style.wallet} `}>
-            
+
             {children}
-            
-            <Link to={"/"}><p>Connect wallet</p>
+
+            <span ><p>Connect wallet</p>
                 <img src={wallet} alt="wallet"/>
                 <div>
                     <img src={circle} alt="circle"/>
                 </div>
-            </Link>
-            
+            </span>
+
         </div>
     );
 }

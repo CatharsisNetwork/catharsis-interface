@@ -7,12 +7,13 @@ import avatar from "../../../assets/image/header/avatar.png";
 import Navbar from "../../ui/Navbar/Navbar";
 import {useCloseModalContext} from "../../../hooks/useCloseModalContext";
 import {links} from '../../../assets/database/header/data';
+import Avatar from "../../ui/Avatar/Avatar";
 
 
 function HeaderModal() {
     const onClose = useCloseModalContext()
     return (
-        <div className={style.modal} >
+        <div className={style.modal}>
             <div className={style.modal_logo}>
                 <Logo/>
             </div>
@@ -21,10 +22,7 @@ function HeaderModal() {
             </div>
             <div className={style.modal_wallet}>
                 <Wallet customStyle={"modal"}>
-                    <Link to={"/"}>
-                        <img src={avatar} alt="avatar"/>
-                        <p>Account</p>
-                    </Link>
+                    <Avatar/>
                 </Wallet>
             </div>
         </div>
