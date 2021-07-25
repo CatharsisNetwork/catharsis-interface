@@ -5,6 +5,8 @@ import main_content_vector from "../../../assets/image/main/main_content_vector.
 import main_content_frame_1 from "../../../assets/image/main/main_content_frame_1.png"
 import main_content_frame_2 from "../../../assets/image/main/main_content_frame_2.png"
 import main_content_action from "../../../assets/image/main/main_content_action.png"
+import main_content_flame from "../../../assets/image/main/main_content_flame.png"
+import main_content_voting from "../../../assets/image/main/main_content_voting.png"
 import CardsList from "../../ui/Card/CardsList";
 import {data} from "../../../assets/database/main/data";
 import MainCardsList from './MainCards/MainCardsList';
@@ -13,6 +15,8 @@ function MainPage() {
     return (
         <>
             <div className={"_container"}>
+
+
                 <section className={style.main_header}>
                     <div className={style.main_header__title}>
                         <h1>
@@ -35,6 +39,8 @@ function MainPage() {
                     </div>
                 </section>
             </div>
+
+
             <section className={style.position}>
                 <div className={"_container"}>
                     <div className={style.main_content}>
@@ -51,6 +57,8 @@ function MainPage() {
                 </div>
                 <img src={main_content_vector} alt="main_content_vector"/>
             </section>
+
+
             <section className={style.position}>
                 <div className={"_container"}>
                     <div className={style.main_content}>
@@ -60,36 +68,55 @@ function MainPage() {
                         <div className={style.main_content__cards}>
                             <MainCardsList data={data.content.main_cards}/>
                         </div>
+                        <div className={style.main_content__action}>
+                            <img src={main_content_action} alt="main_content_action"/>
+                        </div>
                     </div>
-                </div >
+
+                </div>
                 <div className={style.position_bg}/>
+
             </section>
-            <div className={"_container"}>
-                <section className={style.main_content}>
-                    <div className={style.main_content__cards}>
 
-                    </div>
-                </section>
-            </div>
-            <img src={main_content_action} alt="main_content_action"/>
-            <div className={"_container"}>
-                <section className={style.main_content}>
-                    <div className={style.main_content__cards}>
 
+            <section className={style.position}>
+                <div className={"_container"}>
+                    <div className={style.main_content}>
+                        <div className={style.main_content__title}>
+                            <span><img src={main_content_flame} alt=""/> Auction</span>
+                        </div>
+                        <div className={style.main_content__cards}>
+                            <CardsList cards={data.content.cards_content_2}/>
+                        </div>
+                        <div className={style.main_content__button}>
+                            <button> Gallery</button>
+                        </div>
                     </div>
-                </section>
-            </div>
-            <div>
-                <img src={main_content_frame_1} alt="main_content_frame_1"/>
-                <img src={main_content_frame_2} alt="main_content_frame_2"/>
-            </div>
-            <div className={"_container"}>
-                <section className={style.main_content}>
-                    <div className={style.main_content__cards}>
+                </div>
+                <div className={style.position_frame}>
+                    <img src={main_content_frame_1} alt="main_content_frame_1"/>
+                </div>
+                <div className={style.position_frame}>
+                    <img src={main_content_frame_2} alt="main_content_frame_2"/>
+                </div>
+            </section>
 
+
+            <section className={style.position}>
+                <div className={"_container"}>
+                    <div className={style.main_content}>
+                        <div className={style.main_content__title}>
+                            <span><img src={main_content_voting} alt=""/> Voting</span>
+                            <p>Let’s choose a winner together</p>
+                        </div>
+                        <div className={style.main_content__cards}>
+                            <CardsList cards={data.content.cards_content_3}/>
+                        </div>
                     </div>
-                </section>
-            </div>
+                </div>
+
+            </section>
+
         </>
     );
 }
