@@ -161,6 +161,7 @@
   font-size: 22px;
   line-height: 27px;
 }
+
 @mixin font_size_medium_x_bold {
   @include font_weight_bold;
   font-size: 20px;
@@ -222,7 +223,49 @@
 }
 
 
+@mixin card_footer__star_or_flame {
+  @include flex_row_start;
+  margin-top: 8px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  span {
+    margin-left: 8px;
+    @include font_size_micro;
+    text-align: center;
+    color: $pink0;
+  }
+}
 
+@mixin card_footer__btn {
+  margin-bottom: 25px;
+  button {
+    cursor: pointer;
+    @include font_size_small_m;
+    width: 159px;
+    height: 41px;
+    background: $white;
+    border-radius: 43px;
+    text-align: center;
+    color: $purple20;
+  }
+}
+@mixin card_footer_info_value {
+  span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #5DAD6A;
+  }
+  p {
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
 
-
-
+    color: #6D6D6D;
+  }
+}

@@ -1,13 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import style from "./style.module.scss";
 import {data} from "../../../assets/database/callery/data";
 import Input from "../../ui/Input/Input";
 import Dropdown from "../../ui/Dropdown/Dropdown";
 import CardsList from "../../ui/Card/CardsList";
 import GalleryTabsGroup from "./GalleryTabsGroup";
+import { scrollToTop} from "../../../utils/lib/scroll";
 
 
 const GalleryPage = () => {
+
+    useEffect(() => scrollToTop(),[])
 
     return (
         <div className={"content"}>

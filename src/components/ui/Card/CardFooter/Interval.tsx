@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './style.module.scss';
-import {IntervalType} from "../../../assets/database/callery/data";
+import style from '../style.module.scss';
+import {IntervalType} from "../../../../assets/database/callery/data";
 
 
 

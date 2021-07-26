@@ -1,14 +1,11 @@
 import card_content_1 from "../../image/card/card_content_1.png";
-import card_content_2 from "../../image/card/card_content_2.png";
 import card_content_3 from "../../image/card/card_content_3.png";
 import card_content_4 from "../../image/card/card_content_4.png";
 import card_content_5 from "../../image/card/card_content_5.png";
 import card_content_6 from "../../image/card/card_content_6.png";
 import card_content_7 from "../../image/card/card_content_7.png";
-import card_content_8 from "../../image/card/card_content_8.png";
 import card_content_9 from "../../image/card/card_content_9.png";
 import card_content_10 from "../../image/card/card_content_10.png";
-import card_content_11 from "../../image/card/card_content_11.png";
 import card_content_12 from "../../image/card/card_content_12.png";
 import main_card_1 from "../../image/main/main_card_1.png";
 import main_card_2 from "../../image/main/main_card_2.png";
@@ -16,7 +13,7 @@ import main_card_3 from "../../image/main/main_card_3.png";
 import main_card_vector_1 from "../../image/main/main_card_vector_1.png";
 import main_card_vector_2 from "../../image/main/main_card_vector_2.png";
 import main_card_vector_3 from "../../image/main/main_card_vector_3.png";
-import {CardType, GalleryDataType} from "../callery/data";
+import {CardType} from "../callery/data";
 
 
 export type MainCardType = {
@@ -36,8 +33,8 @@ export type MainDataType = {
     content: {
         cards_content_1: Array<CardType>,
         main_cards: Array<MainCardType>,
-        cards_content_2:Array<CardType>
-        cards_content_3:Array<CardType>
+        cards_content_2: Array<CardType>
+        cards_content_3: Array<CardType>
     }
 }
 
@@ -51,61 +48,83 @@ export const data: MainDataType = {
             {
                 header: {
                     title: "Here comes the squad",
-                    amount: "1 NFT",
-                    star: "Fractional panks",
+                    amount: "Bundle",
+                    star: {
+                        icon: "star",
+                        title: "Fractional panks"
+                    },
+                    flame: {
+                        icon: "flame",
+                        title: "Live auction"
+                    }
                 },
 
                 content: {
                     img: card_content_7
                 },
                 footer: {
-                    title: "Auction ends in 2,524 blocks",
-                    interval: [
-                        {value: 0, period: "Days"},
-                        {value: 19, period: "Hours"},
-                        {value: 56, period: "Minutes"},
-                        {value: 13, period: "Seconds"},
-                    ]
+                    info: [
+                        {value: 12, title: "Total supply", symbol: "K", style: "total"},
+                        {value: 1, title: "Curator fee", symbol: "%", style: "curator"},
+                        {value: 0.2, title: "Highest Bid", symbol: "ETH", style: "bid"},
+
+                    ],
+                    button: {
+                        value: "View details",
+                        style: "mauve"
+                    }
                 }
             },
             {
                 header: {
                     title: "Here comes the squad",
                     amount: "1 NFT",
-                    star: "Fractional panks",
+                    star: {
+                        icon: "star",
+                        title: "Fractional panks"
+                    }
                 },
 
                 content: {
                     img: card_content_6
                 },
                 footer: {
-                    title: "Auction ends in 2,524 blocks",
-                    interval: [
-                        {value: 0, period: "Days"},
-                        {value: 19, period: "Hours"},
-                        {value: 56, period: "Minutes"},
-                        {value: 13, period: "Seconds"},
-                    ]
+                    info: [
+                        {value: 257, title: "Total supply", symbol: "K", style: "total"},
+                        {value: 0.47, title: "Curator fee", symbol: "%", style: "curator"},
+                        {value: 1.3, title: "Highest Bid", symbol: "ETH", style: "bid"},
+
+                    ],
+                    button: {
+                        value: "View details",
+                        style: "mauve"
+                    }
                 }
             },
             {
                 header: {
                     title: "Here comes the squad",
                     amount: "1 NFT",
-                    star: "Fractional panks",
+                    star: {
+                        icon: "star",
+                        title: "Fractional panks"
+                    }
                 },
 
                 content: {
                     img: card_content_5
                 },
                 footer: {
-                    title: "Auction ends in 2,524 blocks",
-                    interval: [
-                        {value: 0, period: "Days"},
-                        {value: 19, period: "Hours"},
-                        {value: 56, period: "Minutes"},
-                        {value: 13, period: "Seconds"},
-                    ]
+                    info: [
+                        {value: 1555, title: "Total supply", symbol: "K", style: "total"},
+                        {value: 1.55, title: "Curator fee", symbol: "%", style: "curator"},
+                        {value: 0.15, title: "Highest Bid", symbol: "ETH", style: "bid"},
+
+                    ],
+                    button: {
+                        value: "View details",
+                        style: "mauve"
+                    }
                 }
             },
         ],
@@ -123,7 +142,8 @@ export const data: MainDataType = {
                 image_card_1: main_card_2,
                 image_card_2: main_card_vector_2,
                 title: "Buy Fractional </br> Ownership Tokens",
-                description: "Buy <span>fractional ownership tokens </span>  from your friends, AMMs or other defi protocols." +
+                description: "Buy <span>fractional ownership tokens </span>  from your " +
+                    "friends, AMMs or other defi protocols." +
                     " Then hold them in your wallet like a normal ERC20 token.",
                 style: "custom_green"
             },
@@ -131,17 +151,26 @@ export const data: MainDataType = {
                 image_card_1: main_card_3,
                 image_card_2: main_card_vector_3,
                 title: "Buyout Fractionalized </br> NFTs",
-                description: "If you see a fractionalized NFT you like, submit a buyout to kick off an auction " +
-                    "for</br> the NFT. After the auction ends the <span>winner</span>  will get the NFT and the fractional owners will get ETH.",
+                description: "If you see a fractionalized NFT you like, submit " +
+                    "a buyout to kick off an auction " +
+                    "for</br> the NFT. After the auction ends the <span>winner</span>  " +
+                    "will get the NFT and the fractional owners will get ETH.",
                 style: "custom_orange"
             },
         ],
-        cards_content_2:[
+        cards_content_2: [
             {
                 header: {
                     title: "Here comes the squad",
                     amount: "1 NFT",
-                    star: "Fractional panks",
+                    star: {
+                        icon: "star",
+                        title: "Fractional panks"
+                    },
+                    flame: {
+                        icon: "flame",
+                        title: "Live auction"
+                    }
                 },
 
                 content: {
@@ -154,14 +183,25 @@ export const data: MainDataType = {
                         {value: 19, period: "Hours"},
                         {value: 56, period: "Minutes"},
                         {value: 13, period: "Seconds"},
-                    ]
+                    ],
+                    button: {
+                        value: "View details",
+                        style: "view"
+                    }
                 }
             },
             {
                 header: {
                     title: "Here comes the squad",
                     amount: "1 NFT",
-                    star: "Fractional panks",
+                    star: {
+                        icon: "star",
+                        title: "Fractional panks"
+                    },
+                    flame: {
+                        icon: "flame",
+                        title: "Live auction"
+                    }
                 },
 
                 content: {
@@ -170,18 +210,29 @@ export const data: MainDataType = {
                 footer: {
                     title: "Auction ends in 2,524 blocks",
                     interval: [
-                        {value: 0, period: "Days"},
-                        {value: 19, period: "Hours"},
-                        {value: 56, period: "Minutes"},
-                        {value: 13, period: "Seconds"},
-                    ]
+                        {value: 2, period: "Days"},
+                        {value: 23, period: "Hours"},
+                        {value: 44, period: "Minutes"},
+                        {value: 20, period: "Seconds"},
+                    ],
+                    button: {
+                        value: "View details",
+                        style: "view"
+                    }
                 }
             },
             {
                 header: {
                     title: "Here comes the squad",
-                    amount: "1 NFT",
-                    star: "Fractional panks",
+                    amount: "2 NFT",
+                    star: {
+                        icon: "star",
+                        title: "Fractional panks"
+                    },
+                    flame: {
+                        icon: "flame",
+                        title: "Live auction"
+                    }
                 },
 
                 content: {
@@ -190,73 +241,66 @@ export const data: MainDataType = {
                 footer: {
                     title: "Auction ends in 2,524 blocks",
                     interval: [
-                        {value: 0, period: "Days"},
-                        {value: 19, period: "Hours"},
-                        {value: 56, period: "Minutes"},
-                        {value: 13, period: "Seconds"},
-                    ]
+                        {value: 3, period: "Days"},
+                        {value: 11, period: "Hours"},
+                        {value: 14, period: "Minutes"},
+                        {value: 47, period: "Seconds"},
+                    ],
+                    button: {
+                        value: "View details",
+                        style: "view"
+                    }
                 }
             },
         ],
-        cards_content_3:[
+        cards_content_3: [
             {
                 header: {
                     title: "Here comes the squad",
-                    amount: "1 NFT",
-                    star: "Fractional panks",
+                    amount: "3 NFT",
                 },
 
                 content: {
                     img: card_content_3
                 },
                 footer: {
-                    title: "Auction ends in 2,524 blocks",
-                    interval: [
-                        {value: 0, period: "Days"},
-                        {value: 19, period: "Hours"},
-                        {value: 56, period: "Minutes"},
-                        {value: 13, period: "Seconds"},
-                    ]
+                    button: {
+                        value: "Vote",
+                        style: "vote"
+                    }
                 }
             },
             {
                 header: {
                     title: "Here comes the squad",
                     amount: "1 NFT",
-                    star: "Fractional panks",
                 },
 
                 content: {
                     img: card_content_4
                 },
                 footer: {
-                    title: "Auction ends in 2,524 blocks",
-                    interval: [
-                        {value: 0, period: "Days"},
-                        {value: 19, period: "Hours"},
-                        {value: 56, period: "Minutes"},
-                        {value: 13, period: "Seconds"},
-                    ]
+                    button: {
+                        value: "Vote",
+                        style: "vote"
+                    }
+
                 }
             },
             {
                 header: {
                     title: "Here comes the squad",
                     amount: "1 NFT",
-                    star: "Fractional panks",
                 },
 
                 content: {
                     img: card_content_1
                 },
                 footer: {
-                    title: "Auction ends in 2,524 blocks",
-                    interval: [
-                        {value: 0, period: "Days"},
-                        {value: 19, period: "Hours"},
-                        {value: 56, period: "Minutes"},
-                        {value: 13, period: "Seconds"},
-                    ]
+                    button: {
+                        value: "Vote",
+                        style: "vote"
+                    }
                 }
             },
         ],

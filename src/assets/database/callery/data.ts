@@ -9,19 +9,37 @@ export type IntervalType = {
     value: number,
     period: string,
 }
+export type FooterInfoType = {
+    value: number,
+    title: string,
+    symbol: string,
+    style: string,
+}
 
 export type CardType = {
     header: {
         title: string
         amount: string
-        star: string
+        star?: {
+            icon: string
+            title: string
+        }
+        flame?: {
+            icon: string
+            title: string
+        }
     },
     content: {
         img: string
     },
     footer: {
-        title: string
-        interval: Array<IntervalType>
+        title?: string
+        info?: Array<FooterInfoType>
+        interval?: Array<IntervalType>
+        button: {
+            value: string
+            style: string
+        }
     }
 }
 
@@ -48,27 +66,37 @@ export const data: GalleryDataType = {
         header: {
             title: "Here comes the squad",
             amount: "1 NFT",
-            star: "Fractional panks",
+            star: {
+                icon: "star",
+                title: "Fractional panks"
+            }
         },
 
         content: {
             img: card_content_1
         },
         footer: {
-            title: "Auction ends in 2,524 blocks",
             interval: [
                 {value: 0, period: "Days"},
                 {value: 19, period: "Hours"},
                 {value: 56, period: "Minutes"},
                 {value: 13, period: "Seconds"},
-            ]
+            ],
+            button: {
+                value: "View details",
+                style: "view"
+            }
         }
     },
         {
             header: {
                 title: "Here comes the squad",
                 amount: "1 NFT",
-                star: "Fractional panks",
+                star: {
+                    icon: "star",
+                    title: "Fractional panks"
+                }
+
             },
 
             content: {
@@ -81,14 +109,21 @@ export const data: GalleryDataType = {
                     {value: 19, period: "Hours"},
                     {value: 56, period: "Minutes"},
                     {value: 13, period: "Seconds"},
-                ]
+                ],
+                button: {
+                    value: "View details",
+                    style: "view"
+                }
             }
         },
         {
             header: {
                 title: "Here comes the squad",
                 amount: "1 NFT",
-                star: "Fractional panks",
+                star: {
+                    icon: "star",
+                    title: "Fractional panks"
+                }
             },
 
             content: {
@@ -101,14 +136,21 @@ export const data: GalleryDataType = {
                     {value: 19, period: "Hours"},
                     {value: 56, period: "Minutes"},
                     {value: 13, period: "Seconds"},
-                ]
+                ],
+                button: {
+                    value: "View details",
+                    style: "view"
+                }
             }
         },
         {
             header: {
                 title: "Here comes the squad",
                 amount: "1 NFT",
-                star: "Fractional panks",
+                star: {
+                    icon: "star",
+                    title: "Fractional panks"
+                }
             },
 
             content: {
@@ -121,14 +163,21 @@ export const data: GalleryDataType = {
                     {value: 19, period: "Hours"},
                     {value: 56, period: "Minutes"},
                     {value: 13, period: "Seconds"},
-                ]
+                ],
+                button: {
+                    value: "View details",
+                    style: "view"
+                }
             }
         },
         {
             header: {
                 title: "Here comes the squad",
                 amount: "1 NFT",
-                star: "Fractional panks",
+                star: {
+                    icon: "star",
+                    title: "Fractional panks"
+                }
             },
 
             content: {
@@ -141,14 +190,21 @@ export const data: GalleryDataType = {
                     {value: 19, period: "Hours"},
                     {value: 56, period: "Minutes"},
                     {value: 13, period: "Seconds"},
-                ]
+                ],
+                button: {
+                    value: "View details",
+                    style: "view"
+                }
             }
         },
         {
             header: {
                 title: "Here comes the squad",
                 amount: "1 NFT",
-                star: "Fractional panks",
+                star: {
+                    icon: "star",
+                    title: "Fractional panks"
+                }
             },
 
             content: {
@@ -161,7 +217,11 @@ export const data: GalleryDataType = {
                     {value: 19, period: "Hours"},
                     {value: 56, period: "Minutes"},
                     {value: 13, period: "Seconds"},
-                ]
+                ],
+                button: {
+                    value: "View details",
+                    style: "view"
+                }
             }
         },
     ]

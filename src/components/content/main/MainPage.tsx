@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from "./style.module.scss";
 import main_content_1 from "../../../assets/image/main/main_content_1.png"
 import main_content_vector from "../../../assets/image/main/main_content_vector.png"
@@ -10,8 +10,11 @@ import main_content_voting from "../../../assets/image/main/main_content_voting.
 import CardsList from "../../ui/Card/CardsList";
 import {data} from "../../../assets/database/main/data";
 import MainCardsList from './MainCards/MainCardsList';
+import {scrollToTop} from "../../../utils/lib/scroll";
+import { Link } from 'react-router-dom';
 
 function MainPage() {
+    useEffect(() => scrollToTop(), [])
     return (
         <>
             <div className={"_container"}>
@@ -51,7 +54,9 @@ function MainPage() {
                             <CardsList cards={data.content.cards_content_1}/>
                         </div>
                         <div className={style.main_content__button}>
-                            <button> Gallery</button>
+                            <Link to={"gallery"}>
+                                <button> Gallery</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -72,10 +77,8 @@ function MainPage() {
                             <img src={main_content_action} alt="main_content_action"/>
                         </div>
                     </div>
-
                 </div>
                 <div className={style.position_bg}/>
-
             </section>
 
 
@@ -89,7 +92,9 @@ function MainPage() {
                             <CardsList cards={data.content.cards_content_2}/>
                         </div>
                         <div className={style.main_content__button}>
-                            <button> Gallery</button>
+                            <Link to={"gallery"}>
+                                <button> Gallery</button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -114,7 +119,6 @@ function MainPage() {
                         </div>
                     </div>
                 </div>
-
             </section>
 
         </>

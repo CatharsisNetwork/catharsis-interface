@@ -82,6 +82,7 @@
     }
 
     &__button {
+      cursor: pointer;
       @include flex_column_center;
       width: 189px;
       height: 49px;
@@ -168,6 +169,7 @@
       margin-bottom: 90px;
 
       button {
+        cursor: pointer;
         width: 64px;
         height: 21px;
         font-style: normal;
@@ -183,5 +185,50 @@
 }
 
 @media (max-width: 1200px) {
+  .position {
+    & > img {
+      height: 990px;
+      bottom: 217px;
+    }
 
+    &_bg {
+      height: 900px;
+    }
+  }
+  .main_content__cards {
+    @include flex_row_center;
+    flex-wrap: wrap;
+  }
+  .main_content__action {
+    top: 92%;
+    left: 8%;
+  }
+}
+
+@media (max-width: 990px) {
+  .main_content__action {
+    left: -6%;
+  }
+}
+
+@media (max-width: 767px) {
+  .position {
+    &_bg {
+      height: 1276px;
+    }
+  }
+  .main_content__cards {
+    @include flex_row_center;
+    flex-wrap: wrap;
+  }
+  .main_content__action {
+    top: 98%;
+    left: 10%;
+
+    img {
+      height: 33%;
+      width: 82%;
+
+    }
+  }
 }
