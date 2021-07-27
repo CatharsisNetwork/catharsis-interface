@@ -1,0 +1,29 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+.card {
+  width: 199px;
+  height: 199px;
+  left: 234px;
+  top: 567px;
+  background: url("../../../../assets/image/fractionalize/bg_fractionalize.png") no-repeat 100% 100%, #C4C4C4;
+  border-radius: 9px;
+  @include flex_column_justify_flex-end;
+
+  &_button {
+    width: 184px;
+    height: 27.6px;
+    margin: 7px;
+    background: rgba(11, 11, 11, 0.76);
+    border-radius: 58.88px;
+    @include flex_row_center;
+    & span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}
