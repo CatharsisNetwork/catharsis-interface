@@ -1,3 +1,23 @@
+@mixin font_weight_normal {
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin font_weight_bold {
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin font_weight_600 {
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin font_weight_900 {
+  font-style: normal;
+  font-weight: 900;
+}
+
 @mixin flex_column {
   display: flex;
   flex-direction: column;
@@ -26,6 +46,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 @mixin flex_row_space-around {
   @include flex_row;
   justify-content: space-around;
@@ -37,6 +58,7 @@
   justify-content: center;
   align-items: flex-start;
 }
+
 @mixin flex_row_start {
   @include flex_row;
   justify-content: center;
@@ -49,79 +71,101 @@
   align-items: flex-end;
 }
 
+@mixin font_size_micro {
+  @include font_weight_normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
 @mixin font_size_small_xs {
-  font-style: normal;
-  font-weight: normal;
+  @include font_weight_normal;
   font-size: 18px;
   line-height: 21px;
 }
 
 @mixin font_size_small_s {
-  font-style: normal;
-  font-weight: normal;
+  @include font_weight_normal;
   font-size: 21.6675px;
   line-height: 25px;
 }
 
+@mixin font_size_small_s_900 {
+  @include font_weight_900;
+  font-size: 16.0284px;
+  line-height: 20px;
+}
+
 @mixin font_size_small_m {
-  font-style: normal;
-  font-weight: 600;
+  @include font_weight_600;
   font-size: 16.3902px;
   line-height: 20px;
 }
 
 @mixin font_size_small_l {
-  font-style: normal;
-  font-weight: 600;
+  @include font_weight_600;
   font-size: 14px;
   line-height: 17px;
 }
+
 @mixin font_size_small_xl {
-  font-style: normal;
-  font-weight: normal;
+  @include font_weight_normal;
   font-size: 15px;
   line-height: 17px;
 }
+
+@mixin font_size_small_xll {
+  @include font_weight_bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 @mixin font_size_medium_s {
-  font-style: normal;
-  font-weight: bold;
+  @include font_weight_bold;
   font-size: 42px;
   line-height: 51px;
 }
+
 @mixin font_size_medium_l {
-  font-style: normal;
-  font-weight: normal;
+  @include font_weight_normal;
   font-size: 18px;
   line-height: 153%;
 }
+
 @mixin font_size_medium_m {
-  font-style: normal;
-  font-weight: bold;
+  @include font_weight_bold;
   font-size: 20px;
   line-height: 44px;
 }
-@mixin font_size_medium_800 {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-}@mixin font_size_medium_800_s {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 17px;
-}
-@mixin font_size_medium_xl{
-  font-style: normal;
-  font-weight: normal;
+
+@mixin font_size_medium_xl {
+  @include font_weight_normal;
   font-size: 21.6675px;
   line-height: 25px;
 
-}@mixin font_size_large{
-  font-style: normal;
-  font-weight: bold;
+}
+
+@mixin font_size_large {
+  @include font_weight_bold;
   font-size: 42px;
   line-height: 51px;
+}
+
+@mixin font_size_small_xs_bold {
+  @include font_weight_bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin font_size_small_medium_bold {
+  @include font_weight_bold;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+@mixin font_size_medium_x_bold {
+  @include font_weight_bold;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 
@@ -134,8 +178,8 @@
   width: 309px;
   white-space: nowrap;
   padding: 12px;
-
-  & a:first-child {
+  cursor: pointer;
+  & span:first-child {
     position: relative;
     padding: 0 15px 0 15px;
     border-right: 1px solid #303030;
@@ -148,7 +192,7 @@
     }
   }
 
-  & a:last-child {
+  & span:last-child {
     position: relative;
     padding: 0 51px 0 12px;
 
@@ -171,7 +215,7 @@
     }
   }
 
-  & a {
+  & span {
     @include flex_row_space_between;
     text-decoration: none;
     color: #BABABA;
@@ -179,7 +223,49 @@
 }
 
 
+@mixin card_footer__star_or_flame {
+  @include flex_row_start;
+  margin-top: 8px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  span {
+    margin-left: 8px;
+    @include font_size_micro;
+    text-align: center;
+    color: $pink0;
+  }
+}
 
+@mixin card_footer__btn {
+  margin-bottom: 25px;
+  button {
+    cursor: pointer;
+    @include font_size_small_m;
+    width: 159px;
+    height: 41px;
+    background: $white;
+    border-radius: 43px;
+    text-align: center;
+    color: $purple20;
+  }
+}
+@mixin card_footer_info_value {
+  span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: #5DAD6A;
+  }
+  p {
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
 
-
-
+    color: #6D6D6D;
+  }
+}

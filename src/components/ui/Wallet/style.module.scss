@@ -15,11 +15,11 @@
   width: 196px;
   height: 51px;
 
-  & a:first-child {
+  & span:first-child {
     display: none;
   }
 
-  & a:last-child {
+  & span:last-child {
 
     & > img {
       top: -1px;
@@ -51,11 +51,11 @@
     width: 154px;
     height: 38px;
 
-    & a:first-child {
+    & span:first-child {
       display: none;
     }
 
-    & a:last-child {
+    & span:last-child {
       padding: 0 49px 0 14px;
 
       & > img {
@@ -78,7 +78,7 @@
       }
     }
 
-    & a {
+    & span {
       @include font_size_small_l;
     }
   }

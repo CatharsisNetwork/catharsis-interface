@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {links} from '../../../assets/database/footer/data';
 import Avatar from '../../ui/Avatar/Avatar';
 import Logo from '../../ui/Logo/Logo';
@@ -27,7 +28,10 @@ function Footer() {
                             <Avatar/>
                         </Wallet>
                         <div className={style.footer_wallet__text}>
-                            <p>Terms and conditions</p>
+                            <Link to={"/"}>
+                                Terms and conditions
+                            </Link>
+
                         </div>
                     </div>
                 </div>

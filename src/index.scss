@@ -55,9 +55,11 @@ ul[class],
 ol[class] {
   list-style: none;
 }
-li{
+
+li {
   list-style: none;
 }
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
   text-decoration: none;
@@ -69,6 +71,17 @@ article > * + * {
   margin-top: 1em;
 }
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input:focus-visible {
+  outline: none;
+}
 
 input,
 button,

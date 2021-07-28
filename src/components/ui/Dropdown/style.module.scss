@@ -1,0 +1,69 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+.popup {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  z-index: 4;
+  @include flex_column_start;
+  width: 206px;
+  height: 0;
+  background: #181818;
+  overflow: hidden;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  & span {
+    cursor: pointer;
+    width: 79px;
+    @include font_size_micro;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 15px;
+  }
+
+  &.active {
+    height: 200px;
+  }
+
+  transition: height 0.6s ease;
+}
+
+
+.search_dropdown {
+  position: relative;
+  @include flex_row_center;
+  width: 206px;
+  height: 47px;
+  background: #181818;
+  border: 1px solid #202020;
+  box-sizing: border-box;
+  box-shadow: 0 4px 37px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  & .sort {
+    width: 50px;
+    height: 17px;
+    @include font_size_small_l;
+    text-align: center;
+    color: #FFFFFF;
+    margin-right: 9px;
+  }
+
+  & .value {
+    width: 79px;
+    height: 16px;
+    @include font_size_micro;
+    text-align: center;
+    color: #595959;
+    margin-right: 25px;
+  }
+
+  & img {
+    cursor: pointer;
+    width: 16px;
+    height: 10.18px;
+  }
+}

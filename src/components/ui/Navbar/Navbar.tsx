@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link, useLocation} from 'react-router-dom'
-import {LinkType} from '../../../utils/types';
+import {LinkType} from '../../../utils/types/types';
 import style from './style.module.scss';
 
 

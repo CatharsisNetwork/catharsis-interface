@@ -1,8 +1,0 @@
-export type {GalleryTypes} from './gallery'
-export type {HowWorksTypes} from './howWorks'
-export type {AuctionTypes} from './auction'
-export type {votingTypes} from './voting'
-export {gallery} from './gallery'
-export {howWorks} from './howWorks'
-export {auction} from './auction'
-export {voting} from './voting'

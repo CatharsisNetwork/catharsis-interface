@@ -1,0 +1,42 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+.search_input {
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 13px;
+    right: 17px;
+  }
+
+  input {
+    cursor: pointer;
+    width: 625px;
+    padding-left: 25px;
+    height: 47px;
+    background: #181818;
+    border: 1px solid #202020;
+    box-sizing: border-box;
+    box-shadow: 0 4px 37px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;@include font_size_micro;
+    color: #595959;
+  }
+}
+
+@media (max-width: 880px) {
+  .search_input {
+    input {
+      max-width: 345px;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .search_input {
+    input {
+      max-width: 310px;
+    }
+  }
+}

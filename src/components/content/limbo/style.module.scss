@@ -1,0 +1,19 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+
+.gallery {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  @include flex_column_center;
+  margin: 100px 0;
+  &_text {
+    @include font_size_large;
+    color: $white;
+
+    span {
+      color: $lilac;
+    }
+  }
+}
