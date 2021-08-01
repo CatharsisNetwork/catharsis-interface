@@ -1,12 +1,12 @@
-@import "../../../../../styles/vars";
-@import "../../../../../styles/mixins";
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/mixins";
 
 .card {
   width: 199px;
   height: 199px;
   left: 234px;
   top: 567px;
-  background: url("../../../../../assets/image/fractionalize/bg_fractionalize.png") no-repeat 100% 100%, #C4C4C4;
+  background: url("../../../../../../assets/image/fractionalize/bg_fractionalize.png") no-repeat 100% 100%, #C4C4C4;
   border-radius: 9px;
   @include flex_column_justify_flex-end;
 

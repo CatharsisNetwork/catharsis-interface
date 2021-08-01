@@ -1,7 +1,7 @@
 import React from 'react';
-import ButtonGroup from "../../../ui/ButtonGroup/ButtonGroup";
-import Button from "../../../ui/ButtonGroup/Button";
-import style from "../style.module.scss";
+import ButtonGroup from "../../../../ui/ButtonGroup/ButtonGroupType";
+import Button from "../../../../ui/ButtonGroup/Button";
+import style from "../style.module.scss"
 
 function TokenCard() {
     return (
@@ -27,7 +27,7 @@ function TokenCard() {
                                     denouncing
                                     pleasure and
                                     praising pain</p>
-                            </>}/></>)}
+                            </>} /></>)}
             </ButtonGroup>
         </div>
     );

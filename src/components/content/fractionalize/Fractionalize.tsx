@@ -1,14 +1,29 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import style from "./style.module.scss";
-import SwitchLine from "../../ui/SwitchLine/SwitchLine";
-import LeftSide from "./LeftSide/LeftSide";
-import RightSide from "./RightSide/RightSide";
 import ContentButton from "./ContentButton";
 import FractionalizeNavigate from "./FractionalizeNavigate";
+import FractionalizeBody from "./FractionalizeBody/FractionalizeBody";
+import FractionalizeAuction from "./FractionalizeAuction/FractionalizeAuction";
+import FractionalizePreview from "./FractionalizePreview/FractionalizePreview";
 
 function Fractionalize() {
-    const [checked, setChecked] = useState<boolean>(false)
+    const [content, setContent] = useState<string>("body")
+    const [button, setButton] = useState<string>("Send for approval")
 
+
+    useEffect(() => {
+        if (content === "body") setButton("Send for approval")
+        if (content === "auction") setButton("Schedule auction")
+        if (content === "preview") setButton("Fractionalize")
+
+    }, [content])
+
+
+    function getFractionalizeContent(content: string) {
+        if (content === "body") return <FractionalizeBody/>
+        if (content === "auction") return <FractionalizeAuction/>
+        if (content === "preview") return <FractionalizePreview/>
+    }
 
     return (
         <div className={"content"}>
@@ -16,13 +31,10 @@ function Fractionalize() {
                 <div className={style.fractional_title}>
                     <span>Fractionalize</span>
                 </div>
-                <FractionalizeNavigate/>
-                <div className={style.content}>
-                        <LeftSide/>
-                        <RightSide/>
-                </div>
+                <FractionalizeNavigate setContent={setContent}/>
+                {getFractionalizeContent(content)}
                 <div className={style.button}>
-                    <ContentButton title={"Send for approval"}/>
+                    <ContentButton button={button}/>
                 </div>
             </div>
         </div>

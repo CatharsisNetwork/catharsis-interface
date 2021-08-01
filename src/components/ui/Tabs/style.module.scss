@@ -73,17 +73,18 @@
     }
 
     order: 2;
-    grid-gap: 34px;
+    grid-gap: 20px;
     @include flex_row_center;
 
     button {
       cursor: pointer;
+
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 16px;
+
       color: #FFFFFF;
-      grid-gap: 10px;
       margin-top: 20px;
 
       span {
@@ -95,36 +96,19 @@
     }
 
     .active {
-      height: 34px;
-      font-style: normal;
       font-weight: bold;
-      font-size: 14px;
-      line-height: 17px;
-      text-align: center;
       color: #D8B2FF;
     }
   }
 
   & .tabs_line {
     order: 1;
-    position: relative;
-    margin-top: 13px;
-    height: 8px;
-    background: #232323;
-    border-radius: 27px;
     width: 345px;
     @media (max-width: 345px) {
       width:310px;
     }
-
     span {
-      position: absolute;
-      top: 0;
       width: 115px;
-      height: 8px;
-      background: #D8B2FF;
-      border-radius: 27px;
-      transition: all 900ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       @media (max-width: 345px) {
         width:103px;
       }

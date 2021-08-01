@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import style from "./style.module.scss";
-import {getActiveClassName} from "../../../../../utils/lib/getActiveClassName";
+import {getActiveClassName} from "../../../../../../utils/lib/getActiveClassName";
 
 
 function FractionalizeCard() {

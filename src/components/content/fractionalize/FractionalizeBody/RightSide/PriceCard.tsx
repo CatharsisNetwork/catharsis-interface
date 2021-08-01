@@ -1,8 +1,8 @@
 import React from 'react';
-import style from "../style.module.scss";
-import ButtonGroup from "../../../ui/ButtonGroup/ButtonGroup";
-import Button from "../../../ui/ButtonGroup/Button";
-import attention from "../../../../assets/image/fractionalize/attention.png";
+import style from"../style.module.scss"
+import ButtonGroup from "../../../../ui/ButtonGroup/ButtonGroupType";
+import Button from "../../../../ui/ButtonGroup/Button";
+import attention from "../../../../../assets/image/fractionalize/attention.png";
 
 function PriceCard() {
     return (
@@ -14,12 +14,12 @@ function PriceCard() {
                         <Button title={() => <span>Fixed price</span>}
                                 active={active}
                                 setActive={() => setActive(!active)}
-                                customStyle={""}/>
+                                customStyle={"checkbox_button"}/>
 
                         <Button title={() => <span>Fair distribution auction</span>}
                                 active={!active}
                                 setActive={() => setActive(!active)}
-                                customStyle={""}/>
+                                customStyle={"checkbox_button"}/>
                     </>)}
                 </ButtonGroup>
             </div>

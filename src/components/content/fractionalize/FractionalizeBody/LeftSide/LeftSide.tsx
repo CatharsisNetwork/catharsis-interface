@@ -1,6 +1,6 @@
 import React from 'react';
-import style from "../style.module.scss";
-import flame from "../../../../assets/image/fractionalize/flame.png";
+import style from "../style.module.scss"
+import flame from "../../../../../assets/image/fractionalize/flame.png";
 import FractionalizeCard from "./FractionalizeCard/FractionalizeCard";
 
 function LeftSide() {

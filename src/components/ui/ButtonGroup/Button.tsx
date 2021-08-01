@@ -1,5 +1,5 @@
-import React, {Dispatch, SetStateAction, useState} from 'react';
-import style from "../../content/fractionalize/style.module.scss";
+import React, {Dispatch, SetStateAction} from 'react';
+import style from "./style.module.scss";
 import {getActiveClassName} from "../../../utils/lib/getActiveClassName";
 
 

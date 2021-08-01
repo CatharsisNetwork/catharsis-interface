@@ -1,0 +1,30 @@
+
+.button_content {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 216px;
+  background: white;
+  opacity: 0;
+  margin-bottom: 51px;
+  height: 50px;
+  border-radius: 37.4634px;
+}
+
+.button_content.active {
+  animation: shadow 0.3s linear;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes shadow {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 5%;
+    width: 100%;
+  }
+}

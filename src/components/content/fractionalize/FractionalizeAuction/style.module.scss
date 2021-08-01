@@ -1,0 +1,51 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+.content {
+  margin-top: 90px;
+
+  @include flex_row_center;
+  grid-gap: 30px;
+
+  &_left {
+    overflow: hidden;
+    width: 475px;
+    height: 491px;
+    background: #1A1820;
+    border-radius: 32px;
+
+
+
+  }
+  &_right {
+    @include flex_column_center;
+    justify-content: flex-start;
+    width: 475px;
+    height: 491px;
+    background: #1A1820;
+    border-radius: 32px;
+    grid-gap: 15px;
+
+  }
+}
+
+@media (max-width: 990px) {
+  .content {
+    margin-top: 37px;
+    @include flex_column_center;
+
+    &_left {
+      max-width: 345px;
+      height: 347px;
+      @media (max-width: 345px) {
+        max-width: 310px;
+      }
+    }
+
+    &_right {
+      width: 345px;
+      height: 347px;
+
+    }
+  }
+}

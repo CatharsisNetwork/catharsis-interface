@@ -1,7 +1,7 @@
-import React, {Dispatch, SetStateAction, useEffect, useState} from 'react';
+import React, {Dispatch, SetStateAction} from 'react';
 import {getActiveClassName} from "../../../utils/lib/getActiveClassName";
 import style from "./style.module.scss";
-import TabsIcon, {PngType} from "./TabsIcon";
+import TabsIcon from "./TabsIcon";
 
 type TabsButtonType = {
     activeTabs: boolean,
@@ -9,15 +9,28 @@ type TabsButtonType = {
     title: string,
     icon?: { active: string, nonactive: string },
     id: number,
+    content: string,
     tabsId: number,
     setTabsId: Dispatch<SetStateAction<number>>
+    setContent: Dispatch<SetStateAction<string>>
 }
 
-function TabsButton({activeTabs, setActiveTabs, title, icon, id, tabsId, setTabsId}: TabsButtonType) {
+function TabsButton({
+                        activeTabs,
+                        content,
+                        setActiveTabs,
+                        title,
+                        icon,
+                        id,
+                        tabsId,
+                        setTabsId,
+                        setContent
+                    }: TabsButtonType) {
 
     return (
         <button className={getActiveClassName(style, "button_title", tabsId === id)}
                 onClick={() => {
+                    setContent (content)
                     setActiveTabs(!activeTabs)
                     setTabsId(id)
                 }

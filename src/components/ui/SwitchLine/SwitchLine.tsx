@@ -1,10 +1,14 @@
-import React, {useState} from 'react';
+import React, {Dispatch, SetStateAction, useState} from 'react';
 import style from './style.module.scss';
-import SwitchLineButton from "./SwitchLineButton";
+import SwitchLineButton from "./SwitchLineButtonType";
+import {TabsDataType} from "../Tabs/Tabs";
 
+type SwitchLineType = {
+    setContent: Dispatch<SetStateAction<string>>,
+    tabsData: Array<TabsDataType>
+}
 
-
-function SwitchLine() {
+function SwitchLine({setContent, tabsData}: SwitchLineType) {
     const [width, setWidth] = useState("0")
     const [currentPosition, setCurrentPosition] = useState("left")
 
@@ -12,24 +16,19 @@ function SwitchLine() {
 
         <div className={style.switch}>
             <div className={style.switch_line}>
-
-                <SwitchLineButton currentPosition={currentPosition}
-                                  setCurrentPosition={setCurrentPosition}
-                                  setWidth={setWidth}
-                                  title={"The Body Fractionalization"}
-                                  position={"left"}/>
-
-                <SwitchLineButton currentPosition={currentPosition}
-                                  setCurrentPosition={setCurrentPosition}
-                                  setWidth={setWidth}
-                                  title={"Auction"}
-                                  position={"center"}/>
-
-                <SwitchLineButton currentPosition={currentPosition}
-                                  setCurrentPosition={setCurrentPosition}
-                                  setWidth={setWidth}
-                                  title={"Preview and transfer"}
-                                  position={"right"}/>
+                {tabsData.map((el, idx) => {
+                    return (
+                        <SwitchLineButton currentPosition={currentPosition}
+                                          setCurrentPosition={setCurrentPosition}
+                                          setWidth={setWidth}
+                                          setContent={setContent}
+                                          title={el.title}
+                                          content={el.content}
+                                          key={idx}
+                                          position={el.position ? el.position : ""}/>
+                    )
+                })
+                }
 
                 <span className={style.switch_ripple} style={{width: `${width}`}}/>
                 <span className={style.switch_thumb} style={{left: `${width}`}}/>

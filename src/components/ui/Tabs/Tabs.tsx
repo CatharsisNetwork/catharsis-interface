@@ -1,21 +1,30 @@
-import React, {useState} from 'react';
-import circle_half from "../../../assets/image/gallery/circle_half.png";
-import circle_half_grey from "../../../assets/image/gallery/circle_half_grey.png";
-import trophy_grey from "../../../assets/image/gallery/trophy_grey.png";
-import trophy from "../../../assets/image/gallery/trophy.png";
+import React, {Dispatch, SetStateAction, useState} from 'react';
 import style from './style.module.scss';
-import {getActiveClassName} from "../../../utils/lib/getActiveClassName";
 import TabsButton from "./TabsButton";
 
-type TabsDataType = {
+export type TabsDataType = {
     title: string,
     icon?: { active: string, nonactive: string },
+    content: string,
+    position?: string
+}
+
+type TabsPropsType = {
+    tabsData: Array<TabsDataType>,
+    customStyle?: string,
+    setContent: Dispatch<SetStateAction<string>>
 }
 
 
-function Tabs({tabsData, customStyle}: { tabsData: Array<TabsDataType>, customStyle?: string }) {
+function Tabs({
+                  tabsData,
+                  customStyle,
+                  setContent
+              }: TabsPropsType) {
+
     const [activeTabs, setActiveTabs] = useState<boolean>(true)
     const [tabsId, setTabsId] = useState<number>(1)
+
     return (
         <div className={style[customStyle ? customStyle : ""]}>
             <div className={style.tabs_button}>
@@ -24,6 +33,8 @@ function Tabs({tabsData, customStyle}: { tabsData: Array<TabsDataType>, customSt
                     return <TabsButton activeTabs={activeTabs}
                                        setActiveTabs={setActiveTabs}
                                        title={el.title}
+                                       setContent={setContent}
+                                       content={el.content}
                                        id={idx}
                                        key={idx}
                                        setTabsId={setTabsId}

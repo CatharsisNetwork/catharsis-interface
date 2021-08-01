@@ -1,13 +1,20 @@
 import React from 'react';
 import style from "./style.module.scss";
 import {getActiveClassName} from "../../../utils/lib/getActiveClassName";
+import BoxShadowButton from "../../ui/BoxShadowButton/BoxShadowButton";
 
-function ContentButton({title, img, customStyle = ''}: { title: string, img?: string, customStyle?: string }) {
+function ContentButton({button, img, customStyle = ''}: { button: string, img?: string, customStyle?: string }) {
+
+
     return (
-        <div className={getActiveClassName(style, "button_content", customStyle)}>
-            <img src={img} alt="button"/>
-            <span>{title}</span>
-        </div>
+        <BoxShadowButton shadow={"button_content"}>
+            {<div className={getActiveClassName(style, "button_content", customStyle)}
+            >
+                <img src={img} alt="button"/>
+                <span>{button}</span>
+
+            </div>}
+        </BoxShadowButton>
     );
 }
 

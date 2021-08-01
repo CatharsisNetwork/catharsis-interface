@@ -3,20 +3,31 @@ import style from "./style.module.scss";
 import circle_wavy_check from "../../../assets/image/fractionalize/circle_wavy_check.png";
 import {getClassNameButton, getClassNameSpan, getPosition} from "./helper";
 
-type SwitchLineButton = {
+type SwitchLineButtonType = {
     currentPosition: string
     title: string
     position: string
+    content: string
     setCurrentPosition: Dispatch<SetStateAction<string>>
     setWidth: Dispatch<SetStateAction<string>>
+    setContent: Dispatch<SetStateAction<string>>
 }
 
 
-function SwitchLineButton({setCurrentPosition, setWidth, currentPosition, title, position}: SwitchLineButton) {
+function SwitchLineButton({
+                              setCurrentPosition,
+                              setWidth,
+                              currentPosition,
+                              title,
+                              position,
+                              setContent,
+                              content
+                          }: SwitchLineButtonType) {
     return (
         <button
             className={`${style[`switch_checkbox__${position}`]} ${style[getClassNameButton(position, currentPosition)]}`}
             onClick={() => {
+                setContent(content)
                 setCurrentPosition(position);
                 setWidth(getPosition(position));
             }}>

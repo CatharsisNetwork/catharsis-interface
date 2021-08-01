@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction, useState} from 'react';
+import React, {Dispatch, SetStateAction} from 'react';
 import style from "./style.module.scss";
 
 function Slider({slider, setSlider}: { slider: number, setSlider: Dispatch<SetStateAction<number>> }) {
