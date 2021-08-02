@@ -1,0 +1,72 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/mixins";
+
+
+#calendar {
+  @include flex_column_center;
+  width: 475px;
+}
+
+#calendar th {
+  width: 44.67px;
+  height: 44.67px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.4082px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #636A77;
+}
+
+#calendar td {
+  cursor: pointer;
+  width: 44.67px;
+  height: 44.67px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17.3714px;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#calendar .calendar_nav {
+  margin-bottom: 10px;
+  height: 30px;
+  @include flex_row_space_between;
+  width: 263px;
+}
+
+.calendar_nav__prev {
+  cursor: pointer;
+  @include flex_column_center;
+}
+
+.calendar_nav__next {
+  cursor: pointer;
+  @include flex_column_center;
+}
+
+#calendar .calendar_nav__info {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17.3714px;
+  line-height: 27px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+
+.calendar_table {
+  height: 310px;
+}
+
+#calendar .active {
+  color: red;
+}
+
+.is-active {
+  background: #1294F2;
+  border-radius: 131.527px;
+}
