@@ -12,7 +12,7 @@ import MainCardsList from './MainCards/MainCardsList';
 import {scrollToTop} from "../../../utils/lib/scroll";
 import {Link} from 'react-router-dom';
 import MainPageHeader from "./MainPageHeader";
-import MainPageSection from "./MainCards/MainPageSection";
+import MainPageSection from "./MainPageSection";
 
 function MainPage() {
     useEffect(() => scrollToTop(), [])

@@ -1,9 +1,68 @@
 @import "../../../styles/vars";
 @import "../../../styles/mixins";
 
+@mixin wallet {
+  &:active{
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.68);
+  }
+  position: relative;
+  @include flex_row_center;
+  background: #212121;
+  box-shadow: 0 0 30.439px rgba(0, 0, 0, 0.68);
+  border-radius: 37.4634px;
+  width: 309px;
+  white-space: nowrap;
+  padding: 12px;
+  cursor: pointer;
+
+  .avatar{
+    position: relative;
+    padding: 0 15px 0 15px;
+    border-right: 1px solid #303030;
+    margin-left: 10px;
+
+    & img {
+      position: absolute;
+      top: 1px;
+      left: -12px;
+    }
+  }
+
+  .connect {
+    position: relative;
+    padding: 0 51px 0 12px;
+
+    & > img {
+      position: absolute;
+      top: -1px;
+      right: -2px;
+      z-index: 10;
+
+    }
+
+    & div {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      height: 41px;
+      width: 41px;
+      transform-origin: 50% 50%;
+      animation: rot 20s linear 0s infinite;
+    }
+  }
+
+  & span {
+    @include flex_row_space_between;
+    text-decoration: none;
+    color: #BABABA;
+
+  }
+}
 
 .wallet.header {
   @include wallet;
+
 }
 
 .wallet.modal {
@@ -15,11 +74,11 @@
   width: 196px;
   height: 51px;
 
-  & span:first-child {
+  .avatar{
     display: none;
   }
 
-  & span:last-child {
+  .connect{
 
     & > img {
       top: -1px;
@@ -51,11 +110,11 @@
     width: 154px;
     height: 38px;
 
-    & span:first-child {
+    .avatar{
       display: none;
     }
 
-    & span:last-child {
+    .connect{
       padding: 0 49px 0 14px;
 
       & > img {

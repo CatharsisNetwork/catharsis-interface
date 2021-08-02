@@ -39,7 +39,6 @@
         left: 14px;
         @include font_size_small_s_900;
         color: $black20;
-
       }
     }
 
@@ -75,7 +74,7 @@
   &_footer {
     @include flex_column_center;
     background: #181818;
-
+    position: relative;
     box-shadow: 0 48px 136px $black160;
     border-radius: 0 0 22px 22px;
 
@@ -99,7 +98,6 @@
 
       .interval span {
         @include font_size_micro;
-
         color: $lilac40;
       }
     }
@@ -107,20 +105,32 @@
     &__view {
       @include card_footer__btn;
       margin-top: 14px;
+      box-shadow: 0 2px 2px -1px $purple20, 0px 3px 4px 1px $purple20, 1px 1px 2px 1px rgba(0, 0, 0, 0.68);
     }
 
     &__mauve {
       @include card_footer__btn;
+      box-shadow: 0 2px 2px -1px $black160, 0px 3px 4px 1px $black160, 1px 1px 2px 1px rgba(0, 0, 0, 0.68);
 
       button {
         background: #392A47;
         color: #D8B2FF;
+        border-radius: 43px;
+      }
+
+      &:active {
+        margin-top: 1px;
       }
     }
 
     &__vote {
+      box-shadow: 0 2px 2px -1px $black160, 0px 3px 4px 1px #000900, 1px 1px 2px 1px #FFFFFF;
       @include card_footer__btn;
       margin-bottom: 14px;
+
+      &:active {
+        margin-top: 1px;
+      }
 
       button {
         border: 1px solid #FFFFFF;

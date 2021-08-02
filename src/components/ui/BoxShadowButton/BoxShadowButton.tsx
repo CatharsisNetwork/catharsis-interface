@@ -12,7 +12,7 @@ function BoxShadowButton({children,shadow}: { children: React.ReactNode,shadow:s
                     setActive(!active);
                     setTimeout(() => {
                         setActive(active)
-                    }, 350)
+                    }, 450)
                 }
             }/>
         </>

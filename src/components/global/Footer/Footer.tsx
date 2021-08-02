@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {links} from '../../../assets/database/footer/data';
-import Avatar from '../../ui/Avatar/Avatar';
+import Avatar from '../../ui/Wallet/Avatar';
 import Logo from '../../ui/Logo/Logo';
 import Navbar from '../../ui/Navbar/Navbar';
 import Wallet from '../../ui/Wallet/Wallet';

@@ -6,7 +6,7 @@ import Menu from "../../ui/Menu/Menu";
 import HeaderModal from "./HeaderModal";
 import Logo from "../../ui/Logo/Logo";
 import Navbar from "../../ui/Navbar/Navbar";
-import Avatar from "../../ui/Avatar/Avatar";
+import Avatar from "../../ui/Wallet/Avatar";
 import {links} from '../../../assets/database/header/data';
 
 

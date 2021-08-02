@@ -1,8 +1,8 @@
 import React from 'react';
-import style from"../style.module.scss"
+import style from "../style.module.scss"
 import ButtonGroup from "../../../../ui/ButtonGroup/ButtonGroupType";
 import Button from "../../../../ui/ButtonGroup/Button";
-import attention from "../../../../../assets/image/fractionalize/attention.png";
+import PriceCardInfoAndAttention from "./PriceCardInfoAndAttention";
 
 function PriceCard() {
     return (
@@ -23,27 +23,10 @@ function PriceCard() {
                     </>)}
                 </ButtonGroup>
             </div>
-
-
-            <div className={style.info}>
-                <p>
-                    <span> Fixed price:</span> But I must explain to you how all this mistaken idea of
-                    denouncing pleasure and praising pain
-                </p>
-                <p>
-                    <span>  Fair distribution auction:</span> But I must explain to you how all this
-                    mistaken idea of denouncing pleasure and praising pain
-                </p>
-            </div>
-
-            <div className={style.attention}>
-                <img src={attention} alt="attention"/>
-                <span>
-                                    After you applied for fractionalization, it will be manually moderated
-                                </span>
-            </div>
+            <PriceCardInfoAndAttention/>
         </div>
     );
 }
+
 
 export default PriceCard;
