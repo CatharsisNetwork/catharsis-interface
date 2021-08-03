@@ -1,7 +1,6 @@
 import React from 'react';
 import style from "../style.module.scss";
 import rectangle from "../../../../assets/image/gallery/rectangle.png";
-import BoxShadowButton from "../../BoxShadowButton/BoxShadowButton";
 
 function HeaderBtn({value}: { value: string }) {
     return (

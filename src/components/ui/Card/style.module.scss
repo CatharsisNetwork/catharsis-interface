@@ -105,12 +105,12 @@
     &__view {
       @include card_footer__btn;
       margin-top: 14px;
-      box-shadow: 0 2px 2px -1px $purple20, 0px 3px 4px 1px $purple20, 1px 1px 2px 1px rgba(0, 0, 0, 0.68);
+      box-shadow: 0 2px 2px -1px $purple20;
     }
 
     &__mauve {
       @include card_footer__btn;
-      box-shadow: 0 2px 2px -1px $black160, 0px 3px 4px 1px $black160, 1px 1px 2px 1px rgba(0, 0, 0, 0.68);
+      box-shadow: 0 2px 2px -1px $black160;
 
       button {
         background: #392A47;
@@ -124,7 +124,7 @@
     }
 
     &__vote {
-      box-shadow: 0 2px 2px -1px $black160, 0px 3px 4px 1px #000900, 1px 1px 2px 1px #FFFFFF;
+      box-shadow: 0 2px 2px -1px $black160;
       @include card_footer__btn;
       margin-bottom: 14px;
 
