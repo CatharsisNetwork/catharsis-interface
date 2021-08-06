@@ -13,12 +13,16 @@ import {scrollToTop} from "../../../utils/lib/scroll";
 import {Link} from 'react-router-dom';
 import MainPageHeader from "./MainPageHeader";
 import MainPageSection from "./MainPageSection";
+import bg from "../../../assets/image/main/bg_main.png";
 
 function MainPage() {
     useEffect(() => scrollToTop(), [])
     return (
         <>
             <div className={"_container"}>
+                <div className={"main_bg"}>
+                    <img src={bg} alt=""/>
+                </div>
                 <section className={style.main_header}>
                     <MainPageHeader/>
                 </section>

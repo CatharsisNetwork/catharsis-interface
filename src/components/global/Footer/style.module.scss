@@ -14,9 +14,11 @@
     order: 2;
     position: relative;
 
+
     & img {
       width: 242px;
       height: 84px;
+      margin-bottom: 16px;
     }
 
     &__text {

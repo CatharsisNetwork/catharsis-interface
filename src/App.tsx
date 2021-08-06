@@ -4,11 +4,14 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Header from "./components/global/Header/Header";
 import Footer from './components/global/Footer/Footer';
 import usePageRender from './hooks/useRederPage';
+import bg from '../src/assets/image/main/bg_main_2.png'
+
 
 
 function App() {
     return (
         <div className={"main"}>
+
             <Router>
                 <Header/>
                 <Switch>

@@ -5,23 +5,29 @@
   background: $grey80;
   backdrop-filter: blur(1px);
   border-radius: 32px;
-  min-width: 468px;
+  width: 468px;
   height: 51px;
-  @include flex_row_space_between;
-  flex: 0 0;
-  transition: margin-bottom 0.5s ease-in-out;
+  display: grid;
+  grid-template-columns:41px 108px 86px 34px 66px;
+  grid-gap: 20px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  transition: margin-bottom 0.2s ease-in-out;
   margin-bottom: 0;
   margin-left: 172px;
 
+
   & .link {
-    margin: 16px;
     white-space: nowrap;
+    text-align: center;
+    @include flex_row_center;
 
     & a {
       color: #141414;
       text-decoration: none;
       font-style: normal;
-      font-weight: 800;
+      font-weight: 600;
       font-size: 14px;
       line-height: 17px;
       text-align: center;
@@ -30,16 +36,23 @@
 
   &:hover {
     transition: margin-bottom 0.2s ease-in-out;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 
 .active {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: center;
+  margin: 0 0;
+
+
+  span {
+
+    color: #141414;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+  }
 }
 
 .navbar_modal {
@@ -76,7 +89,7 @@
   }
 
   @media (max-height: 450px) {
-    margin:0 40px ;
+    margin: 0 40px;
     grid-gap: 0;
     position: relative;
     display: grid;
@@ -156,10 +169,8 @@
       width: 50px;
       border: 1px solid rgba(189, 189, 189, 0.06);
       transform: rotate(90deg);
-
     }
   }
-
 }
 
 

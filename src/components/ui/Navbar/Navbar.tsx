@@ -31,7 +31,7 @@ const Navbar = ({customStyle = "", onClose, links}: NavbarPropsType) => {
                 links.map((link, index) => (
                     <li key={index} className={`${style.link} ${style[isActive(link.path) || '']}`}>
                         <Link  onClick={onClose} to={link.path}>
-                            {link.label}
+                            <span>{link.label}</span>
                         </Link>
                     </li>
                 ))

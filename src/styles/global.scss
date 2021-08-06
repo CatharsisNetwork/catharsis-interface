@@ -15,14 +15,22 @@ body {
   @include flex_column_center;
   width: 100%;
   min-height: 100vh;
+
+  &_bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include flex_column_center;
+
+  }
 }
 
 .main::after {
   content: "";
-  position: absolute;
-  background: url("../assets/image/main/bg_main_2.png") no-repeat top center,
-  url("../assets/image/main/bg_main.png") no-repeat top center;
-
+  position: absolute;;
+  background: url("../assets/image/main/bg_main_2.png") no-repeat top center;
   top: 0;
   left: 0;
   z-index: -5;
@@ -39,7 +47,7 @@ body {
   @include flex_column_center;
 }
 
-.faq_bg{
+.faq_bg {
   position: absolute;
   background: url("../assets/image/faq/bg.png") no-repeat top center;
   left: -138px;
@@ -48,7 +56,7 @@ body {
   z-index: -1;
   width: 100vw;
   height: 90vh;
-  @media (max-width: 550px)  {
+  @media (max-width: 550px) {
     transform: rotate(271deg);
     left: -185px;
     top: 177px;
