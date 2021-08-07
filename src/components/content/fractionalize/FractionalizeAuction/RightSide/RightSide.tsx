@@ -1,6 +1,7 @@
 import React from 'react';
 import style from "../style.module.scss";
 import Calendar from "./Calendar/Calendar";
+import CalendarInputGroup from "./CalendarInputGroup";
 
 
 function RightSide() {
@@ -10,6 +11,7 @@ function RightSide() {
                 <span>Date of auction</span>
             </div>
             <Calendar/>
+            <CalendarInputGroup/>
         </div>
     );
 }

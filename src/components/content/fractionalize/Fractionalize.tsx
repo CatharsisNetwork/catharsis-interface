@@ -7,7 +7,7 @@ import FractionalizeAuction from "./FractionalizeAuction/FractionalizeAuction";
 import FractionalizePreview from "./FractionalizePreview/FractionalizePreview";
 
 function Fractionalize() {
-    const [content, setContent] = useState<string>("body")
+    const [content, setContent] = useState<string>("auction")
     const [button, setButton] = useState<string>("Send for approval")
 
 

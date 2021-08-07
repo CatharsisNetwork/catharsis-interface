@@ -45,8 +45,18 @@
 
 .main {
   &_header {
+    position: relative;
     @include flex_column_center;
     grid-gap: 21px;
+
+    &__bg {
+      position: absolute;
+      bottom: -114px;
+      left: 18px;
+      width: 100%;
+    @include  flex_row_center;
+      align-items: flex-end;
+    }
 
     &__title {
       width: 570px;
@@ -105,7 +115,7 @@
     &__image {
       margin-top: 7px;
       @include flex_column_center;
-     
+
       width: 447px;
       height: 436px;
     }
@@ -189,6 +199,7 @@
       height: 990px;
       bottom: 217px;
     }
+
     &_bg {
       height: 900px;
     }
@@ -215,42 +226,51 @@
       height: 1276px;
     }
   }
-  .main_header{
+  .main_header {
     &__title {
       margin-top: 25px;
       width: 300px;
+
       h1 {
         font-size: 30px;
         line-height: 36px;
       }
     }
+
     &__description {
       width: 297px;
+
       span {
         font-size: 15px;
         line-height: 17px;
 
       }
     }
-    &__image img{
+
+    &__image img {
       width: 294.24px;
       height: 287px;
     }
+
     &__button {
       width: 157px;
       height: 40.7px;
+
       span {
         font-size: 14.9524px;
         line-height: 18px;
       }
     }
+
     &__cards {
       @include flex_row_center;
       flex-wrap: wrap;
     }
+
     &__action {
       top: 98%;
       left: 10%;
+
       img {
         height: 33%;
         width: 82%;

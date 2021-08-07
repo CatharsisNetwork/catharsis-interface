@@ -1,5 +1,5 @@
 import React from "react";
-
+import {ChangeEvent, FormEvent} from "react";
 export interface IParams {
     page: string
     slug: string
@@ -22,4 +22,9 @@ export interface LinkType {
     label: string
     path: string
 }
+
+
+export type InputChange = ChangeEvent<HTMLInputElement>
+export type FormSubmit = FormEvent<HTMLFormElement>
+
 

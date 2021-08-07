@@ -14,6 +14,7 @@ import {Link} from 'react-router-dom';
 import MainPageHeader from "./MainPageHeader";
 import MainPageSection from "./MainPageSection";
 import bg from "../../../assets/image/main/bg_main.png";
+import gallery from "../../../assets/image/main/gallery.png";
 
 function MainPage() {
     useEffect(() => scrollToTop(), [])
@@ -25,6 +26,9 @@ function MainPage() {
                 </div>
                 <section className={style.main_header}>
                     <MainPageHeader/>
+                    <div className={style.main_header__bg}>
+                        <img src={gallery} alt=""/>
+                    </div>
                 </section>
             </div>
 
