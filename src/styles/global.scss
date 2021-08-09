@@ -23,7 +23,11 @@ body {
     left: 0;
     z-index: -1;
     @include flex_column_center;
-
+    @media (max-width:990px){
+      img{
+        width: 100%;
+      }
+    }
   }
 }
 

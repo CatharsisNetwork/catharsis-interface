@@ -68,3 +68,23 @@ input[type='range']::-webkit-slider-thumb {
   font-size: 12px;
   line-height: 16px;
 }
+.auction {
+  .range_container{
+
+    &__thumb {
+      display: block;
+      width: 93%;
+      left: -1%;
+    }
+  }
+}
+.auction_buyout {
+  .range_container{
+
+    &__thumb {
+      display: block;
+      width: 95%;
+      left: 4px;
+    }
+  }
+}
