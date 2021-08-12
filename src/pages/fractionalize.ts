@@ -1,2 +1,2 @@
-import Fractionalize from "../components/content/fractionalize/Fractionalize";
+import Fractionalize from '../components/content/fractionalize/Fractionalize';
 export default Fractionalize;

@@ -1,0 +1,44 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+.attention_preview,
+.attention {
+  @include flex_row_center;
+  margin-top: 21px;
+  width: 421px;
+  height: 45px;
+  border: 2px solid #22202A;
+  box-sizing: border-box;
+  border-radius: 9px;
+
+  span {
+    margin-left: 22px;
+    width: 352px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #A7A0B0;
+  }
+}
+
+.attention_preview {
+  margin-top: 0;
+  padding: 10px;
+  border: 2px solid #22202A;
+  box-sizing: border-box;
+  border-radius: 9px;
+}
+
+@media (max-width: 990px) {
+  .attention_preview,
+  .attention{
+    width: 308px;
+    height: 58px;
+    padding:0 21px ;
+    span {
+      width: 100%;}
+  }
+
+
+}

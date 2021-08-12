@@ -1,211 +1,228 @@
+export function calendar(selector: string) {
+	initCalendar(document.querySelector(selector));
 
+	function initCalendar(calendar: any) {
+		const date = new Date();
+		let showedYear = date.getFullYear();
+		let showedMonth = date.getMonth();
 
-export function calendar(selector:string){
+		const currentMoment = {
+			year: showedYear,
+			month: showedMonth,
+			date: date.getDate(),
+		};
 
-initCalendar(document.querySelector(selector))
+		const dates = calendar.querySelector('.calendar_table__dates');
+		const info = calendar.querySelector('.calendar_nav__info');
+		drawCalendar(showedYear, showedMonth, currentMoment);
 
-function initCalendar(calendar:any) {
+		const prev = calendar.querySelector('.calendar_nav__prev');
+		const next = calendar.querySelector('.calendar_nav__next');
 
-    let date = new Date();
-    let showedYear = date.getFullYear();
-    let showedMonth = date.getMonth();
+		prev.addEventListener('click', function () {
+			showedYear = getPrevYear(showedYear, showedMonth);
+			showedMonth = getPrevMonth(showedMonth);
 
-    let currentMoment = {
-        year: showedYear,
-        month: showedMonth,
-        date: date.getDate()
-    };
+			drawCalendar(showedYear, showedMonth, currentMoment);
+		});
 
-    let dates = calendar.querySelector('.calendar_table__dates');
-    let info = calendar.querySelector('.calendar_nav__info');
-    drawCalendar(showedYear, showedMonth, currentMoment, calendar);
+		next.addEventListener('click', function () {
+			showedYear = getNextYear(showedYear, showedMonth);
+			showedMonth = getNextMonth(showedMonth);
 
-    let prev = calendar.querySelector('.calendar_nav__prev');
-    let next = calendar.querySelector('.calendar_nav__next');
+			drawCalendar(showedYear, showedMonth, currentMoment);
+		});
 
-    prev.addEventListener('click', function() {
-        showedYear = getPrevYear(showedYear, showedMonth);
-        showedMonth = getPrevMonth(showedMonth);
+		function drawCalendar(
+			showedYear: any,
+			showedMonth: any,
+			currentMoment: any
+		) {
+			drawDates(showedYear, showedMonth, dates);
+			showInfo(showedYear, showedMonth, info);
+			showCurrentDate(showedYear, showedMonth, currentMoment, dates);
+		}
+	}
 
-        drawCalendar(showedYear, showedMonth, currentMoment, calendar);
-    });
+	function showCurrentDate(
+		showedYear: any,
+		showedMonth: any,
+		currentMoment: any,
+		dates: any
+	) {
+		if (
+			showedYear === currentMoment['year'] &&
+			showedMonth === currentMoment['month']
+		) {
+			const tds = dates.querySelectorAll('td');
+			for (let i = 0; i < tds.length; i++) {
+				if (Number(tds[i].innerHTML) === currentMoment['date']) {
+					tds[i].classList.add('active');
+					break;
+				}
+			}
+		}
+	}
 
-    next.addEventListener('click', function() {
-        showedYear = getNextYear(showedYear, showedMonth);
-        showedMonth = getNextMonth(showedMonth);
+	function getPrevYear(year: any, month: any) {
+		if (month === 0) {
+			return year - 1;
+		} else {
+			return year;
+		}
+	}
 
-        drawCalendar(showedYear, showedMonth, currentMoment, calendar);
-    });
+	function getPrevMonth(month: any) {
+		if (month === 0) {
+			return 11;
+		} else {
+			return month - 1;
+		}
+	}
 
-    function drawCalendar(showedYear:any, showedMonth:any, currentMoment:any, calendar:any) {
-        drawDates(showedYear, showedMonth, dates);
-        showInfo(showedYear, showedMonth, info);
-        showCurrentDate(showedYear, showedMonth, currentMoment, dates);
-    }
-}
+	function getNextYear(year: any, month: any) {
+		if (month === 11) {
+			return year + 1;
+		} else {
+			return year;
+		}
+	}
 
-function showCurrentDate(showedYear:any, showedMonth:any, currentMoment:any, dates:any) {
-    if (
-        showedYear === currentMoment['year'] &&
-        showedMonth === currentMoment['month']
-    ) {
-        let tds = dates.querySelectorAll('td');
-        for (let i = 0; i < tds.length; i++) {
-            if (Number(tds[i].innerHTML) === currentMoment['date']) {
-                tds[i].classList.add('active');
-                break;
-            }
-        }
-    }
-}
+	function getNextMonth(month: any) {
+		if (month === 11) {
+			return 0;
+		} else {
+			return month + 1;
+		}
+	}
 
-function getPrevYear(year:any, month:any) {
-    if (month === 0) {
-        return year - 1;
-    } else {
-        return year;
-    }
-}
+	function showInfo(year: any, month: any, elem: any) {
+		elem.innerHTML = getMonthName(month) + ' ' + year;
+	}
 
-function getPrevMonth(month:any) {
-    if (month === 0) {
-        return 11;
-    } else {
-        return month - 1;
-    }
-}
+	function getMonthName(num: any) {
+		const monthes = [
+			'January',
+			'February',
+			'March',
+			'April',
+			'May',
+			'June',
+			'July',
+			'August',
+			'September',
+			'October',
+			'November',
+			'December',
+		];
 
-function getNextYear(year:any, month:any) {
-    if (month === 11) {
-        return year + 1;
-    } else {
-        return year;
-    }
-}
+		return monthes[num];
+	}
 
-function getNextMonth(month:any) {
-    if (month === 11) {
-        return 0;
-    } else {
-        return month + 1;
-    }
-}
+	function drawDates(year: any, month: any, dates: any) {
+		let arr = [];
+		const firstDateOfMonth = 1;
+		const lastDateOfMonth = getLastDayOfMonth(year, month);
 
-function showInfo(year:any, month:any, elem:any) {
-    elem.innerHTML = getMonthName(month) + ' ' + year;
-}
+		const unshiftElemsNum = getUnshiftElemsNum(year, month);
+		const pushElemsNum = getPushElemsNum(year, month);
 
-function getMonthName(num:any) {
-    let monthes = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+		arr = createArr(firstDateOfMonth, lastDateOfMonth);
+		arr = unshiftElems(unshiftElemsNum, '', arr);
+		arr = pushElems(pushElemsNum, '', arr);
+		arr = chunkArr(7, arr);
 
-    return monthes[num];
-}
+		createTable(arr, dates);
+	}
 
-function drawDates(year:any, month:any, dates:any) {
-    let arr = [];
-    let firstDateOfMonth = 1;
-    let lastDateOfMonth = getLastDayOfMonth(year, month);
+	function createTable(arr: any, parent: HTMLElement) {
+		parent.innerHTML = '';
 
-    let unshiftElemsNum = getUnshiftElemsNum(year, month);
-    let pushElemsNum = getPushElemsNum(year, month);
+		for (let i = 0; i < arr.length; i++) {
+			const tr = document.createElement('tr');
 
-    arr = createArr(firstDateOfMonth, lastDateOfMonth);
-    arr = unshiftElems(unshiftElemsNum, '', arr);
-    arr = pushElems(pushElemsNum, '', arr);
-    arr = chunkArr(7, arr);
+			for (let j = 0; j < arr[i].length; j++) {
+				const td = document.createElement('td');
+				td.innerHTML = arr[i][j];
+				tr.appendChild(td);
+			}
 
-    createTable(arr, dates);
-}
+			parent.appendChild(tr);
+		}
+	}
 
-function createTable(arr:any, parent: HTMLElement ) {
-    parent.innerHTML = '';
+	function createArr(from: number, to: number) {
+		const arr = [];
+		for (let i = from; i <= to; i++) {
+			arr.push(i);
+		}
 
-    for (let i = 0; i < arr.length; i++) {
-        let tr = document.createElement('tr');
+		return arr;
+	}
 
-        for (let j = 0; j < arr[i].length; j++) {
-            let td = document.createElement('td');
-            td.innerHTML = arr[i][j];
-            tr.appendChild(td);
-        }
+	function unshiftElems(num: number, elem: string, arr: any) {
+		for (let i = 0; i < num; i++) {
+			arr.unshift(elem);
+		}
 
-        parent.appendChild(tr);
-    }
-}
+		return arr;
+	}
 
-function createArr(from:number, to:number) {
-    let arr = [];
-    for (let i = from; i <= to; i++) {
-        arr.push(i);
-    }
+	function pushElems(num: number, elem: string, arr: Array<string>) {
+		for (let i = 0; i < num; i++) {
+			arr.push(elem);
+		}
 
-    return arr;
-}
+		return arr;
+	}
 
-function unshiftElems(num:number, elem:string, arr:any) {
-    for (let i = 0; i < num; i++) {
-        arr.unshift(elem);
-    }
+	function getLastDayOfMonth(year: number, month: number) {
+		const date = new Date(year, month + 1, 0);
+		return date.getDate();
+	}
 
-    return arr;
-}
+	function getUnshiftElemsNum(year: number, month: number) {
+		const jsDayNum = getFirstWeekDayOfMonthNum(year, month);
+		const realDayNum = getRealDayOfWeekNum(jsDayNum);
 
-function pushElems(num:number, elem:string, arr:Array<string>) {
-    for (let i = 0; i < num; i++) {
-        arr.push(elem);
-    }
+		return realDayNum - 1;
+	}
 
-    return arr;
-}
+	function getPushElemsNum(year: number, month: number) {
+		const jsDayNum = getLastWeekDayOfMonthNum(year, month);
+		const realDayNum = getRealDayOfWeekNum(jsDayNum);
 
-function getLastDayOfMonth(year:number, month:number) {
-    let date = new Date(year, month + 1, 0);
-    return date.getDate();
-}
+		return 7 - realDayNum;
+	}
 
+	function chunkArr(num: number, arr: Array<string>) {
+		const result = [];
+		let chunk = [];
+		const iterCount = arr.length / num;
 
-function getUnshiftElemsNum(year:number, month:number) {
-    let jsDayNum = getFirstWeekDayOfMonthNum(year, month);
-    let realDayNum = getRealDayOfWeekNum(jsDayNum);
+		for (let i = 0; i < iterCount; i++) {
+			chunk = arr.splice(0, num);
+			result.push(chunk);
+		}
 
-    return realDayNum - 1;
-}
+		return result;
+	}
 
-function getPushElemsNum(year:number, month:number) {
-    let jsDayNum = getLastWeekDayOfMonthNum(year, month);
-    let realDayNum = getRealDayOfWeekNum(jsDayNum);
+	function getRealDayOfWeekNum(jsNumOfDay: number) {
+		if (jsNumOfDay === 0) {
+			return 7;
+		} else {
+			return jsNumOfDay;
+		}
+	}
 
-    return 7 - realDayNum;
-}
+	function getFirstWeekDayOfMonthNum(year: number, month: number) {
+		const date = new Date(year, month, 1);
+		return date.getDay();
+	}
 
-function chunkArr(num:number, arr:Array<string>) {
-    let result = [];
-    let chunk = [];
-    let iterCount = arr.length / num;
-
-    for (let i = 0; i < iterCount; i++) {
-        chunk = arr.splice(0, num);
-        result.push(chunk);
-    }
-
-    return result;
-}
-
-function getRealDayOfWeekNum(jsNumOfDay:number) {
-    if (jsNumOfDay === 0) {
-        return 7;
-    } else {
-        return jsNumOfDay;
-    }
-}
-
-function getFirstWeekDayOfMonthNum(year:number, month:number) {
-    let date = new Date(year, month, 1);
-    return date.getDay();
-}
-
-function getLastWeekDayOfMonthNum(year:number, month:number) {
-    let date = new Date(year, month + 1, 0);
-    return date.getDay();
-}
+	function getLastWeekDayOfMonthNum(year: number, month: number) {
+		const date = new Date(year, month + 1, 0);
+		return date.getDay();
+	}
 }

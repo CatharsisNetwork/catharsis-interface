@@ -3,7 +3,6 @@
 
 .content {
   margin-top: 90px;
-
   @include flex_row_center;
   grid-gap: 30px;
 
@@ -17,13 +16,11 @@
     border-radius: 32px;
 
     &__items {
-
       .title {
         width: 475px;
         height: 44px;
         background: #22202A;
         @include flex_row_center;
-
         span {
           font-style: normal;
           font-weight: 600;
@@ -148,29 +145,7 @@
         }
       }
 
-      .attention {
-        @include flex_row_center;
-        margin-top: 21px;
-        width: 421px;
-        height: 45px;
-        border: 2px solid #22202A;
-        box-sizing: border-box;
-        border-radius: 9px;
 
-        img {
-
-        }
-
-        span {
-          margin-left: 22px;
-          width: 352px;
-          font-style: normal;
-          font-weight: 600;
-          font-size: 12px;
-          line-height: 14px;
-          color: #A7A0B0;
-        }
-      }
     }
 
     &__input {

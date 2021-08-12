@@ -3,6 +3,7 @@
 
 
 .footer {
+  z-index: 1;
   @include flex_column_center;
   width: 100%;
   background: $black20;
