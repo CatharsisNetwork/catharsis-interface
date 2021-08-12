@@ -20,7 +20,10 @@
     & a {
       color: #141414;
       text-decoration: none;
-      @include font_size_medium_800_s;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 14px;
+      line-height: 17px;
       text-align: center;
     }
   }
@@ -32,7 +35,10 @@
 }
 
 .active {
-  @include font_size_medium_800;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
   text-align: center;
 }
 
@@ -48,7 +54,11 @@
     margin-bottom: 11px;
 
     & a {
-      @include font_size_medium_800;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 22px;
       text-align: center;
       color: #FFFFFF;
     }
@@ -66,7 +76,7 @@
   }
 
   @media (max-height: 450px) {
-    margin: 0 40px;
+    margin:0 40px ;
     grid-gap: 0;
     position: relative;
     display: grid;
@@ -149,6 +159,7 @@
 
     }
   }
+
 }
 
 

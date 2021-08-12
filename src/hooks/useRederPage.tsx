@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
-import {IParams} from "../utils/types";
+import {IParams} from "../utils/types/types";
 import NotFound from "../components/global/Notfound/NotFound";
 
 

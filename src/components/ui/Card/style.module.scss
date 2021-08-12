@@ -1,0 +1,212 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+.card {
+  max-width: 350px;
+  width: 100%;
+
+
+  background: $black20;
+  box-shadow: 0 48px 136px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+
+  &_header {
+    @include flex_column_start;
+    padding: 16px 13px 16px 21px;
+
+    & > div {
+      @include flex_row_space_between;
+    }
+
+    &__title {
+      white-space: nowrap;
+      @include font_size_small_xll;
+      color: $white;
+      margin-right: 51px;
+
+    }
+
+    &__amount {
+      @include flex_column_start;
+      position: relative;
+      cursor: pointer;
+
+      span {
+        width: 51px;
+        text-align: center;
+        position: absolute;
+        top: 5px;;
+        left: 14px;
+        @include font_size_small_s_900;
+        color: $black20;
+
+      }
+    }
+
+    &__container {
+      @include flex_column_start;
+      justify-content: flex-start;
+      height: 56px;
+
+      & .star {
+        @include card_footer__star_or_flame;
+      }
+
+      & .flame {
+        @include card_footer__star_or_flame;
+
+        span {
+          color: #F24B41;
+        }
+      }
+    }
+
+
+  }
+
+  &_content {
+    width: 350px;
+    height: 286px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_footer {
+    @include flex_column_center;
+    background: #181818;
+
+    box-shadow: 0 48px 136px $black160;
+    border-radius: 0 0 22px 22px;
+
+    &__title {
+      @include font_size_small_xs_bold;
+      color: $white;
+      margin-top: 11px;
+    }
+
+    &__countdown {
+      margin-top: 14px;
+      padding: 0 15px 0 21px;
+      width: 100%;
+      flex: 1 1 auto;
+      @include flex_row_space_between;
+
+      .interval p {
+        @include font_size_small_medium_bold;
+        color: $white;
+      }
+
+      .interval span {
+        @include font_size_micro;
+
+        color: $lilac40;
+      }
+    }
+
+    &__view {
+      @include card_footer__btn;
+      margin-top: 14px;
+    }
+
+    &__mauve {
+      @include card_footer__btn;
+
+      button {
+        background: #392A47;
+        color: #D8B2FF;
+      }
+    }
+
+    &__vote {
+      @include card_footer__btn;
+      margin-bottom: 14px;
+
+      button {
+        border: 1px solid #FFFFFF;
+        background: #181818;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &_footer.interval {
+    background: $purple20;
+    height: 180px;
+    @include flex_column_center;
+    box-shadow: 0 48px 136px $black160;
+    border-radius: 0 0 22px 22px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .card {
+    padding: 0 20px;
+
+    &_header__title {
+      margin-right: 21px;
+    }
+
+    &_content {
+      width: 100%;
+    }
+  }
+
+}
+
+
+.info {
+  margin: 16px 0 33px 0;
+  @include flex_row_space_between;
+  position: relative;
+
+  &_total {
+    position: relative;
+    @include card_footer_info_value;
+  }
+
+  &_curator {
+    @include card_footer_info_value;
+    margin: 0 33px 0 41px;
+
+    span {
+      color: #D7B1FD;
+    }
+  }
+
+  &_bid {
+    @include card_footer_info_value;
+
+    span {
+      color: #F24B41;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 27%;
+    width: 29px;
+    border: 2px solid #262626;
+    transform: rotate(90deg);
+    border-radius: 2px;
+
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    width: 29px;
+    border: 2px solid #262626;
+    transform: rotate(90deg);
+    border-radius: 2px;
+  }
+}
+
+
