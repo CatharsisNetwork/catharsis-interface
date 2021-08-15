@@ -18,10 +18,10 @@ const Modal: React.FC<IModalProps> = (props) => {
 		<ModalContainer>
 			<div className={style.root} onClick={onClose}>
 				<div
-					className={`${style[`${custom_style}`]} ${style.container}`}
+					className={`${style[`${custom_style}`]} ${style[`${custom_style}__container`]}`}
 					onClick={(event) => event.stopPropagation()}
 				>
-					<div className={style.children}>{children}</div>
+					{children}
 					<img
 						className={style.close}
 						src={close}

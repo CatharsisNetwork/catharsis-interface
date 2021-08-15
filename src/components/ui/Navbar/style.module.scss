@@ -42,10 +42,7 @@
 
 .active {
   margin: 0 0;
-
-
   span {
-
     color: #141414;
     font-style: normal;
     font-weight: 800;
@@ -119,9 +116,18 @@
     }
   }
 
+  .active {
+    span {
+      color:$lilac80;
+    }
+  }
 }
-
 .navbar_footer {
+  .active {
+    span {
+      color:$lilac80;
+    }
+  }
   @include flex_column_start;
   grid-gap: 21px;
 

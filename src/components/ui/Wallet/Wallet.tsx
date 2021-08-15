@@ -6,7 +6,7 @@ import BoxShadowButton from "../BoxShadowButton/BoxShadowButton";
 
 /**
  The component is a wrapper and it renders nested "children" or not depending on the place of use.
- Component used in Header and HeaderModal.Styles mixin are in the folder style/_mixin.
+ Component used in Header and HeaderModalMenu.Styles mixin are in the folder style/_mixin.
  */
 
 

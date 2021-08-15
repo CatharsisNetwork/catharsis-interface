@@ -7,7 +7,7 @@ import { useCloseModalContext } from '../../../hooks/useCloseModalContext';
 import { links } from '../../../assets/database/header/data';
 import Avatar from '../../ui/Wallet/Avatar';
 
-function HeaderModal() {
+function HeaderModalMenu() {
 	const onClose = useCloseModalContext();
 	return (
 		<div className={style.modal}>
@@ -26,4 +26,4 @@ function HeaderModal() {
 	);
 }
 
-export default HeaderModal;
+export default HeaderModalMenu;

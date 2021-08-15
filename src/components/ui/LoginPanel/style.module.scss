@@ -1,0 +1,58 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.panel {
+  width: 540px;
+  height: 313px;
+  background: #181818;
+  box-shadow: 0 48px 136px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
+  padding: 16px 28px 40px 28px;
+
+
+  &_title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16.3902px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #232323;
+  }
+
+  &_content {
+    margin-top: 21px;
+    @include flex_column_center;
+    grid-gap: 9px;
+
+    &__item {
+      span {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+
+      .icon {
+        @include flex_row_center;
+        width: 48px;
+        height: 48px;
+      }
+
+      @include flex_row_space_between;
+      padding: 0 19px 0 26px;
+      width: 100%;
+      height: 62px;
+      background: #C87B25;
+      border-radius: 12px;
+    }
+  }
+}
+@media (max-width: 760px) {
+  .panel {
+    width: 345px;
+  }
+
+}

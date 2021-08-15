@@ -76,14 +76,16 @@
       height: 341px;
       background: #202020;
       border-radius: 13px;
-      &_flame{
+
+      &_flame {
         padding: 21px;
         width: 88px;
         height: 34px;
         background: #181818;
         border-radius: 7px;
         @include flex_row_space_between;
-        span{
+
+        span {
           font-style: normal;
           font-weight: bold;
           font-size: 16px;
@@ -91,22 +93,72 @@
           color: #F24B41;
         }
       }
+
       &_title {
-        padding: 14px;
+        margin-bottom: 42px;
+        padding: 0 14px 0 14px;
         width: 100%;
         @include flex_row_space_between;
-        &__image{
+
+        &__image {
           @include flex_row_center;
-          grid-gap:24px;
-          span{
+          grid-gap: 24px;
+
+          span {
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
             line-height: 21px;
             color: #FFFFFF;
-        }
+          }
 
         }
+      }
+
+      &_body {
+        @include flex_column_center;
+        grid-gap: 10px;
+
+        &__item {
+          @include flex_row_space_between;
+          width: 250px;
+          height: 81px;
+          background: #181818;
+          border-radius: 10px;
+          padding: 21px 31px 21px 13px;
+
+          .content {
+            span {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 17px;
+              color: #4E4D55;
+            }
+
+            p {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 18px;
+              line-height: 22px;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+
+      &_button {
+        margin-top: 14px;
+        width: 250px;
+        height: 43px;
+        background: #6417AB;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
       }
     }
   }
@@ -124,3 +176,27 @@
 }
 
 
+@media (max-width: 990px) {
+  .dropex {
+
+    &_cards {
+      @include flex_column_center;
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .dropex {
+    &_button {
+      width: 320px;
+
+      span {
+        font-size: 14px;
+        line-height: 16px;
+
+      }
+    }
+  }
+}
