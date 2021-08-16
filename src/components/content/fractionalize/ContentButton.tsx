@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
 import { getActiveClassName } from '../../../utils/lib/getActiveClassName';
-import BoxShadowButton from '../../ui/BoxShadowButton/BoxShadowButton';
 import { NavLink } from 'react-router-dom';
 
 function ContentButton({
