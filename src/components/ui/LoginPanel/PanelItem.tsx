@@ -1,6 +1,5 @@
 import React, {Dispatch, SetStateAction} from 'react';
 import style from './style.module.scss'
-import {getActiveClassName} from "../../../utils/lib/getActiveClassName";
 
 function PanelItem({
                        title,
