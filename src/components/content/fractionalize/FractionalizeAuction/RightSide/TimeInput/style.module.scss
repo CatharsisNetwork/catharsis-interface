@@ -1,0 +1,25 @@
+@import "../../../../../../styles/vars";
+@import "../../../../../../styles/mixins";
+
+.input {
+  width: 125px;
+  height: 53px;
+  background: #22202A;
+  border-radius: 7px;
+  @include flex_row_center;
+  color:#D8B2FF;
+  grid-gap: 2px;
+  text-align: center;
+  input{
+    background: #22202A;
+    width: 36px;
+    text-align: center;
+    height: 27px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23.8053px;
+    line-height: 37px;
+    color:#D8B2FF;
+    border-bottom: 1px solid #D8B2FF;
+  }
+}

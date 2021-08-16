@@ -17,7 +17,7 @@
     color: #FFFFFF;
   }
 
-  .fractional {
+  .button_title {
     @include flex_row_center;
     grid-gap: 10px;
 
@@ -57,4 +57,61 @@
     transition: all 900ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 
+}
+
+
+//Fractionalize page tabs
+
+.fractional {
+  @include flex_column_center;
+
+  & .tabs_button {
+    width: 345px;
+    @media (max-width: 345px) {
+      width: 310px;
+      grid-gap: 5px;
+    }
+
+    order: 2;
+    grid-gap: 20px;
+    @include flex_row_center;
+
+    button {
+      cursor: pointer;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+
+      color: #FFFFFF;
+      margin-top: 20px;
+
+      span {
+        width: 105px;
+        @media (max-width: 345px) {
+          width:103px;
+        }
+      }
+    }
+
+    .active {
+      font-weight: bold;
+      color: #D8B2FF;
+    }
+  }
+
+  & .tabs_line {
+    order: 1;
+    width: 345px;
+    @media (max-width: 345px) {
+      width:310px;
+    }
+    span {
+      width: 115px;
+      @media (max-width: 345px) {
+        width:103px;
+      }
+    }
+  }
 }

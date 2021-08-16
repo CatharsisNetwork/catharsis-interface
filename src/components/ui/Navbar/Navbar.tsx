@@ -5,7 +5,7 @@ import style from './style.module.scss';
 
 
 /**
- The component takes a parameter customStyle for reuse . Component used in Header and HeaderModal.
+ The component takes a parameter customStyle for reuse . Component used in Header and HeaderModalMenu.
  The component compares the link title with pathname and applies the style "active",if they are equal.
  */
 
@@ -31,7 +31,7 @@ const Navbar = ({customStyle = "", onClose, links}: NavbarPropsType) => {
                 links.map((link, index) => (
                     <li key={index} className={`${style.link} ${style[isActive(link.path) || '']}`}>
                         <Link  onClick={onClose} to={link.path}>
-                            {link.label}
+                            <span>{link.label}</span>
                         </Link>
                     </li>
                 ))

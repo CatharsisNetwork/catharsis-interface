@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react": "^17.0.14"
+    "@types/react": "^17.0.14",
+    "dotenv-cli": "^4.0.0"
   }
 }

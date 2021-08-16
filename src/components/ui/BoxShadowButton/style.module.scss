@@ -1,0 +1,114 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+
+.button_content {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 216px;
+  background: white;
+  opacity: 0;
+  margin-bottom: 51px;
+  height: 50px;
+  border-radius: 37.4634px;
+}
+
+.button_content.active {
+  animation: shadow 0.3s linear;
+  animation-iteration-count: 1;
+
+}
+
+@mixin card_btn {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  margin-bottom: 51px;
+  width: 159px;
+  height: 41px;
+  border-radius: 43px;
+}
+
+.view {
+  @include card_btn;
+  background: #383640;
+}
+
+.mauve {
+  @include card_btn;
+  background: #D8B2FF;
+}
+
+.vote {
+  @include card_btn;
+  background: #FFFFFF;
+}
+
+.vote.active,
+.mauve.active,
+.view.active {
+  animation: shadow 0.3s linear;
+  animation-iteration-count: 1;
+  border-radius: 43px;
+}
+
+.view.active {
+  animation: card 0.3s linear;
+  animation-iteration-count: 1;
+}
+
+
+.wallet {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  height: 48px;
+  border-radius: 37px;
+  width: auto;
+  background: #FFFFFF;
+}
+
+.wallet.active {
+  animation: shadow 0.3s linear;
+  animation-iteration-count: 1;
+  border-radius: 43px;
+}
+
+@keyframes shadow {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 5%;
+    width: 100%;
+  }
+}
+
+@keyframes card {
+  from {
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 40%;
+    width: 100%;
+  }
+}
+
+.card_header_btn {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  height: 31px;
+  right: 0;
+  opacity: 0;
+  width: 71px;
+  background: #FFFFFF;
+}

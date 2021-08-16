@@ -1,0 +1,18 @@
+.active {
+  animation: process 0.5s linear infinite;
+}
+
+.loader {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+@keyframes process {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

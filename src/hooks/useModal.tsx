@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {Dispatch, SetStateAction, useCallback} from 'react';
 import Modal from "../components/global/Modal/Modal";
 import {CloseModalLinkOnClick} from './useCloseModalContext';
 
@@ -10,31 +10,36 @@ import {CloseModalLinkOnClick} from './useCloseModalContext';
 
 
 type ModalPropsType = {
-    children: () => React.ReactNode
-    custom_style: string
+    children: (element: string) => React.ReactNode
+    setDisplay: Dispatch<SetStateAction<string>>
 }
 
-const useModal = ({children, custom_style = ''}: ModalPropsType) => {
+const useModal = ({children,setDisplay}: ModalPropsType) => {
     const [isOpen, setIsOpen] = React.useState<boolean>(false);
+    const [element, setElement] = React.useState<string>('');
+    const [style, setStyle] = React.useState<string>('');
 
-    const onOpen = () => {
+    const onOpen = ({style, element}: { style: string, element: string }) => {
+        setElement(element)
         setIsOpen(true);
+        setStyle(style)
     };
-
     const onClose = () => {
         setIsOpen(false);
+        setDisplay('')
+
     };
     const ModalComponent = useCallback(
         () => (
             <CloseModalLinkOnClick.Provider value={onClose}>
                 <Modal isOpen={isOpen}
                        onClose={onClose}
-                       custom_style={custom_style}>
-                    {children()}
+                       custom_style={style}>
+                    {children(element)}
                 </Modal>
             </CloseModalLinkOnClick.Provider>
         ),
-        [isOpen,children,custom_style]
+        [isOpen, children]
     );
 
     return {ModalComponent, onOpen};

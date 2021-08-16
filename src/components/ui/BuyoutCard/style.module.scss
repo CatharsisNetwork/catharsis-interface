@@ -1,0 +1,34 @@
+@import "../../../styles/_vars.scss";
+@import "../../../styles/_mixins.scss";
+
+.item {
+  span {
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4E4D55;
+  }
+
+  padding: 19px 26px 21px 26px;
+  width: 100%;
+  height: 86px;
+  background: #22202A;
+  border-radius: 10px;
+
+  &_content {
+    @include flex_row_center;
+    justify-content: flex-start;
+    grid-gap: 6px;
+
+    span {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}

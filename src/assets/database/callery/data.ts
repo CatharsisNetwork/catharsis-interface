@@ -76,6 +76,7 @@ export const data: GalleryDataType = {
             img: card_content_1
         },
         footer: {
+            title: "Auction ends in 2,524 blocks",
             interval: [
                 {value: 0, period: "Days"},
                 {value: 19, period: "Hours"},

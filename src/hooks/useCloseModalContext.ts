@@ -1,11 +1,14 @@
-import React, {useContext} from "react";
+import React, { useContext } from 'react';
 
 type ContextProps = () => void;
 
-const defaultValue = () => {}
+const defaultValue = () => {
+	return null;
+};
 
-export const CloseModalLinkOnClick = React.createContext<ContextProps>(defaultValue);
+export const CloseModalLinkOnClick =
+	React.createContext<ContextProps>(defaultValue);
 
 export function useCloseModalContext() {
-    return useContext(CloseModalLinkOnClick);
+	return useContext(CloseModalLinkOnClick);
 }

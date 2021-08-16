@@ -1,25 +1,130 @@
 @import "../../../styles/vars";
 @import "../../../styles/mixins";
 
+@mixin small_width {
+  margin-top: 12px;
+  width: 154px;
+  height: 38px;
+
+  .avatar {
+    display: none;
+  }
+
+  .connect {
+    padding: 0 49px 0 14px;
+
+    & > img {
+      width: 18.39px;
+      height: 17.68px;
+      top: -1px;
+      right: 16px;
+    }
+
+    & div {
+      & > img {
+        height: 29px;
+        width: 29px;
+      }
+
+      top: -7px;
+      right: 11px;
+      height: 29px;
+      width: 29px;
+    }
+  }
+
+  & span {
+    @include font_size_small_l;
+  }
+}
+
+@mixin wallet {
+  &:active {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.68);
+  }
+  position: relative;
+  @include flex_row_center;
+  background: #212121;
+  box-shadow: 0 0 30.439px rgba(0, 0, 0, 0.68);
+  border-radius: 37.4634px;
+  width: 309px;
+  white-space: nowrap;
+  padding: 12px;
+  cursor: pointer;
+
+  .avatar {
+    position: relative;
+    padding: 0 15px 0 15px;
+    border-right: 1px solid #303030;
+    margin-left: 10px;
+
+    & img {
+      position: absolute;
+      top: 1px;
+      left: -12px;
+    }
+  }
+
+  .connect {
+    position: relative;
+    padding: 0 51px 0 12px;
+
+    & > img {
+      position: absolute;
+      top: -1px;
+      right: -2px;
+      z-index: 10;
+
+    }
+
+    & div {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      height: 41px;
+      width: 41px;
+      transform-origin: 50% 50%;
+      animation: rot 20s linear 0s infinite;
+    }
+  }
+
+  & span {
+    @include flex_row_space_between;
+    text-decoration: none;
+    color: #BABABA;
+
+  }
+}
 
 .wallet.header {
   @include wallet;
+
+}
+
+.wallet.header_none {
+  width: 309px;
+
+  span {
+    display: none;
+  }
 }
 
 .wallet.modal {
   @include wallet;
 }
 
+.wallet.login,
 .wallet.footer {
   @include wallet;
   width: 196px;
   height: 51px;
 
-  & span:first-child {
+  .avatar {
     display: none;
   }
 
-  & span:last-child {
+  .connect {
 
     & > img {
       top: -1px;
@@ -47,40 +152,7 @@
 @media (max-width: 990px) {
   .wallet.header,
   .wallet.footer {
-    margin-top: 12px;
-    width: 154px;
-    height: 38px;
-
-    & span:first-child {
-      display: none;
-    }
-
-    & span:last-child {
-      padding: 0 49px 0 14px;
-
-      & > img {
-        width: 18.39px;
-        height: 17.68px;
-        top: -1px;
-        right: 16px;
-      }
-
-      & div {
-        & > img {
-          height: 29px;
-          width: 29px;
-        }
-
-        top: -7px;
-        right: 11px;
-        height: 29px;
-        width: 29px;
-      }
-    }
-
-    & span {
-      @include font_size_small_l;
-    }
+    @include small_width;
   }
   .wallet.footer {
     margin-top: 0;
@@ -88,3 +160,8 @@
 }
 
 
+@media (max-width: 768px) {
+  .wallet.login {
+    @include small_width;
+  }
+}

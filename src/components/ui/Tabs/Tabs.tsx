@@ -1,47 +1,55 @@
-import React, { useState} from 'react';
-import circle_half from "../../../assets/image/gallery/circle_half.png";
-import circle_half_grey from "../../../assets/image/gallery/circle_half_grey.png";
-import trophy_grey from "../../../assets/image/gallery/trophy_grey.png";
-import trophy from "../../../assets/image/gallery/trophy.png";
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import style from './style.module.scss';
+import TabsButton from './TabsButton';
 
-const png = {
-    circle_half,
-    circle_half_grey,
-    trophy_grey,
-    trophy
-}
+export type TabsDataType = {
+	title: string,
+	icon?: { active: string, nonactive: string },
+	content: string,
+	position?: string,
+};
 
+type TabsPropsType = {
+	tabsData: Array<TabsDataType>,
+	customStyle?: string,
+	setContent: Dispatch<SetStateAction<string>>,
+};
 
-function Tabs() {
-    const [activeTabs, setActiveTabs] = useState<boolean>(false)
-    return (
-        <>
-            <div className={style.tabs_button}>
-                <button className={`${style.fractional} ${style[activeTabs ? "active" : ""]}`}
-                        onClick={() => {
-                            if (activeTabs) return;
-                            setActiveTabs(!activeTabs)
-                        }
-                        }>
-                    <img src={png[activeTabs ? "circle_half" : "circle_half_grey"]} alt="circle_half"/>
-                    <span>Fractionalized</span>
-                </button>
-                <button className={`${style.fractional} ${style[!activeTabs ? "active" : ""]}`}
-                        onClick={() => {
-                            if (!activeTabs) return;
-                            setActiveTabs(!activeTabs)
-                        }
-                        }>
-                    <img src={png[activeTabs ? "trophy_grey" : "trophy"]} alt="trophy"/>
-                    <span>Auction</span>
-                </button>
-            </div>
-            <div className={style.tabs_line}>
-                <span style={{left: !activeTabs ? "50%" : "0"}}/>
-            </div>
-        </>
-    );
+function Tabs({ tabsData, customStyle, setContent }: TabsPropsType) {
+	const [activeTabs, setActiveTabs] = useState<boolean>(true);
+	const [tabsId, setTabsId] = useState<number>(1);
+
+	return (
+		<div className={style[customStyle ? customStyle : '']}>
+			<div className={style.tabs_button}>
+				{tabsData.map((el, idx) => {
+					return (
+						<TabsButton
+							activeTabs={activeTabs}
+							setActiveTabs={setActiveTabs}
+							title={el.title}
+							setContent={setContent}
+							content={el.content}
+							id={idx}
+							key={idx}
+							setTabsId={setTabsId}
+							tabsId={tabsId}
+							icon={el.icon}
+						/>
+					);
+				})}
+			</div>
+			<div className={style.tabs_line}>
+				<span
+					style={{
+						left: `${
+							(100 / tabsData.length) * (tabsId + 1) - 100 / tabsData.length
+						}%`,
+					}}
+				/>
+			</div>
+		</div>
+	);
 }
 
 export default Tabs;

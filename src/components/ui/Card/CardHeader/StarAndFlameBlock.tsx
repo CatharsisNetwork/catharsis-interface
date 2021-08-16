@@ -40,8 +40,8 @@ export default StarAndFlameBlock;
 
 
 function StarAndFlameItem({value}: StarAndFlameItemType) {
-    return <div className={style[`${value.icon}`]}>
+    return <span className={style[`${value.icon}`]}>
         <img src={png[value.icon === "star" ? "star" : "flame"]} alt={`${value.icon}`}/>
         <span>{value.title}</span>
-    </div>
+    </span>
 }

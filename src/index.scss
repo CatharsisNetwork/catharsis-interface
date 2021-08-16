@@ -21,10 +21,6 @@ code {
   box-sizing: border-box;
 }
 
-ul[class],
-ol[class] {
-  padding: 0;
-}
 
 body,
 h1,
@@ -54,6 +50,7 @@ body {
 ul[class],
 ol[class] {
   list-style: none;
+  padding: 0;
 }
 
 li {
@@ -90,6 +87,24 @@ select {
   font: inherit;
 }
 
+input {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border: none;
+}
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

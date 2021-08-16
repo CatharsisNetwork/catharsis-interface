@@ -8,14 +8,14 @@ import style from './style.module.scss';
  */
 
 function Menu() {
-    return (
-        <div className={style.menu}>
-            <img src={menu_2} alt=""/>
-            <img src={menu_1} alt=""/>
-            <img src={menu_2} alt=""/>
-            <img src={menu_1} alt=""/>
-        </div>
-    );
+	return (
+		<div className={style.menu}>
+			<img src={menu_2} alt="" />
+			<img src={menu_1} alt="" />
+			<img src={menu_2} alt="" />
+			<img src={menu_1} alt="" />
+		</div>
+	);
 }
 
 export default Menu;

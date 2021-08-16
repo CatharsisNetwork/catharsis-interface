@@ -1,0 +1,89 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.card_preview,
+.card {
+  position: relative;
+  width: 199px;
+  height: 199px;
+  border-radius: 9px;
+  @include flex_column_justify_flex-end;
+  border: 1px solid #1A1820;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 197px;
+    height: 197px;
+  }
+
+  &_button {
+    z-index: 1;
+    width: 184px;
+    margin: 8px;
+    background: rgba(11, 11, 11, 0.76);
+    border-radius: 58.88px;
+
+    & span {
+      @include flex_row_center;
+      height: 27.6px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+  &.active {
+    border: 1px solid #C19CE3;
+    border-radius: 9px;
+  }
+}
+.card_preview{
+  width: 285px;
+  height: 365px;
+  img {
+    width: 285px;
+    height: 365px;
+  }
+  & .card_button {
+    width: 246px;
+    margin: 20px;
+    & span {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  &.active {
+    border: 1px solid #1A1820;
+  }
+}
+@media (max-width: 990px) {
+      .card_preview {
+        width: 345px;
+        height: 406.21px;
+        img {
+          width: 285px;
+          height: 365px;
+        }
+        & .card_button {
+          width: 273.77px;
+          height: 41.07px;
+          background: rgba(11, 11, 11, 0.76);
+          border-radius: 87.6077px;
+          & span {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            color: #FFFFFF;
+          }
+        }
+        &.active {
+          border: 1px solid #1A1820;
+        }
+      }
+}
