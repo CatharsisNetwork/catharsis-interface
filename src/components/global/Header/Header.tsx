@@ -11,9 +11,10 @@ import {links} from '../../../assets/database/header/data';
 import HeaderModalWallet from "./HeaderModalWallet";
 
 function Header() {
+
     const [display, setDisplay] = useState<string>('')
     const children = (element: string) => {
-        if (element === 'menu') return <HeaderModalMenu/>;
+        if (element === 'menu') return <HeaderModalMenu setDisplay={setDisplay} onOpen={onOpen} display={display}/>;
         if (element === 'wallet') return <HeaderModalWallet/>;
     };
 

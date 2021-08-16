@@ -2,13 +2,37 @@
 @import "../../../styles/mixins";
 
 .panel {
+  position: relative;
   width: 540px;
-  height: 313px;
+  height: auto;
   background: #181818;
   box-shadow: 0 48px 136px rgba(0, 0, 0, 0.2);
   border-radius: 22px;
   padding: 16px 28px 40px 28px;
 
+  &_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &_wallet {
+    width: 174px;
+    position: absolute;
+    top: -75px;
+    right: 21px;
+    @media (max-width: 990px) {
+      position: absolute;
+      right: 33%;
+    }
+    @media (max-width: 768px) {
+      position: absolute;
+      top: -65px;
+      right: 22%;
+    }
+  }
 
   &_title {
     font-style: normal;
@@ -20,12 +44,35 @@
     border-bottom: 1px solid #232323;
   }
 
+  &_initializing {
+    @include flex_row_space_between;
+    height: 62px;
+    background: #343434;
+    border-radius: 12px;
+    padding: 0 19px 0 26px;
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      color: #C1C1C1;
+    }
+  }
+
   &_content {
     margin-top: 21px;
     @include flex_column_center;
     grid-gap: 9px;
 
+    .active {
+      height: 92px;
+
+    }
+
     &__item {
+      min-height: 55px;
       span {
         font-style: normal;
         font-weight: 600;
@@ -33,6 +80,20 @@
         line-height: 24px;
         text-align: center;
         color: #FFFFFF;
+      }
+
+      .title {
+        @include flex_column_start;
+
+        small {
+
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          color: #C9D6ED;
+        }
       }
 
       .icon {
@@ -47,12 +108,56 @@
       height: 62px;
       background: #C87B25;
       border-radius: 12px;
+      @media (max-width: 768px) {
+        height: auto
+      }
     }
   }
 }
+
 @media (max-width: 760px) {
   .panel {
     width: 345px;
+    &_content {
+      .active {
+        height: auto;
+        min-height: 65px;
+      }
+      &__item {
+         span {
+           font-size: 16px;
+           line-height: 19px;
+        }
+        .title {
+          small {
+            font-size: 14px;
+            line-height: 16px;
+            text-align: start;
+            color: #C9D6ED;
+          }
+        }
+        .icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
   }
+}
 
+@media (max-width: 345px) {
+  .panel {
+    width: 320px;
+  }
+}
+
+.initializing {
+  position: relative;
+  width: 30px;
+
+  img:first-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }

@@ -11,8 +11,7 @@ import {links} from "../../../assets/database/header/data";
 
 function HeaderModalWallet() {
     return (
-                <LoginPanel/>
-
+        <LoginPanel/>
     );
 }
 

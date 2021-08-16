@@ -9,6 +9,7 @@
   top: 0;
   left: 0;
   @include flex_column_center;
+  justify-content: flex-start;
   z-index: 100;
   overflow: auto;
 }
@@ -21,12 +22,14 @@
 }
 
 .header_wallet__container {
+
   position: absolute;
   top: 100px;
   right: 100px;
-  @media (max-width: 768px) {
-    position: relative;
-    top: 0;
+  @media (max-width: 990px) {
+
+    position: static;
+    top: 20%;
     right: 0;
   }
 }
@@ -46,12 +49,14 @@
 
 .header_wallet {
   border-radius: 22px;
-  margin: 0 auto;
   width: auto;
+  @media (max-width: 990px) {
+    margin-top: 159px;
+  }
   @include header;
+
   & > img {
-    top: 5px;
-    right: 5px;
+    display: none;
   }
 }
 

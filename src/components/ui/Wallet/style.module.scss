@@ -1,6 +1,43 @@
 @import "../../../styles/vars";
 @import "../../../styles/mixins";
 
+@mixin small_width {
+  margin-top: 12px;
+  width: 154px;
+  height: 38px;
+
+  .avatar {
+    display: none;
+  }
+
+  .connect {
+    padding: 0 49px 0 14px;
+
+    & > img {
+      width: 18.39px;
+      height: 17.68px;
+      top: -1px;
+      right: 16px;
+    }
+
+    & div {
+      & > img {
+        height: 29px;
+        width: 29px;
+      }
+
+      top: -7px;
+      right: 11px;
+      height: 29px;
+      width: 29px;
+    }
+  }
+
+  & span {
+    @include font_size_small_l;
+  }
+}
+
 @mixin wallet {
   &:active {
     box-shadow: none;
@@ -67,6 +104,7 @@
 
 .wallet.header_none {
   width: 309px;
+
   span {
     display: none;
   }
@@ -76,6 +114,7 @@
   @include wallet;
 }
 
+.wallet.login,
 .wallet.footer {
   @include wallet;
   width: 196px;
@@ -113,40 +152,7 @@
 @media (max-width: 990px) {
   .wallet.header,
   .wallet.footer {
-    margin-top: 12px;
-    width: 154px;
-    height: 38px;
-
-    .avatar {
-      display: none;
-    }
-
-    .connect {
-      padding: 0 49px 0 14px;
-
-      & > img {
-        width: 18.39px;
-        height: 17.68px;
-        top: -1px;
-        right: 16px;
-      }
-
-      & div {
-        & > img {
-          height: 29px;
-          width: 29px;
-        }
-
-        top: -7px;
-        right: 11px;
-        height: 29px;
-        width: 29px;
-      }
-    }
-
-    & span {
-      @include font_size_small_l;
-    }
+    @include small_width;
   }
   .wallet.footer {
     margin-top: 0;
@@ -154,3 +160,8 @@
 }
 
 
+@media (max-width: 768px) {
+  .wallet.login {
+    @include small_width;
+  }
+}
