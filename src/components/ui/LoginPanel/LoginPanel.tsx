@@ -4,7 +4,6 @@ import login_item__1 from '../../../assets/image/header/login_item__1.png'
 import login_item__2 from '../../../assets/image/header/login_item__2.png'
 import login_item__3 from '../../../assets/image/header/login_item__3.png'
 import close_login from '../../../assets/image/header/close_login.png'
-import initializing from '../../../assets/image/header/initializing_1.png'
 import PanelItem from "./PanelItem";
 import Wallet from "../Wallet/Wallet";
 import Avatar from "../Wallet/Avatar";
