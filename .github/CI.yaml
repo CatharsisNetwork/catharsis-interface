@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
       - dev
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
