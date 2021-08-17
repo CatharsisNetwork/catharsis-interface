@@ -3,6 +3,7 @@ import style from './style.module.scss';
 import { CardType } from '../../../assets/database/callery/data';
 import CardFooter from './CardFooter/CardFooter';
 import CardHeader from './CardHeader/CardHeader';
+import CardContent from "./CardContent/CardContent";
 
 function Card({ data }: { data: CardType }) {
 	return (
@@ -13,11 +14,7 @@ function Card({ data }: { data: CardType }) {
 				star={data.header.star}
 				title={data.header.title}
 			/>
-
-			<div className={style.card_content}>
-				<img src={data.content.img} alt="card_content" />
-			</div>
-
+			<CardContent icon={data.content.img}/>
 			<CardFooter
 				interval={data.footer.interval}
 				info={data.footer.info}

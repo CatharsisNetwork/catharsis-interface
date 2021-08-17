@@ -59,6 +59,16 @@
 
 }
 
+//Admin page tabs
+.admin {
+  margin-top: 25px;
+.tabs_button{
+  grid-gap: 140px;
+}
+  .tabs_line {
+    width: 816px;
+  }
+}
 
 //Fractionalize page tabs
 
@@ -90,7 +100,7 @@
       span {
         width: 105px;
         @media (max-width: 345px) {
-          width:103px;
+          width: 103px;
         }
       }
     }
@@ -105,12 +115,13 @@
     order: 1;
     width: 345px;
     @media (max-width: 345px) {
-      width:310px;
+      width: 310px;
     }
+
     span {
       width: 115px;
       @media (max-width: 345px) {
-        width:103px;
+        width: 103px;
       }
     }
   }

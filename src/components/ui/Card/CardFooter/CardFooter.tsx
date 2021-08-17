@@ -18,9 +18,12 @@ function CardFooter({
                     }: { button: FooterBtnType, title?: string, info?: Array<FooterInfoType>, interval?: Array<IntervalType> }) {
     return (
         <div className={`${style.card_footer} ${style[interval ? "interval" : ""]}`}>
-            <div className={style.card_footer__title}>
-                <span> {title}</span>
-            </div>
+
+            {
+                title ? (  <div className={style.card_footer__title}>
+                    <span> {title}</span>
+                </div>) : null
+            }
 
             {
                 info ? (<div className={style.card_footer__countdown}>
@@ -34,8 +37,9 @@ function CardFooter({
                 </div>) : null
             }
 
-
-            <FooterBtn button={button}/>
+            {
+                button ? <FooterBtn button={button}/> : null
+            }
         </div>
     );
 }

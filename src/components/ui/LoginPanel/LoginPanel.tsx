@@ -10,6 +10,7 @@ import Avatar from "../Wallet/Avatar";
 import {useCloseModalContext} from "../../../hooks/useCloseModalContext";
 import Initializing from "./Initializing";
 import Refresh from "../Refresh/Refresh";
+import {useHistory} from "react-router-dom";
 
 
 type PanelType = {
@@ -36,7 +37,7 @@ const panel: Array<PanelType> = [
 ]
 
 function LoginPanel() {
-
+    const onClose = useCloseModalContext();
     const [current, setCurrent] = useState<string | false>(false)
     useEffect(() => {
         setCurrent(false)
@@ -46,9 +47,18 @@ function LoginPanel() {
         if (!current) return panel
         return panel.filter(el => el.title === current)
     }
+    const history = useHistory()
 
 
-    const onClose = useCloseModalContext();
+    const login = (title: string) => {
+        setCurrent(title)
+        setTimeout(() => {
+            history.push('/admin')
+            onClose();
+        }, 1000)
+    }
+
+
     return (
         <div className={style.panel}>
             <div className={style.panel_close} onClick={onClose}>
@@ -66,13 +76,13 @@ function LoginPanel() {
                 current ? (
                     <div className={style.panel_initializing}>
                         <span>Initializing...</span>
-                        <Refresh children={() => <Initializing/>} isLoading={true} />
+                        <Refresh children={() => <Initializing/>} isLoading={true}/>
                     </div>
                 ) : null
             }
             <div className={style.panel_content}>
                 {filter(panel).map((el, idx) => {
-                    return <PanelItem title={el.title} key={idx} icon={el.icon} bg={el.bg} setCurrent={setCurrent}
+                    return <PanelItem title={el.title} key={idx} icon={el.icon} bg={el.bg} setCurrent={login}
                                       current={current}/>
                 })}
             </div>
