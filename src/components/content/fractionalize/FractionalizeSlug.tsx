@@ -1,10 +1,10 @@
 import React from 'react';
 import style from './style.module.scss';
-import FractionalizeDropex from './FractionalizeDropex/FractionalizeDropex';
+import Farm from '../farm/Farm';
 
 function FractionalizeSlug({ slug }: { slug: string }) {
 	function getFractionalizeContent() {
-		if (slug === '4') return <FractionalizeDropex />;
+		if (slug === '4') return <Farm />;
 	}
 
 	return (

@@ -3,7 +3,7 @@ import style from './style.module.scss';
 import DropexButton from './DropexButton';
 import DropexCardContent from './DropexCardContent';
 
-function FractionalizeDropex() {
+function Farm() {
 	return (
 		<div className={style.dropex}>
 			<div className={style.dropex_title}>
@@ -18,4 +18,4 @@ function FractionalizeDropex() {
 	);
 }
 
-export default FractionalizeDropex;
+export default Farm;
