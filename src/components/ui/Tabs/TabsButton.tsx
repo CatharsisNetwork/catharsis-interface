@@ -1,7 +1,7 @@
 import React, {Dispatch, SetStateAction} from 'react';
 import {getActiveClassName} from "../../../utils/lib/getActiveClassName";
 import style from "./style.module.scss";
-import TabsIcon from "./TabsIcon";
+import TabsIcon from "../TabsIcon/TabsIcon";
 
 type TabsButtonType = {
     activeTabs: boolean,

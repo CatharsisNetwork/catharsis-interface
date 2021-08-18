@@ -1,55 +1,60 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, {Dispatch, SetStateAction, useState} from 'react';
 import style from './style.module.scss';
 import TabsButton from './TabsButton';
+import admin from "../../../pages/admin";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 export type TabsDataType = {
-	title: string,
-	icon?: { active: string, nonactive: string },
-	content: string,
-	position?: string,
+    title: string,
+    icon?: { active: string, nonactive: string },
+    content: string,
+    position?: string,
 };
 
 type TabsPropsType = {
-	tabsData: Array<TabsDataType>,
-	customStyle?: string,
-	setContent: Dispatch<SetStateAction<string>>,
+    tabsData: Array<TabsDataType>,
+    customStyle?: string,
+    setContent: Dispatch<SetStateAction<string>>,
 };
 
-function Tabs({ tabsData, customStyle, setContent }: TabsPropsType) {
-	const [activeTabs, setActiveTabs] = useState<boolean>(true);
-	const [tabsId, setTabsId] = useState<number>(1);
-
-	return (
-		<div className={style[customStyle ? customStyle : '']}>
-			<div className={style.tabs_button}>
-				{tabsData.map((el, idx) => {
-					return (
-						<TabsButton
-							activeTabs={activeTabs}
-							setActiveTabs={setActiveTabs}
-							title={el.title}
-							setContent={setContent}
-							content={el.content}
-							id={idx}
-							key={idx}
-							setTabsId={setTabsId}
-							tabsId={tabsId}
-							icon={el.icon}
-						/>
-					);
-				})}
-			</div>
-			<div className={style.tabs_line}>
+function Tabs({tabsData, customStyle, setContent}: TabsPropsType) {
+    const [activeTabs, setActiveTabs] = useState<boolean>(true);
+    const [tabsId, setTabsId] = useState<number>(1);
+    const {width} = useWindowSize()
+    return (
+        <div className={style[customStyle ? customStyle : '']}>
+            <div className={style.tabs_button}>
+                {tabsData.map((el, idx) => {
+                    return (
+                        <TabsButton
+                            activeTabs={activeTabs}
+                            setActiveTabs={setActiveTabs}
+                            title={el.title}
+                            setContent={setContent}
+                            content={el.content}
+                            id={idx}
+                            key={idx}
+                            setTabsId={setTabsId}
+                            tabsId={tabsId}
+                            icon={el.icon}
+                        />
+                    );
+                })}
+            </div>
+            {
+                customStyle === "admin" && width && width > 990 ? (<div className={style.tabs_line}>
 				<span
-					style={{
-						left: `${
-							(100 / tabsData.length) * (tabsId + 1) - 100 / tabsData.length
-						}%`,
-					}}
-				/>
-			</div>
-		</div>
-	);
+                    style={{
+                        left: `${
+                            (100 / tabsData.length) * (tabsId + 1) - 100 / tabsData.length
+                        }%`,
+                    }}
+                />
+                </div>) : null}
+        </div>
+
+
+    );
 }
 
 export default Tabs;

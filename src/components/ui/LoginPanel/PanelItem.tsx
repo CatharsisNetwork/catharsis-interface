@@ -8,10 +8,11 @@ function PanelItem({
                        current,
                        setCurrent
 
-}: { title: string, icon: string, bg: string, setCurrent: Dispatch<SetStateAction<string | false>>, current: string | false }) {
-     console.log(current)
+                   }: { title: string, icon: string, bg: string, setCurrent: (title: string) => void, current: string | false }) {
+    console.log(current)
     return (
-        <div className={`${style.panel_content__item} ${style[current?"active":'']}`} style={{background: `${bg}`}} onClick={() => setCurrent(title)}>
+        <div className={`${style.panel_content__item} ${style[current ? "active" : '']}`} style={{background: `${bg}`}}
+             onClick={() => setCurrent(title)}>
             <span className={style.title}>{title}
                 {current ?
                     (<small>

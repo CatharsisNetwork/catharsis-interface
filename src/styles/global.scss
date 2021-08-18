@@ -49,6 +49,8 @@ body {
   position: relative;
   flex: 1 1 auto;
   @include flex_column_center;
+  justify-content: flex-start;
+
 }
 
 .faq_bg {

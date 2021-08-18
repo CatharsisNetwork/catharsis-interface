@@ -59,6 +59,18 @@
 
 }
 
+//Admin page tabs
+.admin {
+  margin-top: 25px;
+
+  .tabs_button {
+    grid-gap: 140px;
+  }
+
+  .tabs_line {
+    width: 816px;
+  }
+}
 
 //Fractionalize page tabs
 
@@ -90,7 +102,7 @@
       span {
         width: 105px;
         @media (max-width: 345px) {
-          width:103px;
+          width: 103px;
         }
       }
     }
@@ -105,12 +117,45 @@
     order: 1;
     width: 345px;
     @media (max-width: 345px) {
-      width:310px;
+      width: 310px;
     }
+
     span {
       width: 115px;
       @media (max-width: 345px) {
-        width:103px;
+        width: 103px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 990px) {
+  .admin {
+    margin-top: 25px;
+
+    .tabs_button {
+      @include flex_column_center;
+      height: 152px;
+      gap: 10px;
+      .button_title {
+        width: 600px;
+        height: 42px;
+        background: #232323;
+        border-radius: 8px;
+      }
+    }
+
+    .tabs_line {
+      width: 816px;
+    }
+  }
+}
+@media (max-width: 990px) {
+  .admin {
+    .tabs_button {
+      .button_title {
+        width: 331px;
       }
     }
   }

@@ -150,14 +150,16 @@
       overflow: hidden;
       width: 345px;
       height: 406.21px;
-      & .card_preview{
-        width: 345px;
-        height: 406.21px;
-      }
       img {
         width: 345px;
         height: 406.21px;
       }
+      & .card_preview{
+        width: 345px;
+        height: 406.21px;
+
+      }
+
 
       &__button {
         z-index: 1;
