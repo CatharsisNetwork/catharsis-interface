@@ -1,19 +1,18 @@
 import React, {useState} from 'react';
 import style from "./style.module.scss";
 import Approve from "./Approve/Approve";
-import FractionalizeAuction from "../fractionalize/FractionalizeAuction/FractionalizeAuction";
-
-import {tabsData} from "../../../assets/database/admin/tabsData";
+import {tabsData} from "../../../assets/database/user/tabsData";
 import Tabs from "../../ui/Tabs/Tabs";
 import Token from "./Token/Token";
+import Statistic from "./Statistic/Statistic";
 
 
-function ProfileAdmin() {
+function ProfileUser() {
     const [content, setContent] = useState<string>('approve');
 
     function getProfileAdminContent(content: string) {
         if (content === 'approve') return <Approve/>;
-        if (content === 'statistic') return <FractionalizeAuction/>;
+        if (content === 'statistic') return <Statistic/>;
         if (content === 'token') return <Token/>;
     }
 
@@ -33,4 +32,4 @@ function ProfileAdmin() {
     );
 }
 
-export default ProfileAdmin;
+export default ProfileUser;

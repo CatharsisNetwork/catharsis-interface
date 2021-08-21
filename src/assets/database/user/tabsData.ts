@@ -19,5 +19,4 @@ export const tabsData = [
         icon: {active: 'coin', nonactive: 'coin_grey'},
         position: 'right',
     },
-
 ];

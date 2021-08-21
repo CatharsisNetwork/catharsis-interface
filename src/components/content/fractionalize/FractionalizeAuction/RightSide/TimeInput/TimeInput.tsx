@@ -84,7 +84,7 @@ function TimeInput({
 
 	const handleFocus = (e: InputChange) => {
 		e.preventDefault();
-		const { name, value, id } = e.target;
+		const {  id } = e.target;
 
 		// If the value already exists and the user wants to change it, the value is reset to zero.
 

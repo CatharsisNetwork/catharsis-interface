@@ -165,6 +165,7 @@
   }
 
   &_right {
+
     @include flex_column_center;
     justify-content: flex-start;
     width: 475px;
@@ -267,6 +268,7 @@
 }
 
 .input {
+  margin-top: 13px;
   position: relative;
   @include flex_column_center;
 

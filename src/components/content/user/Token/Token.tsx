@@ -2,7 +2,7 @@ import React from 'react';
 import style from "./style.module.scss";
 import TokenTableHead from "./TokenTableHead";
 import TokenTableRow from "./TokenTableRow";
-import {tokenData} from "../../../../assets/database/admin/tokenData";
+import {tokenData} from "../../../../assets/database/user/tokenData";
 
 function Token() {
     return (

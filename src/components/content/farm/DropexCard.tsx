@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import style from './style.module.scss';
 import CardIcons from './CardIcons';
 import flame from '../../../assets/image/fractionalize/flame.png';
 import DropexCardItem from './DropexCardItem';
-import Button from '../../ui/ButtonGroup/Button';
+
 
 const dropex = {
 	item_1: {
@@ -32,7 +32,6 @@ const dropex = {
 };
 
 function DropexCard() {
-	const [active, setActive] = useState(false);
 	return (
 		<div className={style.card}>
 			<div className={style.card_title}>

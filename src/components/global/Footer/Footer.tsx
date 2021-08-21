@@ -6,7 +6,6 @@ import Logo from '../../ui/Logo/Logo';
 import Navbar from '../../ui/Navbar/Navbar';
 import Wallet from '../../ui/Wallet/Wallet';
 import style from './style.module.scss';
-import HeaderModalMenu from "../Header/HeaderModalMenu";
 import HeaderModalWallet from "../Header/HeaderModalWallet";
 import {useModal} from "../../../hooks/useModal";
 

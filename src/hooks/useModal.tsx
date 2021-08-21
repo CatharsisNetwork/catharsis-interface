@@ -27,7 +27,6 @@ const useModal = ({children,setDisplay}: ModalPropsType) => {
     const onClose = () => {
         setIsOpen(false);
         setDisplay('')
-
     };
     const ModalComponent = useCallback(
         () => (
@@ -39,7 +38,8 @@ const useModal = ({children,setDisplay}: ModalPropsType) => {
                 </Modal>
             </CloseModalLinkOnClick.Provider>
         ),
-        [isOpen, children]
+        // eslint-disable-next-line
+        [isOpen, children,style,element]
     );
 
     return {ModalComponent, onOpen};

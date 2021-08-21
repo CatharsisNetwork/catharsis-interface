@@ -53,7 +53,7 @@ function LoginPanel() {
     const login = (title: string) => {
         setCurrent(title)
         setTimeout(() => {
-            history.push('/admin')
+            history.push('/user')
             onClose();
         }, 1000)
     }

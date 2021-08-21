@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from 'react';
+import React from 'react';
 import style from './style.module.scss'
 
 function PanelItem({

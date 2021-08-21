@@ -1,0 +1,80 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+.statistic {
+  margin-top: 43px;
+  @include flex_row_center;
+  align-items: flex-start;
+  margin-bottom: 45px;
+  width: 1110px;
+  height: 430px;
+  background: #181818;
+  border-radius: 32px;
+  gap: 27px;
+
+  &_card {
+    @include flex_column_start;
+    gap: 15px;
+
+    &__item {
+      @include flex_column_center;
+      align-items: flex-start;
+      width: 288px;
+      height: 78px;
+      background: #1F1F1F;
+      border-radius: 10px;
+      padding: 20px;
+
+      span {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #4E4D55;
+      }
+
+      small {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &_schedule {
+    @include flex_column_center;
+    width: 741px;
+    height: 425px;
+    background: #1F1F1F;
+    border-radius: 27px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .statistic {
+  @include flex_column_center;
+    width: auto;
+    height: auto;
+    &_card {
+      @include flex_row_center;}
+}}
+@media (max-width: 768px) {
+  .statistic {
+    &_card {
+      width: 331px;
+      @include flex_column_center;
+      &__item {
+        width: 331px;
+      }
+    }
+    &_schedule {
+
+      border-radius: 10px;
+      width: 331px;
+      height: 274px;
+    }
+  }}

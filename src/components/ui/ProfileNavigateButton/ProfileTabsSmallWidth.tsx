@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {tabsData} from "../../../assets/database/admin/tabsData";
+import {tabsData} from "../../../assets/database/user/tabsData";
 
 import style from './style.module.scss';
 import TabsButton from "../Tabs/TabsButton";

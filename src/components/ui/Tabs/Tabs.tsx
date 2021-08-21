@@ -1,7 +1,6 @@
 import React, {Dispatch, SetStateAction, useState} from 'react';
 import style from './style.module.scss';
 import TabsButton from './TabsButton';
-import admin from "../../../pages/admin";
 import useWindowSize from "../../../hooks/useWindowSize";
 
 export type TabsDataType = {
@@ -19,8 +18,19 @@ type TabsPropsType = {
 
 function Tabs({tabsData, customStyle, setContent}: TabsPropsType) {
     const [activeTabs, setActiveTabs] = useState<boolean>(true);
-    const [tabsId, setTabsId] = useState<number>(1);
+    const [tabsId, setTabsId] = useState<number>(0);
     const {width} = useWindowSize()
+
+    const getTabsLine = () => {
+        if (customStyle === "admin" && width && width < 990) {
+            return null
+        }
+        return (
+            <div className={style.tabs_line}>
+                <span style={{left: `${(100 / tabsData.length) * (tabsId + 1) - 100 / tabsData.length}%`,}}/>
+            </div>
+        )
+    }
     return (
         <div className={style[customStyle ? customStyle : '']}>
             <div className={style.tabs_button}>
@@ -41,16 +51,7 @@ function Tabs({tabsData, customStyle, setContent}: TabsPropsType) {
                     );
                 })}
             </div>
-            {
-                customStyle === "admin" && width && width > 990 ? (<div className={style.tabs_line}>
-				<span
-                    style={{
-                        left: `${
-                            (100 / tabsData.length) * (tabsId + 1) - 100 / tabsData.length
-                        }%`,
-                    }}
-                />
-                </div>) : null}
+            {getTabsLine()}
         </div>
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./style.module.scss";
-import {TokenDataType} from "../../../../assets/database/admin/tokenData";
+import {TokenDataType} from "../../../../assets/database/user/tokenData";
 
 function TokenTableRow({content}: { content: TokenDataType }) {
     return (

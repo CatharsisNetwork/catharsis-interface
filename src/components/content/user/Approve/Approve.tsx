@@ -1,7 +1,8 @@
 import React from 'react';
 import style from "./style.module.scss";
 import ProfileCard from "../../../ui/ProfileCard/ProfileCard";
-import {approve, ApproveType} from "../../../../assets/database/admin/admin";
+import {approve, ApproveType} from "../../../../assets/database/user/user";
+
 
 const header = (el: ApproveType) => {
     return (
@@ -28,7 +29,7 @@ const footer = (el: ApproveType) => {
                 <img src={el.footer.button_2.icon} alt="icon"/>
                 <span>{el.footer.button_2.text}</span>
             </div>
-            <img src={el.footer.image} alt="image"/>
+            <img src={el.footer.image} alt="footer"/>
         </div>
     )
 }

@@ -8,7 +8,7 @@ function TokenTableHead() {
     return (
         <div className={style.token_head}>
             {head.map((el, idx) => {
-                return <span className={style.token_head__item}>{el}</span>
+                return <span className={style.token_head__item} key={idx}>{el}</span>
             })}
         </div>
     );
