@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from './style.module.scss';
+import {scrollToTop} from "../../../utils/lib/scroll";
 
 const LimboPage = () => {
+	useEffect(() => scrollToTop(), []);
 	return (
 		<div className={'content'}>
 			<div className="_container">

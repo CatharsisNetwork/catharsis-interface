@@ -1,7 +1,7 @@
 import React from 'react';
 import style from "./style.module.scss";
 
-const head = ["Pool", "Total alms", "Locked", "Unlocked", "Claimed"]
+const head = ["Pool", "Total alms", "Locked", "Unlocked","Next unlocked date", "Claimed"]
 
 
 function TokenTableHead() {

@@ -13,6 +13,7 @@ function TokenTableRow({content}: { content: TokenDataType }) {
             <span className={style.token_row__item}>{content.total}</span>
             <span className={style.token_row__item}>{content.locked}</span>
             <span className={style.token_row__item}>{content.unlocked}</span>
+            <span className={style.token_row__item}>{content.date}</span>
             <span className={style.token_row__item}>{content.claimed}</span>
         </div>
     );

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from './style.module.scss';
 import DropexButton from './DropexButton';
 import DropexCardContent from './DropexCardContent';
+import {scrollToTop} from "../../../utils/lib/scroll";
 
 function Farm() {
+    useEffect(() => scrollToTop(), []);
     return (
         <div className={'content'}>
             <div className={style.dropex}>

@@ -1,0 +1,108 @@
+@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
+
+.swap {
+  margin-top: 43px;
+  @include flex_column_center;
+  margin-bottom: 45px;
+  width: 790px;
+  height: 254px;
+  background: #181818;
+  border-radius: 32px;
+
+
+  &_title {
+    @include flex_row_center;
+    gap: 10px;
+    margin-bottom: 36px;
+
+    span {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+  &_group {
+    @include flex_row_center;
+    gap: 15px;
+
+    &__input {
+      width: 346px;
+      height: 57px;
+      background: #1E1E1E;
+      border-radius: 12px;
+      @include flex_row_space_between;
+      padding: 14px;
+      small {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #565656;
+      }
+      .currency {
+        @include flex_row_center;
+        width: 148px;
+        height: 32px;
+        background: rgba(216, 178, 255, 0.25);
+        border-radius: 62px;
+        gap: 10px;
+
+        span {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 19px;
+          text-align: center;
+          color: #FFFFFF;
+        }
+
+
+      }
+    }
+
+  }
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  margin-top: 41px;
+  margin-bottom: 51px;
+  padding: 15px 40px;
+  width: 216px;
+  height: 50px;
+  background: #392A47;
+  box-shadow: 0 3px 3px -1px #392A47, 0px 4px 5px 1px #1b1923, 0px 3px 7px 2px rgba(0, 0, 0, 0.68);
+
+  border-radius: 37.4634px;
+
+  &_content {
+    @include flex_column_center;
+
+    img {
+      display: none
+    }
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16.3902px;
+      line-height: 20px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+  &:active {
+    margin-top: 42px;
+    margin-bottom: 50px;
+    height: 50px;
+    box-shadow: 0 0 30.439px rgba(0, 0, 0, 0.68);
+  }
+}

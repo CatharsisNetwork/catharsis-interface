@@ -11,9 +11,7 @@
     margin-bottom: 77px;
     padding:35px;
     margin-top:35px;
-    &_cards{
-        @include flex_column_center;
-    }
+
 }
 @media (max-width:1150px){
     .admin{

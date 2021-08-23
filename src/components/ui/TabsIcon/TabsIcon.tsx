@@ -9,6 +9,8 @@ import trend from '../../../assets/image/admin/trend.png';
 import trend_grey from '../../../assets/image/admin/trend_grey.png';
 import waterfalls from '../../../assets/image/admin/waterfalls.png';
 import waterfalls_grey from '../../../assets/image/admin/waterfalls_grey.png';
+import swap from '../../../assets/image/admin/swap.png';
+import swap_grey from '../../../assets/image/admin/swap_grey.png';
 
 export type PngType = {
 	[key: string]: string,
@@ -19,6 +21,8 @@ const png: PngType = {
 	trophy_grey,
 	trophy,
 	coin,
+	swap,
+	swap_grey,
 	coin_grey,
 	trend,
 	trend_grey,

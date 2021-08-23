@@ -16,7 +16,7 @@ const data = [
     {
         name: 'Mon',
         uv: 40,
-        pv: 124,
+        pv: 199,
         amt: 124,
     },
     {
@@ -28,13 +28,13 @@ const data = [
     {
         name: 'Wed',
         uv: 20,
-        pv: 198,
+        pv: 166,
         amt: 22,
     },
     {
         name: 'Thu',
         uv: 27,
-        pv: 44,
+        pv: 99,
         amt: 20,
     },
     {
@@ -46,13 +46,13 @@ const data = [
     {
         name: 'Sat',
         uv: 23,
-        pv: 38,
+        pv: 50,
         amt: 25,
     },
     {
         name: 'Sun',
         uv: 34,
-        pv: 170,
+        pv: 11,
         amt: 21,
     },
 ];
@@ -95,7 +95,7 @@ export const Schedule = () => {
                         interval={"preserveStart"}
                         tickMargin={getValue(15, 5)}
                         tickLine={false}
-                        width={55}
+                        width={getValue(70, 55)}
                         fontSize={getValue(20, 14)}
                         tick={{stroke: 'rgba(216, 178, 255, 0.64)', strokeWidth: 0.5}}
                     />
