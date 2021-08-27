@@ -11,6 +11,10 @@ import waterfalls from '../../../assets/image/admin/waterfalls.png';
 import waterfalls_grey from '../../../assets/image/admin/waterfalls_grey.png';
 import swap from '../../../assets/image/admin/swap.png';
 import swap_grey from '../../../assets/image/admin/swap_grey.png';
+import ntf from '../../../assets/image/admin/ntf.png';
+import ntf_grey from '../../../assets/image/admin/ntf_grey.png';
+import notification from '../../../assets/image/admin/notification.png';
+import notification_grey from '../../../assets/image/admin/notification_grey.png';
 
 export type PngType = {
 	[key: string]: string,
@@ -25,6 +29,10 @@ const png: PngType = {
 	swap_grey,
 	coin_grey,
 	trend,
+	ntf,
+	ntf_grey,
+	notification,
+	notification_grey,
 	trend_grey,
 	waterfalls,
 	waterfalls_grey,

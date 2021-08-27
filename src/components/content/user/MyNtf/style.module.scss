@@ -1,7 +1,7 @@
 @import "../../../../styles/vars";
 @import "../../../../styles/mixins";
 
-.approve {
+.ntf {
   @include flex_row_center;
   flex-wrap: wrap;
   gap: 16px;
@@ -9,8 +9,10 @@
   margin-bottom: 66px;
 
   &_header {
-    height: 64px;
+    height: 54px;
     @include flex_row_space-around;
+    justify-content: flex-start;
+    padding-left: 19px;
 
     &__title {
       font-style: normal;
@@ -20,35 +22,26 @@
       color: #FFFFFF;
     }
 
-    &__button {
-      width: 73.31px;
-      height: 29.51px;
-      background: #FFFFFF;
-      border-radius: 103.771px;
-      @include flex_row_center;
+  }
 
-      span {
-        font-style: normal;
-        font-weight: 900;
-        font-size: 15.2595px;
-        line-height: 19px;
-        text-align: center;
-        color: #181818;
-      }
-    }
+  &_content {
+    overflow: hidden;
+    width: 333px;
+    height: 210px;
   }
 
 }
 
 @media (max-width: 990px) {
-  .approve {
+  .ntf {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
 }
+
 @media (max-width: 767px) {
-  .approve {
+  .ntf {
     grid-template-columns: 1fr;
   }
 }

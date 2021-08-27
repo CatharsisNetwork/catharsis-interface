@@ -23,15 +23,15 @@ export const adminTabsData = [
 
 export const tabsData = [
     {
-        title: 'Approve',
-        content: 'approve',
-        icon: {active: 'waterfalls', nonactive: 'waterfalls_grey'},
+        title: 'My NTF',
+        content: 'ntf',
+        icon: {active: 'ntf', nonactive: 'ntf_grey'},
         position: 'left',
     },
     {
-        title: 'Statistic',
-        content: 'statistic',
-        icon: {active: 'trend', nonactive: 'trend_grey'},
+        title: 'Notification',
+        content: 'notification',
+        icon: {active: 'notification', nonactive: 'notification_grey'},
         position: 'center',
     },
     {
