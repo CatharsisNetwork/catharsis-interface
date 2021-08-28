@@ -4,7 +4,6 @@ import style from './style.module.scss';
 function BuyoutCard({
 	title,
 	value,
-	customStyle,
 	image,
 }: {
 	title: string,

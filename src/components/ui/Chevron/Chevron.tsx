@@ -1,15 +1,9 @@
 import React from 'react';
 import style from './style.module.scss';
-import caret_down from '../../../assets/image/faq/caret_down.png';
-import caret_up from '../../../assets/image/faq/caret_up.png';
+import caret_down from '../../../assets/images/faq/caret_down.png';
+import caret_up from '../../../assets/images/faq/caret_up.png';
 
-function Chevron({
-	active,
-	customStyle,
-}: {
-	active: boolean,
-	customStyle?: string,
-}) {
+function Chevron({ active }: { active: boolean }) {
 	return (
 		<img
 			className={active ? style.icon_down : style.icon_up}

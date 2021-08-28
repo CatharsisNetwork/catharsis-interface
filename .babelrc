@@ -1,0 +1,28 @@
+{
+    "presets": [
+        [
+            "@babel/env",
+            {
+                "corejs": 3,
+                "useBuiltIns": "usage",
+                "debug": true,
+                "modules": false
+            }
+        ],
+        "@babel/react"
+    ],
+    "env": {
+        "production": {
+            "plugins": [
+                [
+                    "react-remove-properties",
+                    {
+                        "properties": [
+                            "data-test"
+                        ]
+                    }
+                ]
+            ]
+        }
+    }
+}

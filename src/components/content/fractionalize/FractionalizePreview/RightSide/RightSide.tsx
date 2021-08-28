@@ -2,10 +2,10 @@ import React from 'react';
 import style from '../style.module.scss';
 import Attention from '../../../../ui/Atention/Attention';
 import BuyoutCard from '../../../../ui/BuyoutCard/BuyoutCard';
-import ethereum from '../../../../../assets/image/fractionalize/ethereum.png';
-import preview from '../../../../../assets/image/fractionalize/preview.png';
-import body from '../../../../../assets/image/fractionalize/body.png';
-import star from '../../../../../assets/image/fractionalize/star.png';
+import ethereum from '../../../../../assets/images/fractionalize/ethereum.png';
+import preview from '../../../../../assets/images/fractionalize/preview.png';
+import body from '../../../../../assets/images/fractionalize/body.png';
+import star from '../../../../../assets/images/fractionalize/star.png';
 
 const buyout = [
 	{ title: 'Price', value: 'Fixed', image: null, customStyle: 'preview' },

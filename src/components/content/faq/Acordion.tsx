@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import style from './style.module.scss';
-import caret_up from '../../../assets/image/faq/caret_up.png';
-import caret_down from '../../../assets/image/faq/caret_down.png';
+import caret_up from '../../../assets/images/faq/caret_up.png';
+import caret_down from '../../../assets/images/faq/caret_down.png';
 
 function Accordion(props: any) {
 	const [active, setActive] = useState<boolean>(false);

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../style.module.scss';
-import rectangle from '../../../../assets/image/gallery/rectangle.png';
+import rectangle from '../../../../assets/images/gallery/rectangle.png';
 
 function HeaderBtn({ value }: { value: string }) {
 	return (

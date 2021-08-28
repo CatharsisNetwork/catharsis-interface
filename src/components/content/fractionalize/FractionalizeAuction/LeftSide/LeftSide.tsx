@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import style from '../style.module.scss';
 import Slider from '../../../../ui/Slider/Slider';
-import ntf from '../../../../../assets/image/fractionalize/ntf.png';
+import ntf from '../../../../../assets/images/fractionalize/ntf.png';
 import BuyoutCard from '../../../../ui/BuyoutCard/BuyoutCard';
-import ethereum from '../../../../../assets/image/fractionalize/ethereum.png';
+import ethereum from '../../../../../assets/images/fractionalize/ethereum.png';
 
 function LeftSide() {
 	const [slider, setSlider] = useState<number>(50);

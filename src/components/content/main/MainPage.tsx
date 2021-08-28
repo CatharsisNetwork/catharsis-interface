@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import style from './style.module.scss';
-import main_content_vector from '../../../assets/image/main/main_content_vector.png';
-import main_content_frame_1 from '../../../assets/image/main/main_content_frame_1.png';
-import main_content_frame_2 from '../../../assets/image/main/main_content_frame_2.png';
-import main_content_action from '../../../assets/image/main/main_content_action.png';
-import main_content_flame from '../../../assets/image/main/main_content_flame.png';
-import main_content_voting from '../../../assets/image/main/main_content_voting.png';
+import main_content_vector from '../../../assets/images/main/main_content_vector.png';
+import main_content_frame_1 from '../../../assets/images/main/main_content_frame_1.png';
+import main_content_frame_2 from '../../../assets/images/main/main_content_frame_2.png';
+import main_content_action from '../../../assets/images/main/main_content_action.png';
+import main_content_flame from '../../../assets/images/main/main_content_flame.png';
+import main_content_voting from '../../../assets/images/main/main_content_voting.png';
 import CardsList from '../../ui/Card/CardsList';
 import { data } from '../../../assets/database/main/data';
 import MainCardsList from './MainCards/MainCardsList';
@@ -13,8 +13,8 @@ import { scrollToTop } from '../../../utils/lib/scroll';
 import { Link } from 'react-router-dom';
 import MainPageHeader from './MainPageHeader';
 import MainPageSection from './MainPageSection';
-import bg from '../../../assets/image/main/bg_main.png';
-import gallery from '../../../assets/image/main/gallery.png';
+import bg from '../../../assets/images/main/bg_main.png';
+import gallery from '../../../assets/images/main/gallery.png';
 
 function MainPage() {
 	useEffect(() => scrollToTop(), []);

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from './style.module.scss';
 import { getActiveClassName } from '../../../utils/lib/getActiveClassName';
-import bg from '../../../assets/image/fractionalize/bg_fractionalize.png';
+import bg from '../../../assets/images/fractionalize/bg_fractionalize.png';
 
 function FractionalizeCard({ customStyle }: { customStyle?: string }) {
 	const [active, setActive] = useState(false);

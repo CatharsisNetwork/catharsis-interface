@@ -1,5 +1,5 @@
 import React from 'react';
-import search from '../../../assets/image/gallery/search.png';
+import search from '../../../assets/images/gallery/search.png';
 import style from './style.module.scss';
 
 function Input() {

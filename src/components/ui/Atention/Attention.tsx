@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
-import attention from '../../../assets/image/fractionalize/attention.png';
+import attention from '../../../assets/images/fractionalize/attention.png';
 
 function Attention({ customStyle }: { customStyle?: string }) {
 	return (

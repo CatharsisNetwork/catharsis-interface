@@ -1,11 +1,8 @@
 import React from 'react';
-import LoginPanel from "../../ui/LoginPanel/LoginPanel";
-
+import LoginPanel from '../../ui/LoginPanel/LoginPanel';
 
 function HeaderModalWallet() {
-    return (
-        <LoginPanel/>
-    );
+	return <LoginPanel />;
 }
 
 export default HeaderModalWallet;

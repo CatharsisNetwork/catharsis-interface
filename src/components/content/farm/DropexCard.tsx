@@ -1,9 +1,8 @@
 import React from 'react';
 import style from './style.module.scss';
 import CardIcons from './CardIcons';
-import flame from '../../../assets/image/fractionalize/flame.png';
+import flame from '../../../assets/images/fractionalize/flame.png';
 import DropexCardItem from './DropexCardItem';
-
 
 const dropex = {
 	item_1: {

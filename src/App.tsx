@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/global.scss';
+import './assets/styles/global.scss';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/global/Header/Header';
 import Footer from './components/global/Footer/Footer';

@@ -1,5 +1,5 @@
-@import "../../../../styles/vars";
-@import "../../../../styles/mixins";
+@import "../../../../assets/styles/vars";
+@import "../../../../assets/styles/mixins";
 
 .ntf {
   @include flex_row_center;
@@ -91,4 +91,7 @@
   .ntf {
     grid-template-columns: 1fr;
   }
+}
+.ntf{
+
 }

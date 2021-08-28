@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
-import main_content_1 from '../../../assets/image/main/main_content_1.png';
+import main_content_1 from '../../../assets/images/main/main_content_1.png';
 
 function MainPageHeader() {
 	return (

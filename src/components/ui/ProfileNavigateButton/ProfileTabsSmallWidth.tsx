@@ -1,34 +1,33 @@
-import React, {useState} from 'react';
-import {tabsData} from "../../../assets/database/user/tabsData";
+import React, { useState } from 'react';
+import { tabsData } from '../../../assets/database/user/tabsData';
 
 import style from './style.module.scss';
-import TabsButton from "../Tabs/TabsButton";
+import TabsButton from '../Tabs/TabsButton';
 
 function ProfileTabsSmallWidth() {
-    const [activeTabs, setActiveTabs] = useState<boolean>(true);
-    const [tabsId, setTabsId] = useState<number>(1);
+	const [activeTabs, setActiveTabs] = useState<boolean>(true);
+	const [tabsId, setTabsId] = useState<number>(1);
 
-    return (
-        <div className={style.navigate}>
-            {/*{tabsData.map((el, idx) => {*/}
-            {/*    return (*/}
-            {/*        <TabsButton*/}
-            {/*            activeTabs={activeTabs}*/}
-            {/*            setActiveTabs={setActiveTabs}*/}
-            {/*            title={el.title}*/}
-            {/*            setContent={setContent}*/}
-            {/*            content={el.content}*/}
-            {/*            id={idx}*/}
-            {/*            key={idx}*/}
-            {/*            setTabsId={setTabsId}*/}
-            {/*            tabsId={tabsId}*/}
-            {/*            icon={el.icon}*/}
-            {/*        />*/}
-            {/*    );*/}
-            {/*})}*/}
-
-        </div>
-    );
+	return (
+		<div className={style.navigate}>
+			{/*{tabsData.map((el, idx) => {*/}
+			{/*    return (*/}
+			{/*        <TabsButton*/}
+			{/*            activeTabs={activeTabs}*/}
+			{/*            setActiveTabs={setActiveTabs}*/}
+			{/*            title={el.title}*/}
+			{/*            setContent={setContent}*/}
+			{/*            content={el.content}*/}
+			{/*            id={idx}*/}
+			{/*            key={idx}*/}
+			{/*            setTabsId={setTabsId}*/}
+			{/*            tabsId={tabsId}*/}
+			{/*            icon={el.icon}*/}
+			{/*        />*/}
+			{/*    );*/}
+			{/*})}*/}
+		</div>
+	);
 }
 
 export default ProfileTabsSmallWidth;

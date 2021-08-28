@@ -5,7 +5,7 @@ import FractionalizeNavigate from './FractionalizeNavigate';
 import FractionalizeBody from './FractionalizeBody/FractionalizeBody';
 import FractionalizeAuction from './FractionalizeAuction/FractionalizeAuction';
 import FractionalizePreview from './FractionalizePreview/FractionalizePreview';
-import {scrollToTop} from "../../../utils/lib/scroll";
+import { scrollToTop } from '../../../utils/lib/scroll';
 
 function Fractionalize() {
 	useEffect(() => scrollToTop(), []);

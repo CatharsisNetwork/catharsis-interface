@@ -21,11 +21,9 @@ function TimeInput({
 	range === 'from' ? (currentDate = date['from']) : (currentDate = date['to']);
 
 	const handleChangeInput = (e: InputChange) => {
-		let {
-			name,
-			value,
-			id,
-		}: { name: string | number, value: string | number, id: string } = e.target;
+		const { name, id }: { name: string | number, id: string } = e.target;
+		let { value }: { value: string | number } = e.target;
+
 		if (value.length > 2) return;
 
 		//reset alert
@@ -84,7 +82,7 @@ function TimeInput({
 
 	const handleFocus = (e: InputChange) => {
 		e.preventDefault();
-		const {  id } = e.target;
+		const { id } = e.target;
 
 		// If the value already exists and the user wants to change it, the value is reset to zero.
 

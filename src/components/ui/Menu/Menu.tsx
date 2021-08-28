@@ -1,6 +1,6 @@
 import React from 'react';
-import menu_1 from '../../../assets/image/faq/menu_1.svg';
-import menu_2 from '../../../assets/image/faq/menu_2.svg';
+import menu_1 from '../../../assets/images/faq/menu_1.svg';
+import menu_2 from '../../../assets/images/faq/menu_2.svg';
 import style from './style.module.scss';
 
 /**

@@ -120,7 +120,7 @@ export function calendar(selector: string) {
 	}
 
 	function drawDates(year: any, month: any, dates: any) {
-		let arr = [];
+		let arr: any[] = [];
 		const firstDateOfMonth = 1;
 		const lastDateOfMonth = getLastDayOfMonth(year, month);
 
@@ -152,7 +152,7 @@ export function calendar(selector: string) {
 	}
 
 	function createArr(from: number, to: number) {
-		const arr = [];
+		const arr: any[] = [];
 		for (let i = from; i <= to; i++) {
 			arr.push(i);
 		}
@@ -196,8 +196,9 @@ export function calendar(selector: string) {
 	}
 
 	function chunkArr(num: number, arr: Array<string>) {
-		const result = [];
-		let chunk = [];
+		const result: any[] = [];
+		let chunk: any[] = [];
+
 		const iterCount = arr.length / num;
 
 		for (let i = 0; i < iterCount; i++) {

@@ -4,8 +4,11 @@ import { IParams } from '../utils/types/types';
 import NotFound from '../components/global/Notfound/NotFound';
 
 const generatePage = (name: string) => {
+	/* eslint-disable */
+	const pages = require(`../pages/${name}`).default;
+
 	try {
-		return React.createElement(require(`../pages/${name}`).default || null);
+		return React.createElement(pages || null);
 	} catch (err) {
 		return <NotFound />;
 	}

@@ -19,7 +19,7 @@ const tabsData = [
 
 function GalleryTabsGroup() {
 	const [content, setContent] = useState<string>('gallery');
-	console.warn(content)
+	console.warn(content);
 	const { width } = useWindowSize();
 	return width && width > 768 ? (
 		<Tabs setContent={setContent} tabsData={tabsData} />

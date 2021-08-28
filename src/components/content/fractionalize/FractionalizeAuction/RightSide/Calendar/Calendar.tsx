@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
 import { calendar } from './initCalendar';
-import left from '../../../../../../assets/image/fractionalize/left.png';
-import right from '../../../../../../assets/image/fractionalize/right.png';
+import left from '../../../../../../assets/images/fractionalize/left.png';
+import right from '../../../../../../assets/images/fractionalize/right.png';
 
 const days: Array<string> = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 

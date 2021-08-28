@@ -34,7 +34,7 @@ body {
 .main::after {
   content: "";
   position: absolute;;
-  background: url("../assets/image/main/bg_main_2.png") no-repeat top center;
+  background: url("../images/main/bg_main_2.png") no-repeat top center;
   top: 0;
   left: 0;
   z-index: -5;
@@ -55,7 +55,7 @@ body {
 
 .faq_bg {
   position: absolute;
-  background: url("../assets/image/faq/bg.png") no-repeat top center;
+  background: url("../images/faq/bg.png") no-repeat top center;
   left: -138px;
   top: 3px;
   transform: rotate(18deg);

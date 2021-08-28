@@ -1,7 +1,7 @@
 import React from 'react';
 import ModalContainer from './ModalContainer';
 import style from './Modal.module.scss';
-import close from '../../../assets/image/header/close.png';
+import close from '../../../assets/images/header/close.png';
 import { IModalProps } from '../../../utils/types/types';
 
 /**
@@ -18,7 +18,9 @@ const Modal: React.FC<IModalProps> = (props) => {
 		<ModalContainer>
 			<div className={style.root} onClick={onClose}>
 				<div
-					className={`${style[`${custom_style}`]} ${style[`${custom_style}__container`]}`}
+					className={`${style[`${custom_style}`]} ${
+						style[`${custom_style}__container`]
+					}`}
 					onClick={(event) => event.stopPropagation()}
 				>
 					{children}
