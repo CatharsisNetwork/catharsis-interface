@@ -17,6 +17,7 @@ function Approve() {
 						)}
 						footer={() => (
 							<ShieldBlock
+								customStyle={'approve'}
 								text_1={el.footer.button_1.text}
 								icon_1={el.footer.button_1.icon}
 								icon_2={el.footer.button_2.icon}

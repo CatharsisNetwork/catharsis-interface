@@ -7,10 +7,14 @@ import ImageBlock from '../CardComponent/ImageBlock';
 import IntervalBlock from '../CardComponent/IntervalBlock';
 import FractionsBlock from '../CardComponent/FractionsBlock';
 import ShieldBlock from '../CardComponent/ShieldBlock';
+import EllipseBlock from '../CardComponent/EllipseBlock';
+
+import FooterTitle from '../CardComponent/FooterTitle';
+import FromBlock from '../CardComponent/FromBlock';
 
 const FooterBlock = (el: any) => {
 	return (
-		<div>
+		<>
 			<IntervalBlock
 				seconds={el.interval.seconds}
 				days={el.interval.days}
@@ -24,13 +28,17 @@ const FooterBlock = (el: any) => {
 				text_2={el.fractions.button_2.text}
 				icon_2={el.fractions.button_2.icon}
 			/>
+			<FromBlock />
 			<ShieldBlock
+				customStyle={'notification'}
 				text_1={el.shield.button_1.text}
 				icon_1={el.shield.button_1.icon}
 				icon_2={el.shield.button_2.icon}
 				text_2={el.shield.button_2.text}
 			/>
-		</div>
+			<EllipseBlock />
+			<FooterTitle />
+		</>
 	);
 };
 
@@ -41,6 +49,7 @@ function Notification() {
 				return (
 					<ProfileCard
 						key={idx}
+						sold={el.sold}
 						header={() => (
 							<HeaderBlock title={el.header.title} button={el.header.button} />
 						)}

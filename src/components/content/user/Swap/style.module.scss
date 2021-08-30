@@ -10,12 +10,14 @@
   background: #181818;
   border-radius: 32px;
 
+  @media (max-width: 990px) {
 
+    height: auto;
+  }
   &_title {
     @include flex_row_center;
     gap: 10px;
     margin-bottom: 36px;
-
     span {
       font-style: normal;
       font-weight: bold;
@@ -29,6 +31,9 @@
   &_group {
     @include flex_row_center;
     gap: 15px;
+    @media (max-width: 990px) {
+      @include flex_column_center;
+    }
 
     &__input {
       width: 346px;
@@ -37,6 +42,7 @@
       border-radius: 12px;
       @include flex_row_space_between;
       padding: 14px;
+
       small {
         font-style: normal;
         font-weight: bold;
@@ -45,6 +51,7 @@
         text-align: center;
         color: #565656;
       }
+
       .currency {
         @include flex_row_center;
         width: 148px;

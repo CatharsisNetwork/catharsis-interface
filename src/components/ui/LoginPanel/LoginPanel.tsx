@@ -49,9 +49,13 @@ function LoginPanel() {
 	const history = useHistory();
 
 	const login = (title: string) => {
+		let url = '/user';
+		if (title === 'MetaMask') {
+			url = '/admin';
+		}
 		setCurrent(title);
 		setTimeout(() => {
-			history.push('/user');
+			history.push(`/user${url}`);
 			onClose();
 		}, 1000);
 	};

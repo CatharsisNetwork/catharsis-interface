@@ -3,13 +3,146 @@
 
 
 .card {
+  position: relative;
   width: 333.21px;
   height: auto;
   background: #1F1F1F;
   box-shadow: 0 45.6974px 129.476px rgba(0, 0, 0, 0.2);
   border-radius: 20.9446px;
-&_footer{
-  margin-top: 14px;
-  @include flex_column_center;
+
+  &_footer {
+    margin-top: 14px;
+    @include flex_column_center;
+  }
+
+  &_sold {
+    @include flex_column_center;
+    justify-content: flex-start;
+    position: absolute;
+    width: 333px;
+    height: calc(100% - 64px);
+    left: 0;
+    top: 64px;;
+    background: rgba(37, 37, 37, 0.73);
+    backdrop-filter: blur(6px);
+    border-radius: 0 0 20px 20px;
+
+    &__title {
+      margin: 42px 0 10px 0;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 40.5045px;
+      line-height: 50px;
+      color: #FFFFFF;
+    }
+
+    &__button {
+      cursor: pointer;
+      @include flex_column_center;
+      width: 229px;
+      height: 50px;
+      background: rgba(216, 178, 255, 0.48);
+      box-shadow: 0 0 30.439px rgba(0, 0, 0, 0.68);
+      border-radius: 37.4634px;
+
+      span {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16.3902px;
+        line-height: 20px;
+        color: #FFFFFF;
+      }
+    }
+  }
 }
+
+.modal {
+  padding:  20px 45px 35px 45px;
+  @include flex_column_center;
+  width: 410px;
+  height: 239px;
+  left: 515px;
+  top: 230px;
+  background: #202020;
+  border-radius: 20px;
+
+  &_title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+  }
+
+  &_balance {
+    margin-bottom: 13px;
+    @include flex_row_center;
+    span {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #BABABA;
+      margin-right: 18px;
+    }
+
+    small {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+    }
+  }
+  &_price{
+    border: 1px solid #4E4D55;;
+    margin-bottom: 19px;
+    @include flex_row_space_between;
+    .ethereum{
+      @include flex_row_center;
+    }
+    width: 100%;
+    height: 43px;
+    background: #1F1F1F;
+    border-radius: 10px;
+    padding: 16px 12px;
+    span{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+    small{
+      @include flex_column_center;
+      width: 59px;
+      height: 29px;
+      background: #D8B2FF;
+      border-radius: 27px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+  &_button{
+    @include flex_column_center;
+    width: 140px;
+    height: 50px;
+    background: #392A47;
+    border-radius: 37.4634px;
+    span{
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16.3902px;
+      line-height: 20px;
+      color: #FFFFFF;
+    }
+  }
+
 }

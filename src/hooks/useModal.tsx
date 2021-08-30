@@ -9,7 +9,7 @@ import { CloseModalLinkOnClick } from './useCloseModalContext';
 
 type ModalPropsType = {
 	children: (element: string) => React.ReactNode,
-	setDisplay: Dispatch<SetStateAction<string>>,
+	setDisplay?: Dispatch<SetStateAction<string>>,
 };
 
 const useModal = ({ children, setDisplay }: ModalPropsType) => {
@@ -17,14 +17,14 @@ const useModal = ({ children, setDisplay }: ModalPropsType) => {
 	const [element, setElement] = React.useState<string>('');
 	const [style, setStyle] = React.useState<string>('');
 
-	const onOpen = ({ style, element }: { style: string, element: string }) => {
-		setElement(element);
+	const onOpen = ({ style, element }: { style: string, element?: string }) => {
 		setIsOpen(true);
 		setStyle(style);
+		if (element) setElement(element);
 	};
 	const onClose = () => {
 		setIsOpen(false);
-		setDisplay('');
+		if (setDisplay) setDisplay('');
 	};
 	const ModalComponent = useCallback(
 		() => (
@@ -35,7 +35,7 @@ const useModal = ({ children, setDisplay }: ModalPropsType) => {
 			</CloseModalLinkOnClick.Provider>
 		),
 		// eslint-disable-next-line
-        [isOpen, children,style,element]
+        [isOpen, children, style, element]
 	);
 
 	return { ModalComponent, onOpen };

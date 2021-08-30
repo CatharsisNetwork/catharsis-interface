@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './style.module.scss';
+import { getClassName } from '../../../../utils/lib/getActiveClassName';
 
 function ShieldBlock({
 	children,
@@ -7,15 +8,17 @@ function ShieldBlock({
 	text_1,
 	icon_2,
 	text_2,
+	customStyle,
 }: {
 	children?: React.ReactNode,
 	icon_1: string,
 	text_1: string,
 	icon_2: string,
 	text_2: string,
+	customStyle: string,
 }) {
 	return (
-		<div className={style.shield}>
+		<div className={getClassName(style, 'shield', customStyle)}>
 			<div
 				className={style.shield_button}
 				style={{

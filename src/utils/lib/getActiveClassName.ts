@@ -9,3 +9,7 @@ export function getActiveClassName(
 		? `${style[property]} ${style[active === `${extension}` ? 'active' : '']}`
 		: `${style[property]} ${style[active ? 'active' : '']}`;
 }
+
+export function getClassName(style: any, property: string, active: string) {
+	return ` ${style[active]} ${style[property]}`;
+}

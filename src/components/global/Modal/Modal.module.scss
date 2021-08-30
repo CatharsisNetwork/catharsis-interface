@@ -14,6 +14,7 @@
   overflow: auto;
 }
 
+
 .header_modal__container {
   position: absolute;
   top: 0;
@@ -32,6 +33,13 @@
     top: 20%;
     right: 0;
   }
+}
+
+.user_modal__container {
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
 }
 
 @mixin header {
@@ -65,4 +73,10 @@
   position: absolute;
   top: 36px;
   right: 11px;
+}
+
+.user_modal {
+ .close {
+    display: none
+  }
 }

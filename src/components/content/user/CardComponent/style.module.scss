@@ -8,7 +8,7 @@
   @include flex_row_space_between;
   align-items: flex-end;
   padding: 19px 35px;
-  grid-gap: 10px;
+  grid-gap: 30px;
 
   &_title {
     @include flex_column_start;
@@ -88,6 +88,11 @@
   }
 }
 
+.notification.shield {
+  height: auto;
+  padding: 0 35px;
+}
+
 .header {
   height: 64px;
   @include flex_row_center;
@@ -120,12 +125,14 @@
     }
   }
 }
+
 .image {
   overflow: hidden;
   width: 333px;
   height: 210px;
 }
-.interval{
+
+.interval {
   @include flex_row_space_between;
   width: 296px;
   height: 63px;
@@ -133,12 +140,15 @@
   box-sizing: border-box;
   border-radius: 14px;
   padding: 24px;
-  &_time{
+
+  &_time {
     @include flex_row_space_between;
     gap: 14px;
-    &__item{
+
+    &__item {
       @include flex_column_start;
-      small{
+
+      small {
         font-style: normal;
         font-weight: bold;
         font-size: 19.6429px;
@@ -146,7 +156,8 @@
         color: #FFFFFF;
 
       }
-      span{
+
+      span {
         font-style: normal;
         font-weight: normal;
         font-size: 12.5px;
@@ -154,6 +165,157 @@
         color: #C19CE3;
 
       }
+    }
+  }
+}
+
+.ellipse {
+  @include flex_row_space_between;
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 72px;
+
+  &_block {
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    border: 5px solid #334D37;
+    background: #141414;
+    @include flex_row_center;
+    position: relative;
+
+    .blue.value {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15.2325px;
+      line-height: 18px;
+      background: -webkit-linear-gradient(#0192F4 0%, #D826FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .red.value {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15.2325px;
+      line-height: 18px;
+      background: -webkit-linear-gradient(#CA00AF 0%, #E5A335 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &_thumb {
+      position: absolute;
+      top: 22px;
+      left: -5px;
+    }
+  }
+}
+
+@mixin gradient {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15.2325px;
+  line-height: 18px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer {
+  @include flex_row_space_between;
+  width: 100%;
+  margin: 20px 0 30px 0;
+  padding: 0 30px;
+
+  &_title {
+    @include flex_column_center;
+    flex-wrap: nowrap;
+
+    &__item {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15.2325px;
+      line-height: 18px;
+      color: #5A5A5A;
+
+
+      .red.gradient {
+        background: -webkit-linear-gradient(#CA00AF 0%, #E5A335 100%);
+        @include gradient;
+      }
+
+      .blue.gradient {
+
+        background: -webkit-linear-gradient(#0192F4 0%, #D826FF 100%);
+        @include gradient;
+      }
+
+      small {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15.2325px;
+        line-height: 18px;
+        color: white;
+      }
+    }
+  }
+}
+
+.from {
+  margin: 19px 0;
+  gap: 19px;
+  @include flex_column_center;
+  align-items: flex-start;
+
+  &_link {
+    @include flex_column_start;
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #4E4D55;
+    }
+
+    small {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      background: -webkit-linear-gradient(left, #FFFFFF 0%, #212121 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+    }
+  }
+
+  &_suggest {
+    @include flex_column_start;
+    width: 296px;
+    height: 80px;
+    background: #141414;
+    border-radius: 11px;
+    padding: 22px 18px;
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #4E4D55;
+    }
+
+    small {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 27px;
+      text-align: center;
+      color: #FFFFFF;
     }
   }
 }
