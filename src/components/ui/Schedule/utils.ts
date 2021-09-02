@@ -20,10 +20,10 @@ export const FormatNumber = (n: any) => {
 
 export const FormatDate = (timestamp: any) => {
 	const WeekMonthDay = new Date(timestamp).toString().substr(0, 10);
-	let [week, month, day] = WeekMonthDay.split(' ');
+	const [week, month, day] = WeekMonthDay.split(' ');
 
 	// turn date 04 into 4
-	day = day[0] === '0' ? day.substr(1) : day;
+	// day = day[0] === '0' ? day.substr(1) : day;
 
-	return `${week}, ${day} ${month}`;
+	return `${week}, ${day[0] === '0' ? day.substr(1) : day} ${month}`;
 };
