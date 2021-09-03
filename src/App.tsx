@@ -4,8 +4,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/global/Header/Header';
 import Footer from './components/global/Footer/Footer';
 import usePageRender from './hooks/useRederPage';
+import { useDispatch } from 'react-redux';
+import { setAccount } from './store/account';
 
 function App() {
+	const dispatch = useDispatch();
+	if (typeof window !== 'undefined' && window.ethereum) {
+		if (typeof window.ethereum.on !== 'undefined') {
+			window.ethereum.on('accountsChanged', (accounts) => {
+				dispatch(setAccount(accounts[0]));
+			});
+		}
+	}
+
 	return (
 		<div className={'main'}>
 			<Router>

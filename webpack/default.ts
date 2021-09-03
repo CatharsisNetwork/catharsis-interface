@@ -54,9 +54,11 @@ export default (env: webpack.Configuration): webpack.Configuration => ({
 				configFile: path.resolve(ROOT_DIR, 'tsconfig.json'),
 			}),
 		],
+		fallback: { "crypto": require.resolve("crypto-browserify"), "http": require.resolve("stream-http"), "https": require.resolve("https-browserify"), "stream": require.resolve("stream-browserify"),
+		"os": require.resolve("os-browserify"), "Buffer": require.resolve("Buffer")
+	 }	
 	},
 	target: 'web',
-
 	module: {
 		rules: [
 			{
@@ -173,6 +175,15 @@ export default (env: webpack.Configuration): webpack.Configuration => ({
 			// failOnWarning: true,
 		}),
 		new ErrorOverlayPlugin(),
+		new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development')
+        }),
+		new webpack.ProvidePlugin({
+			process: 'process/browser',
+		  }),
+		  new webpack.ProvidePlugin({
+			Buffer: ['buffer', 'Buffer'],
+		  }),
 		// new CleanWebpackPlugin(),
 	],
 });
