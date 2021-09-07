@@ -1,10 +1,13 @@
 import React from 'react';
 import style from './style.module.scss';
-import Farm from '../farm/Farm';
+import FractionalizeFixedPrice from './FractionalizeFixedPrice/FractionalizeFixedPrice';
+import FractionalizeDistribution from './FractionalizeDistribution/FractionalizeDistribution';
 
 function FractionalizeSlug({ slug }: { slug: string }) {
 	function getFractionalizeContent() {
-		if (slug === '4') return <Farm />;
+		if (slug === '4') return <FractionalizeFixedPrice />;
+		if (slug === '5') return <FractionalizeDistribution />;
+		if (slug === '6') return <FractionalizeFixedPrice />;
 	}
 
 	return (

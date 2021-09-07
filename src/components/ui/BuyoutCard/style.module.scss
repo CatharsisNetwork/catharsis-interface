@@ -1,6 +1,8 @@
 @import "../../../assets/styles/_vars.scss";
 @import "../../../assets/styles/_mixins.scss";
 
+.created.item ,
+.created.item ,
 .item {
   span {
     white-space: nowrap;
@@ -31,4 +33,14 @@
       color: #FFFFFF;
     }
   }
+}
+.created.item {
+  background: none;
+  width: auto;
+  padding: 0;
+  height: auto;
+  span {
+    color: #EAEAEA;
+  }
+
 }

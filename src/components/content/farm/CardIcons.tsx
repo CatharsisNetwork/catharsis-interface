@@ -5,8 +5,8 @@ import style from './style.module.scss';
 function CardIcons() {
 	return (
 		<div className={style.dropex_icon}>
-			<img src={ellipse_1} alt="" />
-			<img src={ellipse_2} alt="" />
+			<img src={ellipse_1} alt="ellipse_1" />
+			<img src={ellipse_2} alt="ellipse_2" />
 		</div>
 	);
 }

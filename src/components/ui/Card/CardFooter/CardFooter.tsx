@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../style.module.scss';
-import Interval from './Interval';
+import Interval from '../../Interval/Interval';
 import {
 	FooterInfoType,
 	IntervalType,

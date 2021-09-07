@@ -124,9 +124,9 @@
     }
 
     &__vote {
+      margin-top: 20px;
       box-shadow: 0 2px 2px -1px $black160;
       @include card_footer__btn;
-      margin-bottom: 14px;
 
       &:active {
         margin-top: 1px;

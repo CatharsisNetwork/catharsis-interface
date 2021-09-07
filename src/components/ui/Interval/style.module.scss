@@ -1,0 +1,32 @@
+@import "../../../assets/styles/_vars.scss";
+@import "../../../assets/styles/_mixins.scss";
+
+
+.interval {
+  margin-top: 14px;
+  padding: 0 15px 0 21px;
+  width: 100%;
+  flex: 1 1 auto;
+  @include flex_row_space_between;
+
+  &_item p {
+    @include font_size_small_medium_bold;
+    color: $white;
+  }
+
+  &_item span {
+    @include font_size_micro;
+    color: $lilac40;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+

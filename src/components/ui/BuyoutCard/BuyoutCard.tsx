@@ -5,6 +5,7 @@ function BuyoutCard({
 	title,
 	value,
 	image,
+	customStyle,
 }: {
 	title: string,
 	value: number | string,
@@ -12,7 +13,7 @@ function BuyoutCard({
 	image: string | null,
 }) {
 	return (
-		<div className={style.item}>
+		<div className={`${style[customStyle ? customStyle : '']} ${style.item}`}>
 			<span>{title}</span>
 			<div className={style.item_content}>
 				{image ? <img src={image} alt={'ethereum'} /> : null}
