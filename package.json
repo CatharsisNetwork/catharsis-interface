@@ -1,6 +1,6 @@
 {
   "name": "catharsis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "main": "index.js",
   "dependencies": {
@@ -22,7 +22,8 @@
     "build:dev": "cd webpack && webpack --mode development --config dev.ts",
     "build": "cd webpack && webpack --mode production --config prod.ts",
     "start": "cd webpack && webpack serve --mode development --config local.ts",
-    "lint": "eslint --ext .ts,.tsx --fix ./",
+    "lint": "npx eslint --ext .ts,.tsx",
+    "lint:fix": "npx eslint --ext .ts,.tsx --fix ./",
     "test": "npx jest"
   },
   "jest": {
