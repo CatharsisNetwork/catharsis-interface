@@ -6,6 +6,7 @@ import ethereum from '../../../../../assets/images/fractionalize/ethereum.png';
 import preview from '../../../../../assets/images/fractionalize/preview.png';
 import body from '../../../../../assets/images/fractionalize/body.png';
 import star from '../../../../../assets/images/fractionalize/star.png';
+import HeaderPreviewCard from '../../../../ui/HeaderPreviewCard/HeaderPreviewCard';
 
 const buyout = [
 	{ title: 'Price', value: 'Fixed', image: null, customStyle: 'preview' },
@@ -36,26 +37,7 @@ const description =
 function RightSide() {
 	return (
 		<div className={style.content_right}>
-			<div className={style.title}>
-				<div className={style.title_star}>
-					<img src={star} alt="" />
-					<span>Fractional panks</span>
-				</div>
-				<div className={style.title_body}>
-					<div className={style.title_body__image}>
-						<img src={body} alt="" />
-					</div>
-
-					<div className={style.title_body__sea}>
-						<span>Sea world between fishes</span>
-						<div className={style.created}>
-							<span>
-								Created by : <p>John Dollins</p>{' '}
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
+			<HeaderPreviewCard />
 			<div className={style.description}>
 				<p>{description}</p>
 			</div>

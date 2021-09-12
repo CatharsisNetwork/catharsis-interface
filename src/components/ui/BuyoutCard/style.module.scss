@@ -1,8 +1,9 @@
 @import "../../../assets/styles/_vars.scss";
 @import "../../../assets/styles/_mixins.scss";
 
-.created.item ,
-.created.item ,
+.approve_modal.item,
+.fixed.item,
+.created.item,
 .item {
   span {
     white-space: nowrap;
@@ -24,7 +25,7 @@
     justify-content: flex-start;
     grid-gap: 6px;
 
-    span {
+    small {
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
@@ -34,13 +35,49 @@
     }
   }
 }
+
 .created.item {
   background: none;
   width: auto;
   padding: 0;
   height: auto;
+
   span {
     color: #EAEAEA;
+  }
+
+}
+
+.fixed.item {
+  padding: 18px 8px 18px 11px;
+  width: 170px;
+   span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &_content{
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.approve_modal.item{
+  width: 288px;
+  padding: 20px;
+  background: #292929;
+  border-radius: 10px;
+
+  span{
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #4E4D55;
+  }
+  &_content{
+    small{
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
 }

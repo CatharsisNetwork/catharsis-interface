@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './style.module.scss';
 import BuyoutCard from '../BuyoutCard/BuyoutCard';
+import CreatedWave from './CreatedWave';
 
 function CreatedCards({ buyout }) {
 	return (

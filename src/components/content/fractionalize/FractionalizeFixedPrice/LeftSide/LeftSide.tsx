@@ -10,19 +10,16 @@ const buyout = [
 		title: 'Fraction price',
 		value: '10 984',
 		image: ethereum,
-		customStyle: 'preview',
 	},
 	{
 		title: 'Buyout price',
 		value: '12 320',
 		image: ethereum,
-		customStyle: 'preview',
 	},
 	{
 		title: 'Number of fractions',
 		value: '1000',
 		image: preview,
-		customStyle: 'preview',
 	},
 ];
 
@@ -40,7 +37,7 @@ function LeftSide() {
 							title={el.title}
 							value={el.value}
 							image={el.image}
-							customStyle={el.customStyle}
+							customStyle={'fixed'}
 						/>
 					);
 				})}

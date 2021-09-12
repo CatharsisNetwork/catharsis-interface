@@ -141,6 +141,13 @@
   height: 78px;
   margin-bottom: 30px;
   gap: 20px;
+  @media (max-width: 580px) {
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: flex-start;
+    height: 219px;
+    width: 100%;
+  }
 }
 
 .icon_button {
@@ -167,8 +174,21 @@
   position: absolute;
   top: 16px;
   right: 45px;
+  width: 148px;
   @include flex_column_center;
   gap: 10px;
+  @media (max-width: 580px) {
+    top: 485px;
+    left: 45px;
+  }
+  @media (max-width: 525px) {
+    top: 507px;
+    left: 45px;
+  }
+  @media (max-width: 445px) {
+    top: 528px;
+    left: 17px;
+  }
   &_icon {
     @include flex_row_center;
     width: 162px;

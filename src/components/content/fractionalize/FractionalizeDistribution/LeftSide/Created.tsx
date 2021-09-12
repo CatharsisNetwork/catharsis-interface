@@ -13,13 +13,13 @@ const buyout = [
 		title: 'Fraction price',
 		value: '10 984',
 		image: ethereum,
-		customStyle: 'preview',
+		customStyle: 'fixed',
 	},
 	{
 		title: 'Buyout price',
 		value: '12 320',
 		image: ethereum,
-		customStyle: 'preview',
+		customStyle: 'fixed',
 	},
 ];
 

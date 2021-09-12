@@ -17,7 +17,7 @@ function BuyoutCard({
 			<span>{title}</span>
 			<div className={style.item_content}>
 				{image ? <img src={image} alt={'ethereum'} /> : null}
-				<span>{value}</span>
+				<small>{value}</small>
 			</div>
 		</div>
 	);
