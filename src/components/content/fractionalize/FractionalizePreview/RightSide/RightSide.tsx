@@ -4,8 +4,7 @@ import Attention from '../../../../ui/Atention/Attention';
 import BuyoutCard from '../../../../ui/BuyoutCard/BuyoutCard';
 import ethereum from '../../../../../assets/images/fractionalize/ethereum.png';
 import preview from '../../../../../assets/images/fractionalize/preview.png';
-import body from '../../../../../assets/images/fractionalize/body.png';
-import star from '../../../../../assets/images/fractionalize/star.png';
+
 import HeaderPreviewCard from '../../../../ui/HeaderPreviewCard/HeaderPreviewCard';
 
 const buyout = [

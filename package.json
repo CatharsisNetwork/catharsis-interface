@@ -21,7 +21,7 @@
   "scripts": {
     "build:dev": "cd webpack && webpack --mode development --config dev.ts",
     "build": "cd webpack && webpack --mode production --config prod.ts",
-    "start": "cd webpack && webpack serve --mode development --config local.ts",
+    "start": "cd webpack && webpack serve --mode production --config local.ts",
     "lint": "npx eslint --ext .ts,.tsx",
     "lint:fix": "npx eslint --ext .ts,.tsx --fix ./",
     "test": "npx jest"

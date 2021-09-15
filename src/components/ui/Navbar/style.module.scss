@@ -13,7 +13,6 @@
   padding: 0 24px;
   justify-content: center;
   align-items: center;
-  transition: margin-bottom 0.2s ease-in-out;
   margin-bottom: 0;
   margin-left: 172px;
 
@@ -34,10 +33,6 @@
     }
   }
 
-  &:hover {
-    transition: margin-bottom 0.2s ease-in-out;
-    margin-bottom: 10px;
-  }
 }
 
 .active {

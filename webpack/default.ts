@@ -7,6 +7,8 @@ import * as path from 'path';
 import * as webpack from 'webpack';
 import pkg from '../package.json';
 
+
+
 export const ROOT_DIR = path.resolve(__dirname, '..');
 export const SRC_DIR = path.resolve(ROOT_DIR, 'src');
 export const BUILD_DIR = path.resolve(ROOT_DIR, 'build');
@@ -38,7 +40,10 @@ export default (env: webpack.Configuration): webpack.Configuration => ({
 
 	devtool: 'source-map',
 	bail: true,
+	performance: {
+		hints: false,
 
+	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', '.*'],
 		alias: {
@@ -56,7 +61,11 @@ export default (env: webpack.Configuration): webpack.Configuration => ({
 		],
 	},
 	target: 'web',
-
+	optimization: {
+		splitChunks: {
+			chunks: 'all',
+		},
+	},
 	module: {
 		rules: [
 			{
@@ -136,22 +145,36 @@ export default (env: webpack.Configuration): webpack.Configuration => ({
 			},
 
 			{
-				test: /\.(png|jpg|jpeg|svg)$/,
+				test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
 				type: 'asset/resource',
+				generator: {
+					filename: 'images/[hash][ext][query]'
+				}
 			},
-
 			{
-				test: /\.(ttf|otf|eot|woff|woff2)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							outputPath: 'assets/fonts',
-							name: '[name].[ext]',
-						},
-					},
-				],
+				test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+				type: 'asset',
+				parser: {
+					dataUrlCondition: {
+						maxSize: 8 * 1024 // 8kb
+					}
+				},
+				generator: {  //If emitting file, the file path is
+					filename: 'fonts/[hash][ext][query]'
+				}
 			},
+			// {
+			// 	test: /\.(ttf|otf|eot|woff|woff2)$/,
+			// 	use: [
+			// 		{
+			// 			loader: 'file-loader',
+			// 			options: {
+			// 				outputPath: 'assets/fonts',
+			// 				name: '[name].[ext]',
+			// 			},
+			// 		},
+			// 	],
+			// },
 		],
 	},
 	plugins: [
@@ -161,6 +184,7 @@ export default (env: webpack.Configuration): webpack.Configuration => ({
 			inject: 'body',
 			favicon: './public/favicon.ico',
 		}),
+
 		new MiniCssExtractPlugin({
 			filename: 'assets/[name]-[contenthash:8].css',
 		}),

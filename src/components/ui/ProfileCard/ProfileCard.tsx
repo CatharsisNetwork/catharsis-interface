@@ -2,7 +2,6 @@ import React from 'react';
 import style from './style.module.scss';
 
 import Sold from './Sold';
-import { useModal } from '../../../hooks/useModal';
 
 type ProfileCardType = {
 	header: () => React.ReactNode,

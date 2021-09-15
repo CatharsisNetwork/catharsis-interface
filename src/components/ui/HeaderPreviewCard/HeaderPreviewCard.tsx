@@ -3,7 +3,7 @@ import React from 'react';
 import star from '../../../assets/images/fractionalize/star.png';
 import body from '../../../assets/images/fractionalize/body.png';
 
-function HeaderPreviewCard(props) {
+function HeaderPreviewCard() {
 	return (
 		<div className={style.title}>
 			<div className={style.title_star}>

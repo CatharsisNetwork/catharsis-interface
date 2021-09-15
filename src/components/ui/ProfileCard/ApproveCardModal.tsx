@@ -8,9 +8,9 @@ import shield_slash from '../../../assets/images/admin/shield_slash.png';
 import bg from '../../../assets/images/admin/bg.png';
 import HeaderPreviewCard from '../HeaderPreviewCard/HeaderPreviewCard';
 import BuyoutCard from '../BuyoutCard/BuyoutCard';
-import ethereum from '../../../assets/images/fractionalize/ethereum.png';
+
 import close from '../../../assets/images/admin/close.png';
-import preview from '../../../assets/images/fractionalize/preview.png';
+
 import { useCloseModalContext } from '../../../hooks/useCloseModalContext';
 const description =
 	'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ' +
@@ -32,7 +32,7 @@ const buyout = [
 	},
 ];
 
-function ApproveCardModal(props) {
+function ApproveCardModal() {
 	const onClose = useCloseModalContext();
 	return (
 		<div className={style.approve}>
