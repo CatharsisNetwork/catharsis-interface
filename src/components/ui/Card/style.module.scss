@@ -49,6 +49,9 @@
 
       & .star {
         @include card_footer__star_or_flame;
+        span {
+          margin-top: 4px;
+        }
       }
 
       & .flame {
@@ -129,7 +132,7 @@
       @include card_footer__btn;
 
       &:active {
-        margin-top: 1px;
+        margin-top: 20px;
       }
 
       button {

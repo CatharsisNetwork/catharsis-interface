@@ -45,6 +45,7 @@
 
 .main {
   &_header {
+    padding-top: 10px;
     position: relative;
     @include flex_column_center;
     grid-gap: 21px;

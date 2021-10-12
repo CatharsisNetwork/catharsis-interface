@@ -38,7 +38,7 @@ function MainPage() {
 					cards={() => <CardsList cards={data.content.cards_content_1} />}
 					footer={() => (
 						<Link to={'gallery'}>
-							<button> Gallery</button>
+							<button>View all</button>
 						</Link>
 					)}
 					custom={'button'}
@@ -68,7 +68,7 @@ function MainPage() {
 					cards={() => <CardsList cards={data.content.cards_content_2} />}
 					footer={() => (
 						<Link to={'gallery'}>
-							<button> Gallery</button>
+							<button>View all</button>
 						</Link>
 					)}
 					custom={'button'}

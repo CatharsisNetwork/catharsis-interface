@@ -6,5 +6,5 @@ export const links: Array<LinkType> = [
 	{ label: 'Account', path: '/account' },
 	{ label: 'Fractionalize', path: '/fractionalize' },
 	{ label: 'FAQ', path: '/faq' },
-	{ label: 'Auction', path: '/auction' },
+	{ label: 'Auction', path: '#' },
 ];

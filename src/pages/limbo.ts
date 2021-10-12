@@ -1,2 +1,2 @@
-import LimboPage from '../components/content/gallery/GalleryPage';
+import LimboPage from '../components/content/limbo/LimboPage';
 export default LimboPage;

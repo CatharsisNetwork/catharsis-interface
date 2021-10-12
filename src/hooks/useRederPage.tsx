@@ -5,6 +5,14 @@ import NotFound from '../components/global/Notfound/NotFound';
 
 const generatePage = (name: string) => {
 	/* eslint-disable */
+	if(name === 'account'){
+		const pages = require(`../components/content/user/ProfileUser`).default;
+		try{
+			return React.createElement(pages || null);
+		}catch(err){
+			return <NotFound />;
+		}
+	}
 	const pages = require(`../pages/${name}`).default;
 
 	try {

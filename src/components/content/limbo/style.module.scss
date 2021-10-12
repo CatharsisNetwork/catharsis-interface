@@ -2,18 +2,68 @@
 @import "../../../assets/styles/mixins";
 
 
-.gallery {
+.limbo {
   display: flex;
   height: 100%;
   width: 100%;
   @include flex_column_center;
-  margin: 100px 0;
+  &_title {
+    margin: 63px 0 23px 0;
+    @include font_size_medium_s;
+    text-align: center;
+    color: $white;
+  }
+  &_search {
+    @include flex_row_center;
+    grid-gap: 8px;
+  }
+  &_tabs {
+    margin: 40px 0 50px 0;
+    @include flex_column_center;
+  }
+
+  &_cards {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 100px;
+  }
   &_text {
     @include font_size_large;
     color: $white;
 
     span {
       color: $lilac;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .gallery {
+    &_cards {
+      grid-template-columns:repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery {
+    &_cards {
+      grid-template-columns:repeat(1, 1fr);
+    }
+
+    &_search {
+
+      @include flex_column_center;
+      grid-gap: 82px;
+      margin-bottom: 40px;
+    }
+
+    &_tabs {
+      position: absolute;
+      top: 205px;
+      left: 35px;
+      margin: 0;
     }
   }
 }
