@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import style from './style.module.scss';
-import login_item__1 from '../../../assets/images/header/login_item__1.png';
-import login_item__2 from '../../../assets/images/header/login_item__2.png';
-import login_item__3 from '../../../assets/images/header/login_item__3.png';
 import close_login from '../../../assets/images/header/close_login.png';
 import PanelItem from './PanelItem';
 import Wallet from '../Wallet/Wallet';
@@ -11,40 +8,20 @@ import { useCloseModalContext } from '../../../hooks/useCloseModalContext';
 import Initializing from './Initializing';
 import Refresh from '../Refresh/Refresh';
 import { useHistory } from 'react-router-dom';
-
-type PanelType = {
-	title: string,
-	icon: string,
-	bg: string,
-};
-const panel: Array<PanelType> = [
-	{
-		title: 'MetaMask',
-		icon: login_item__1,
-		bg: '#C87B25',
-	},
-	{
-		title: 'WalletConnect',
-		icon: login_item__2,
-		bg: '#1E60C0',
-	},
-	{
-		title: 'Portis',
-		icon: login_item__3,
-		bg: '#1C345D',
-	},
-];
+import { wallets } from '../../../config/config';
+import { WalletsConfig } from '../../../config/types';
 
 function LoginPanel() {
+	const wallet = wallets();
 	const onClose = useCloseModalContext();
 	const [current, setCurrent] = useState<string | false>(false);
 	useEffect(() => {
 		setCurrent(false);
 	}, []);
 
-	const filter = (panel: Array<PanelType>) => {
+	const filter = (panel: Array<WalletsConfig>) => {
 		if (!current) return panel;
-		return panel.filter((el) => el.title === current);
+		return wallet.filter((el) => el.title === current);
 	};
 	const history = useHistory();
 
@@ -80,12 +57,13 @@ function LoginPanel() {
 				</div>
 			) : null}
 			<div className={style.panel_content}>
-				{filter(panel).map((el, idx) => {
+				{filter(wallet).map((el, idx) => {
 					return (
 						<PanelItem
 							title={el.title}
 							key={idx}
 							icon={el.icon}
+							connectorId={el.connectorId}
 							bg={el.bg}
 							setCurrent={login}
 							current={current}
