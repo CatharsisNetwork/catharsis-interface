@@ -21,7 +21,7 @@ const useAuth = () => {
 					throw new Error('Connector is Failed'); //console.info();
 				}
 			} catch (error) {
-				//console.log(error);
+				//	console.log(error);
 			} finally {
 				// toggleLoadConnection(false)
 			}

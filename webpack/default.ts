@@ -202,8 +202,8 @@ export default (env: webpack.Configuration): webpack.Configuration => ({
 		}),
 		new ErrorOverlayPlugin(),
 		new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('development')
-        }),
+			NODE_ENV: JSON.stringify("development")
+		}),
 		new webpack.ProvidePlugin({
 			process: 'process/browser',
 		  }),
